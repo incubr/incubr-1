@@ -9,13 +9,16 @@ export default function OurWork() {
   const [height, setHeight] = React.useState(0);
 
   React.useEffect(() => {
-    const elementHeight = document.getElementById("PageWrap").scrollWidth;
-    setHeight(elementHeight * 1.2);
-
-    window.addEventListener("resize", () => {
-      setHeight(document.getElementById("PageWrap").scrollWidth * 1.2);
-    })
+    const handleSize = () => {
+      const elementHeight = document.getElementById("PageWrap").scrollWidth;
+      setHeight(elementHeight * 1.2);
+    }
+    handleSize()
+    window.addEventListener("resize", () => handleSize());
     GSAPHorizontalScroll();
+    return () => {
+      window.removeEventListener("resize", () => handleSize);
+    };
   }, []);
 
   const onMouseEnter = () => {
