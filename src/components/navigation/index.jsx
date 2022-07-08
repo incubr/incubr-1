@@ -9,7 +9,7 @@ import LinkedIn from "../../../assets/linkedin.svg";
 import Image from "next/image";
 import Cross from "../../../assets/cross.svg";
 
-export default () => {
+export default function Navigation() {
   const [height, setHeight] = React.useState(0);
   const [opened, setOpened] = React.useState(false);
 

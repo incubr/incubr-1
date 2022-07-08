@@ -9,7 +9,7 @@ import Navigation from "../navigation";
 
 const TEXTS = ["Centered.", "Empathized.", "Focused.", "Desired."];
 
-export default () => {
+export default function Landing() {
   const { height } = React.useContext(Store);
   const [index, setIndex] = React.useState(0);
 

@@ -4,7 +4,7 @@ import TiltedArrow from "../../../assets/tiltedarrow.svg";
 import Image from "next/image";
 import { onmouseleave } from "../../custom-cursor";
 
-export default () => {
+export default function About() {
   const { height } = React.useContext(Store);
 
   const onMouseEnter = () => {
