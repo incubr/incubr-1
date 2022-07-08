@@ -12,9 +12,8 @@ export function GSAPHorizontalScroll() {
       trigger: "#PageWrap",
       pin: true,
       scrub: 1,
-      // snap: 1 / (Sections.length - 1),
       end: () => "+=" + pageWrap.scrollWidth + "px",
-      // markers: true,
+      // markers: true, // TODO: for dev server
     },
     xPercent: -100 * (Sections.length - 1),
     ease: "none",

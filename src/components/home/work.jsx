@@ -11,6 +11,10 @@ export default function OurWork() {
   React.useEffect(() => {
     const elementHeight = document.getElementById("PageWrap").scrollWidth;
     setHeight(elementHeight * 1.2);
+
+    window.addEventListener("resize", () => {
+      setHeight(document.getElementById("PageWrap").scrollWidth * 1.2);
+    })
     GSAPHorizontalScroll();
   }, []);
 
