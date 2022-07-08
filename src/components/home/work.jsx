@@ -14,10 +14,10 @@ export default function OurWork() {
       setHeight(elementHeight * 1.2);
     }
     handleSize()
-    window.addEventListener("resize", () => handleSize());
+    window.addEventListener("resize", handleSize);
     GSAPHorizontalScroll();
     return () => {
-      window.removeEventListener("resize", () => handleSize);
+      window.removeEventListener("resize", handleSize);
     };
   }, []);
 
