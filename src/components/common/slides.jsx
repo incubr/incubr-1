@@ -7,7 +7,7 @@ export default function Slides() {
     <section
       style={{
         backgroundImage: `url("https://cdn.pixabay.com/photo/2022/07/05/10/54/ocean-7302776__480.jpg")`,
-        height: height,
+        height: height + (5 * height / 100),
       }}
       className="flex-none mr-4 font-[PPNeueMontreal] w-[90%] bg-cover "
     >

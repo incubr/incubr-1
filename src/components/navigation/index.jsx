@@ -30,7 +30,7 @@ export default function Navigation() {
       className="navigation flex w-auto font-[Arial] z-[60] absolute items-center"
       style={{ height }}
     >
-      <div className="innerBox w-auto bg-[#1F1D1D] h-72 flex justify-center rounded-tr-xl rounded-br-xl items-center">
+      <div className="innerBox w-auto bg-[#1F1D1D] h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center">
         <button
           onClick={() => {
             if (opened) {
@@ -50,10 +50,7 @@ export default function Navigation() {
               CLOSE
             </span>
           ) : (
-            <span
-              style={{ writingMode: "vertical-rl" }}
-              className="text-white"
-            >
+            <span style={{ writingMode: "vertical-rl" }} className="text-white">
               MENU
             </span>
           )}
@@ -88,13 +85,13 @@ export default function Navigation() {
           </ul>
           <div
             id="button_section"
-            className=" hidden flex-1 flex-col justify-end space-y-4"
+            className=" hidden flex-1 flex-col justify-end space-y-[1.8vw]"
           >
-            <h1 className="text-gray-500">Let's work together</h1>
-            <button className=" rounded-full w-2/3 tracking-wider text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl">
+            <h1 className="text-gray-500 text-[1.5vw]">Let's work together</h1>
+            <button className=" rounded-full w-[20vw] tracking-wider text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-[1.8vw]">
               START A PROJECT
             </button>
-            <h1 className="text-gray-500">Follow us on </h1>
+            <h1 className="text-gray-500 text-[1.5vw]">Follow us on </h1>
             <div className="flex space-x-3">
               <button className="w-14 h-14 flex justify-center items-center bg-white rounded-full">
                 <Image src={LinkedIn} />

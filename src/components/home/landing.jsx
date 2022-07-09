@@ -57,9 +57,9 @@ export default function Landing() {
           </span>
         </div>
       </div>
-      <div className="flex w-full  absolute bottom-10 justify-center">
+      <div className="flex w-full cursor-pointer absolute bottom-10 justify-center">
         <div className="flex w-[85%] justify-end">
-          <div className="w-48 h-48 z-50 flex flex-col items-center justify-between">
+          <div onClick={() => window.scrollTo(0, height - 200)} className="button w-48 h-48 flex flex-col items-center justify-between">
             <div className="w-36 h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
               <Image src={ArrowDown} />
             </div>

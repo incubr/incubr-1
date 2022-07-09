@@ -28,7 +28,7 @@ export default function OurWork() {
     customCursor.classList.replace("bg-black", "bg-white");
     customCursor.classList.replace("bg-opacity-25", "bg-opacity-100");
     customCursor.innerHTML = `
-      <img src="/right.svg" width="70px" />
+    <img src="/right.svg" width="70px" />
     <span className="font-bold pt-10 font-[PPNeueMontreal] tracking-wider">scroll</span>`;
   };
 
@@ -46,11 +46,11 @@ export default function OurWork() {
         </div>
       </div>
       <div
-        style={{
-          height: height,
-        }}
+        // style={{
+        //   height: height,
+        // }}
         onMouseLeave={onmouseleave}
-        className="flex w-full -z-10"
+        className="flex w-full h-[320vw] -z-10"
       >
         <div
           onMouseEnter={onMouseEnter}

@@ -71,7 +71,7 @@ export const reverseNavigation = () => {
   timeline.to(".navigation .innerBox", {
     duration: 0.5,
     width: "auto",
-    height: "18rem",
+    height: "22vw",
     ease: "power2.inOut",
     borderRadius: " 0.75rem 0.75rem 0",
   });
