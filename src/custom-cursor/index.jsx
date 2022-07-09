@@ -15,6 +15,7 @@ export default ({ children }) => {
   React.useEffect(() => {
     const customCursor = document.querySelector(".cursor");
     const onMouseMove = (e) => {
+      customCursor.classList.replace("hidden", "flex");
       customCursor.style.top = `${e.pageY}px`;
       customCursor.style.left = `${e.clientX}px`;
     };
@@ -24,13 +25,18 @@ export default ({ children }) => {
     const onMouseEnter = () => {
       customCursor.classList.remove("hidden");
     };
+    const onScroll = () => {
+      customCursor.classList.replace("flex", "hidden");
+    };
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mouseleave", onMouseLeave);
     window.addEventListener("mouseenter", onMouseEnter);
+    window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseleave", onMouseLeave);
       window.removeEventListener("mouseenter", onMouseEnter);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
