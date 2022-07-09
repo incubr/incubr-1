@@ -13,7 +13,7 @@ export function GSAPHorizontalScroll() {
       pin: true,
       scrub: 1,
       end: () => "+=" + pageWrap.scrollWidth + "px",
-      // markers: true, // TODO: for dev server
+      // markers: true, // for dev server
     },
     xPercent: -100 * (Sections.length - 1),
     ease: "none",

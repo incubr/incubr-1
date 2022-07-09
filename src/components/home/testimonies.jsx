@@ -1,7 +1,7 @@
 import React from "react";
 import Description from "../common/Description";
 import HeadingText from "../common/Heading";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
@@ -9,6 +9,23 @@ import { brands } from "../../../data/brands";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import ArrowDown from "../../../assets/arrowDown.svg";
+
+const Pagination = ({ activeIndex }) => {
+  const swiper = useSwiper();
+  return (
+    <span className="mt-10 flex button text-[1.3vw] justify-center space-x-2">
+      {[1, 2, 3].map((e, index) => (
+        <span
+          key={"sadasd" + e}
+          onClick={() => swiper.slideTo(index)}
+          className={`w-4 h-4 ${
+            activeIndex % 3 === index ? "bg-transparent" : "bg-white"
+          } border border-white rounded-full cursor-pointer`}
+        />
+      ))}
+    </span>
+  );
+};
 
 export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -31,10 +48,11 @@ export default function Testimonies() {
         <Swiper
           modules={[Autoplay]}
           autoplay={{
-            delay: 3000,
+            delay: 6000,
+            disableOnInteraction: false
           }}
           loop
-          className="w-1/2 flex "
+          className="w-1/2 flex flex-col"
           onSlideChange={(e) => setActiveIndex(e.activeIndex)}
         >
           {[1, 2, 5].map((item, index) => (
@@ -56,23 +74,16 @@ export default function Testimonies() {
                    seasoned team and easy to work with.`
                     .split("\n")
                     .map((text) => (
-                      <span className="text-white">{text}</span>
+                      <span key={text} className="text-white">
+                        {text}
+                      </span>
                     ))}
                 </span>
               </div>
             </SwiperSlide>
           ))}
+          <Pagination activeIndex={activeIndex} />
         </Swiper>
-        <span className="mt-10 flex  text-[1.3vw] justify-center space-x-2">
-          {[1, 2, 5].map((e, index) => (
-            <span
-              key={"sadasd" + e}
-              className={`w-4 h-4 ${
-                activeIndex % 3 === index ? "bg-transparent" : "bg-white"
-              } border border-white rounded-full`}
-            />
-          ))}
-        </span>
       </div>
 
       <div className="w-full h-[22vw] items-center bg-[#110A0A]">
@@ -94,7 +105,7 @@ export default function Testimonies() {
         <div className="flex w-[100%] justify-center">
           <div
             onClick={() => window.scrollTo(0, window.scrollY + 400)}
-            className="w-48 h-48 flex flex-col items-center justify-center"
+            className="w-48 h-48 flex flex-col cursor-pointer items-center justify-center"
           >
             <div className="button w-36 h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
               <Image src={ArrowDown} />

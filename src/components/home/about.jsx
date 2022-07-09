@@ -2,7 +2,7 @@ import React from "react";
 import { Store } from "../../../context";
 import TiltedArrow from "../../../assets/tiltedarrow.svg";
 import Image from "next/image";
-import { onmouseleave } from "../../custom-cursor";
+import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 
 export default function About() {
   const { height } = React.useContext(Store);
@@ -28,7 +28,9 @@ export default function About() {
           <Image src={TiltedArrow} />
         </div>
         <div className="w-[60%] flex  ">
-          <h1 className=" text-[7vw] font-[Arial] flex-1">WE DO</h1>
+          <h1 className=" text-[7vw] font-[Arial] flex-1 cursor-pointer">
+            WE DO
+          </h1>
           <div className="flex flex-1 flex-col text-[1.5vw]">
             <div className="flex flex-col w-auto font-[PPNeueMontreal] ">
               <div className="flex flex-col w-auto space-y-4 tracking-wider">
@@ -37,7 +39,11 @@ export default function About() {
                 <span>FIND &amp; DEPLOY TECH. RESOURCES</span>
                 <span>TECHNOLOGY SUPPORT</span>
               </div>
-              <div className="flex justify-end mt-10 font-bold tracking-wider">
+              <div
+                onMouseEnter={buttonMouseEnter}
+                onMouseLeave={onMouseEnter}
+                className="flex text-white cursor-pointer transition-colors ease-in-out duration-200 hover:text-[#F0C808] justify-end mt-10 font-bold tracking-wider"
+              >
                 <span>&amp; much more</span>
               </div>
             </div>

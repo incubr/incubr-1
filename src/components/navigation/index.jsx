@@ -27,7 +27,7 @@ export default function Navigation() {
 
   return (
     <div
-      className="navigation flex w-auto font-[Arial] z-[60] absolute items-center"
+      className="navigation flex w-auto font-[Arial] z-[40] absolute items-center"
       style={{ height }}
     >
       <div className="innerBox w-auto bg-[#1F1D1D] h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center">
@@ -64,7 +64,7 @@ export default function Navigation() {
         >
           <Image src={Cross} />
         </button>
-        <div id="navigation__list" className="hidden flex-1 ml-20">
+        <div id="navigation__list" className="hidden button flex-1 ml-20">
           <ul className="flex flex-col flex-[2] -space-y-8 cursor-pointer">
             <li className="flex text-white text-start opacity-0 -translate-y-36">
               <span className="mt-6 opacity-50">01.</span>{" "}
@@ -88,18 +88,18 @@ export default function Navigation() {
             className=" hidden flex-1 flex-col justify-end space-y-[1.8vw]"
           >
             <h1 className="text-gray-500 text-[1.5vw]">Let's work together</h1>
-            <button className=" rounded-full w-[20vw] tracking-wider text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-[1.8vw]">
+            <button className="button rounded-full w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-[1.8vw]">
               START A PROJECT
             </button>
             <h1 className="text-gray-500 text-[1.5vw]">Follow us on </h1>
             <div className="flex space-x-3">
-              <button className="w-14 h-14 flex justify-center items-center bg-white rounded-full">
+              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                 <Image src={LinkedIn} />
               </button>
-              <button className="w-14 h-14 flex justify-center items-center bg-white rounded-full">
+              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                 <Image src={Instagram} />
               </button>
-              <button className="w-14 h-14 flex justify-center items-center bg-white rounded-full">
+              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                 <Image src={WhatsApp} />
               </button>
             </div>
