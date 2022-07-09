@@ -11,7 +11,7 @@ export default function OurWork() {
   React.useEffect(() => {
     const handleSize = () => {
       const elementHeight = document.getElementById("PageWrap").scrollWidth;
-      setHeight(elementHeight * 1.2);
+      setHeight(elementHeight + 1000);
     }
     handleSize()
     window.addEventListener("resize", handleSize);
