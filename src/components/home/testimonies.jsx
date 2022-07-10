@@ -44,12 +44,15 @@ export default function Testimonies() {
           </div>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-col justify-center font-[PPNeueMontreal] p-4 mt-10 h-[100vh] bg-[#110A0A]">
+      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 mt-10 h-[100vh] bg-[#110A0A]">
+        <div className="flex w-[15vw] h-[15vw] border border-[#FDFDFD] rounded-full p-[1vw]">
+          <div className="w-full h-full rounded-full bg-[#FDFDFD]"></div>
+        </div>
         <Swiper
           modules={[Autoplay]}
           autoplay={{
             delay: 6000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }}
           loop
           className="w-1/2 flex flex-col"
@@ -60,9 +63,6 @@ export default function Testimonies() {
               key={"sadasd" + index}
               className="w-full h-full flex flex-col justify-center items-center"
             >
-              <div className="flex w-[15vw] h-[15vw] border border-[#FDFDFD] rounded-full p-[1vw]">
-                <div className="w-full h-full rounded-full bg-[#FDFDFD]"></div>
-              </div>
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
                 <h1 className=" font-bold text-[1.7vw]">NAME HERE</h1>
                 <span className="text-[1.3vw]">DESIGNATION @ COMPANY</span>
