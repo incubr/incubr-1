@@ -45,7 +45,7 @@ export default function Slides() {
 
 export const MobileSlide = () => {
   return (
-    <div className=" p-5 py-7 bg-[#D9D9D9] rounded-xl w-full">
+    <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#D9D9D9] rounded-xl w-full sm:w-[48%]">
       <div className="flex ">
         <h1 className="font-bold text-xl flex-1">. 01 -05</h1>
         <div className=" flex flex-[2] flex-col">

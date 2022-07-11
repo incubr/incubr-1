@@ -52,7 +52,7 @@ export default function Testimonies() {
           </div>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 lg:h-[100vh] bg-[#1F1D1D]">
+      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 sm:h-[50vh] lg:h-[100vh] bg-[#1F1D1D]">
         <div className="flex w-32 h-32 lg:w-[15vw] lg:h-[15vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
           <div className="w-full h-full rounded-full bg-[#FDFDFD]"></div>
         </div>
@@ -63,7 +63,7 @@ export default function Testimonies() {
             disableOnInteraction: false,
           }}
           loop
-          className="w-full px-10 lg:w-1/2 flex flex-col"
+          className="w-full px-10 sm:px-20 sm:w-1/2 flex flex-col"
           onSlideChange={(e) => setActiveIndex(e.activeIndex)}
         >
           {[1, 2, 5].map((item, index) => (
@@ -99,7 +99,7 @@ export default function Testimonies() {
         </Swiper>
       </div>
 
-      <div className="w-full lg:h-[22vw] items-center bg-[#1F1D1D]">
+      <div className="w-full sm:h-[20vh] lg:h-[22vw] items-center bg-[#1F1D1D]">
         <Marquee
           gradient={false}
           speed={60}

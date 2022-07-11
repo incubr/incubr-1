@@ -27,7 +27,7 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className="hidden lg:flex w-full h-[320vw] -z-10"
+        className="hidden lg:flex w-full h-[350vw] xl:h-[320vw] -z-10"
       >
         <div
           id="PageWrap"
@@ -39,7 +39,7 @@ export default function OurWork() {
         </div>
       </div>
 
-      <div className="flex flex-col space-y-4 lg:hidden w-full px-6">
+      <div className="flex flex-col sm:flex-row  sm:space-y-auto flex-wrap lg:hidden w-full px-6 sm:px-10">
         {[1, 2, 3].map((i) => (
           <MobileSlide key={"sadasdasd" + i.toString()} />
         ))}

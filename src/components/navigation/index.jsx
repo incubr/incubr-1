@@ -83,7 +83,7 @@ export default function Navigation() {
         </button>
         <div
           id="navigation__list"
-          className="hidden button flex-col lg:flex-row flex-1 px-10 lg:px-0 lg:ml-20"
+          className="hidden button flex-col lg:flex-row flex-1 px-10 sm:px-20 lg:px-0 lg:ml-20"
         >
           <ul className="flex flex-col flex-[2] cursor-pointer space-y-5">
             <li className="flex text-white text-start opacity-0 ">
@@ -108,7 +108,7 @@ export default function Navigation() {
             className=" hidden flex-1 flex-col justify-end mt-10 lg:mt-0 space-y-5 lg:space-y-[1.8vw]"
           >
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">Let's work together</h1>
-            <button className="button rounded-full w-full lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
+            <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
               START A PROJECT
             </button>
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">Follow us on </h1>

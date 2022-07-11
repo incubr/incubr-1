@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <footer className="h-screen px-10  space-y-10 lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col sm:flex-row items-center justify-center">
+      <footer className="h-screen px-10  space-y-10 lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center">
         <div className="flex flex-col space-y-10 lg:space-y-[3vw] justify-start items-start">
           <Image src={Logo} />
           <div className="w-full text-md lg:text-[1.5vw] sm:w-2/3">

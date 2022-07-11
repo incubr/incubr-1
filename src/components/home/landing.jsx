@@ -35,9 +35,9 @@ export default function Landing() {
       <Navigation />
       <Headers />
       <div className="flex flex-1 justify-center items-center">
-        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 lg:px-0">
+        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
           <div
-            className=" font-[Arial] text-6xl lg:text-[4.3vw] flex flex-col"
+            className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}
             onMouseLeave={onmouseleave}
           >
@@ -47,7 +47,7 @@ export default function Landing() {
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>
             </div>
-            <span className=" font-[Arial] text-6xl lg:text-[4.3vw]">
+            <span className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw]">
               Solutions.
             </span>
           </div>
@@ -61,7 +61,7 @@ export default function Landing() {
                 <span key={i + line}>{line}</span>
               ))}
           </span>
-          <span className="flex font-[PPNeueMontreal] leading-[1.5] flex-col lg:hidden mt-10 text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+          <span className="flex font-[PPNeueMontreal] leading-[1.5] flex-col lg:hidden mt-10 text-xl sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
             {`We are a new age brand incubator.\n 
             We engineer, design and scale\n 
             digital products to get you massive\n
