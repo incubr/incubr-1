@@ -7,7 +7,7 @@ export const Provider = ({ children }) => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      setHeight(window.innerHeight - (10 * window.innerHeight) / 100);
+      setHeight(window.innerHeight);
     };
 
     handleResize();

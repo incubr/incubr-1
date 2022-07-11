@@ -3,7 +3,6 @@ import { Store } from "../../../context";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 
 export default function Slides() {
-  const { height } = React.useContext(Store);
   const onMouseEnter = () => {
     const customCursor = document.querySelector(".cursor");
     customCursor.style.width = "10rem";
@@ -18,11 +17,10 @@ export default function Slides() {
     <section
       style={{
         backgroundImage: `url("https://cdn.pixabay.com/photo/2022/07/05/10/54/ocean-7302776__480.jpg")`,
-        height: height + (5 * height) / 100,
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onmouseleave}
-      className="flex-none mr-4 font-[PPNeueMontreal] w-[90%] bg-cover "
+      className="flex-none mr-4 h-full font-[PPNeueMontreal] w-full lg:w-[90%] bg-cover "
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-1 flex-col justify-end">
@@ -42,5 +40,28 @@ export default function Slides() {
         </div>
       </div>
     </section>
+  );
+}
+
+export const MobileSlide = () => {
+  return (
+    <div className=" p-5 py-7 bg-[#D9D9D9] rounded-xl w-full">
+      <div className="flex ">
+        <h1 className="font-bold text-xl flex-1">. 01 -05</h1>
+        <div className=" flex flex-[2] flex-col">
+          <h1 className="font-[500] tracking-wide text-2xl">Growth School</h1>
+          <span className=" font-[400] mt-3 text-xl">COLLABORATORS</span>
+          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
+          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
+          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
+        </div>
+      </div>
+      <div
+        className="flex h-64 mt-5 rounded-lg bg-cover w-full "
+        style={{
+          backgroundImage: `url("https://cdn.pixabay.com/photo/2022/07/05/10/54/ocean-7302776__480.jpg")`,
+        }}
+      ></div>
+    </div>
   );
 }

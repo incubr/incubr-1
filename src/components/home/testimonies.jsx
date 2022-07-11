@@ -8,7 +8,6 @@ import { Autoplay } from "swiper";
 import { brands } from "../../../data/brands";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import ArrowDown from "../../../assets/arrowDown.svg";
 
 const Pagination = ({ activeIndex }) => {
   const swiper = useSwiper();
@@ -31,21 +30,30 @@ export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
   return (
     <>
-      <div className="flex flex-col w-full bg-[#FDFDFD] h-[25vw]">
+      <div className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D] lg:h-[25vw]">
         <div className="flex flex-1"></div>
         <div className="flex flex-1 justify-center items-center flex-col">
-          <HeadingText text={"explore our work"} />
-          <div className="flex flex-1 justify-center items-center">
+          <div className="flex px-5 py-2 text-5xl mt-16 lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
+            <h1 className="uppercase">TESTIMONIES</h1>
+          </div>
+          <div className="hidden lg:flex flex-1 justify-center items-center">
             <Description
               text={
                 "Its truly gratifying when our customers find our\n work valuable and purposeful."
               }
             />
           </div>
+          <div className="lg:hidden flex flex-1 justify-center items-center">
+            <Description
+              text={
+                "Its truly gratifying when our customers find our work valuable and purposeful."
+              }
+            />
+          </div>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 mt-10 h-[100vh] bg-[#110A0A]">
-        <div className="flex w-[15vw] h-[15vw] border border-[#FDFDFD] rounded-full p-[1vw]">
+      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 lg:h-[100vh] bg-[#1F1D1D]">
+        <div className="flex w-32 h-32 lg:w-[15vw] lg:h-[15vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
           <div className="w-full h-full rounded-full bg-[#FDFDFD]"></div>
         </div>
         <Swiper
@@ -55,7 +63,7 @@ export default function Testimonies() {
             disableOnInteraction: false,
           }}
           loop
-          className="w-1/2 flex flex-col"
+          className="w-full px-10 lg:w-1/2 flex flex-col"
           onSlideChange={(e) => setActiveIndex(e.activeIndex)}
         >
           {[1, 2, 5].map((item, index) => (
@@ -66,7 +74,7 @@ export default function Testimonies() {
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
                 <h1 className=" font-bold text-[1.7vw]">NAME HERE</h1>
                 <span className="text-[1.3vw]">DESIGNATION @ COMPANY</span>
-                <span className="mt-8 flex flex-col text-[1.3vw] items-center">
+                <span className="mt-8 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
                   {`
                 We are a new age brand incubator. We engineer,\n
                  design and scale digital products to get you\n
@@ -79,6 +87,11 @@ export default function Testimonies() {
                       </span>
                     ))}
                 </span>
+                <span className="mt-8 flex lg:hidden flex-col text-center items-center">
+                  We are a new age brand incubator. We engineer, design and
+                  scale digital products to get you massive growth. We are
+                  customer centric, a seasoned team and easy to work with.
+                </span>
               </div>
             </SwiperSlide>
           ))}
@@ -86,7 +99,7 @@ export default function Testimonies() {
         </Swiper>
       </div>
 
-      <div className="w-full h-[22vw] items-center bg-[#110A0A]">
+      <div className="w-full lg:h-[22vw] items-center bg-[#1F1D1D]">
         <Marquee
           gradient={false}
           speed={60}
@@ -101,18 +114,7 @@ export default function Testimonies() {
         </Marquee>
       </div>
 
-      <div className="flex w-full bg-[#FDFDFD] bottom-10 h-[28vw] items-center justify-center">
-        <div className="flex w-[100%] justify-center">
-          <div
-            onClick={() => window.scrollTo(0, window.scrollY + 400)}
-            className="w-48 h-48 flex flex-col cursor-pointer items-center justify-center"
-          >
-            <div className="button w-36 h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
-              <Image src={ArrowDown} />
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </>
   );
 }

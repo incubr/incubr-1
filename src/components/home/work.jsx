@@ -2,7 +2,7 @@ import React from "react";
 import { GSAPHorizontalScroll } from "../../animation/horizontalScroll";
 import Description from "../common/Description";
 import HeadingText from "../common/Heading";
-import Slides from "../common/slides";
+import Slides, { MobileSlide } from "../common/slides";
 import { onmouseleave } from "../../custom-cursor";
 
 export default function OurWork() {
@@ -14,9 +14,9 @@ export default function OurWork() {
 
   return (
     <>
-      <div className="flex flex-col w-full bg-[#FDFDFD] h-[25vw]">
+      <div className="flex flex-col w-full bg-[#FDFDFD] lg:bg-[#1F1D1D] lg:h-[25vw]">
         <div className="flex flex-1"></div>
-        <div className="flex flex-1 justify-center items-center flex-col">
+        <div className="flex flex-[2] lg:text-white justify-center items-center flex-col">
           <HeadingText text={"explore our work"} />
           <div className="flex flex-1 justify-center items-center">
             <Description
@@ -27,10 +27,9 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className="flex w-full h-[320vw] -z-10"
+        className="hidden lg:flex w-full h-[320vw] -z-10"
       >
         <div
-          
           id="PageWrap"
           className="flex flex-nowrap h-screen p-4 w-full my-10"
         >
@@ -38,6 +37,12 @@ export default function OurWork() {
             <Slides key={"sadasdasd" + i.toString()} />
           ))}
         </div>
+      </div>
+
+      <div className="flex flex-col space-y-4 lg:hidden w-full px-6">
+        {[1, 2, 3].map((i) => (
+          <MobileSlide key={"sadasdasd" + i.toString()} />
+        ))}
       </div>
     </>
   );

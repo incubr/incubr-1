@@ -25,7 +25,7 @@ export default function Landing() {
     const customCursor = document.querySelector(".cursor");
     customCursor.style.width = "7rem";
     customCursor.style.height = "7rem";
-  }
+  };
 
   return (
     <div
@@ -35,35 +35,55 @@ export default function Landing() {
       <Navigation />
       <Headers />
       <div className="flex flex-1 justify-center items-center">
-        <div className="w-[60%]">
+        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 lg:px-0">
           <div
-            className=" font-[Arial] text-[4.3vw] -space-y-3 flex flex-col"
+            className=" font-[Arial] text-6xl lg:text-[4.3vw] flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}
             onMouseLeave={onmouseleave}
           >
-            <div className="flex">
+            <div className="flex flex-col lg:flex-row">
               Human.&nbsp;
               <TextTransition springConfig={presets.gentle}>
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>
             </div>
-            <span className=" font-[Arial] text-[4.3vw]">Solutions.</span>
+            <span className=" font-[Arial] text-6xl lg:text-[4.3vw]">
+              Solutions.
+            </span>
           </div>
-          <span className=" font-[PPNeueMontreal] leading-[1.5] mt-10 text-[1.5vw] tracking-wide font-[350]">
-            We are a new age brand incubator. We engineer, <br />
+          <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
+            {`We are a new age brand incubator. We engineer,\n
             design and scale digital products to get you
-            <br /> massive growth. We are customer centric, a <br />
-            seasoned team and easy to work with.
+            \n massive growth. We are customer centric, a \n
+            seasoned team and easy to work with.`
+              .split("\n")
+              .map((line, i) => (
+                <span key={i + line}>{line}</span>
+              ))}
+          </span>
+          <span className="flex font-[PPNeueMontreal] leading-[1.5] flex-col lg:hidden mt-10 text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+            {`We are a new age brand incubator.\n 
+            We engineer, design and scale\n 
+            digital products to get you massive\n
+             growth. We are customer centric, a \n
+            seasoned team and easy to work\n with.`
+              .split("\n")
+              .map((line, i) => (
+                <span key={i + line}>{line}</span>
+              ))}
           </span>
         </div>
       </div>
-      <div className="flex w-full absolute bottom-10 justify-center">
+      <div className="flex w-full lg:absolute bottom-10 justify-center">
         <div className="flex w-[85%] justify-end">
-          <div onClick={() => window.scrollTo(0, height)} className="button cursor-pointer w-48 h-48 flex flex-col items-center justify-between">
-            <div className="w-36 h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
+          <div
+            onClick={() => window.scrollTo(0, height)}
+            className="button cursor-pointer w-32 lg:w-48 h-32 lg:h-48 flex flex-col items-center justify-between"
+          >
+            <div className="lg:w-36 w-24 h-24 lg:h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
               <Image src={ArrowDown} />
             </div>
-            <h1 className="font-bold text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
+            <h1 className="font-bold text-xl lg:text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
               welcome
             </h1>
           </div>
@@ -71,4 +91,4 @@ export default function Landing() {
       </div>
     </div>
   );
-};
+}
