@@ -60,9 +60,7 @@ export default ({ children }) => {
           style={{
             transition: "width 0.8s, height 0.8s",
           }}
-          className={`cursor w-10 h-10 ${
-            isMobile || isTablet ? "hidden" : "flex"
-          } flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[70] -translate-x-1/2 -translate-y-1/2`}
+          className={`cursor w-10 h-10 flex flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[70] -translate-x-1/2 -translate-y-1/2`}
         ></div>
       </div>
       {children}
