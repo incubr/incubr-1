@@ -9,6 +9,12 @@ import Navigation from "../navigation";
 
 const TEXTS = ["Centered.", "Empathized.", "Focused.", "Desired."];
 
+export const onMouseEnterOnTitle = () => {
+   const customCursor = document.querySelector(".cursor");
+   customCursor.style.width = "7rem";
+   customCursor.style.height = "7rem";
+ };
+
 export default function Landing() {
   const { height } = React.useContext(Store);
   const [index, setIndex] = React.useState(0);
@@ -21,11 +27,6 @@ export default function Landing() {
     return () => clearTimeout(intervalId);
   }, []);
 
-  const onMouseEnterOnTitle = () => {
-    const customCursor = document.querySelector(".cursor");
-    customCursor.style.width = "7rem";
-    customCursor.style.height = "7rem";
-  };
 
   return (
     <div

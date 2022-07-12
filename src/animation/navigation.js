@@ -81,7 +81,7 @@ export const reverseNavigation = (isRight=false) => {
   timeline.to(".navigation", {
     rotate: isRight ? "0deg" : "0deg",
     duration: 0.3,
-    width: "4rem",
+    width: isRight ? "auto": "4rem",
     position: "absolute",
   });
 };
