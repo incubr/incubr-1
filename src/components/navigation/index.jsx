@@ -27,7 +27,7 @@ export default function Navigation() {
 
   return (
     <div
-      className="navigation flex w-auto font-[Arial] z-[40] absolute right-0 lg:left-0  items-center"
+      className="navigation flex w-16 font-[Arial] z-[40] absolute right-0 lg:left-0  items-center"
       style={{ height }}
     >
       <div className="innerBox w-auto transform rotate-180 lg:rotate-0 bg-[#1F1D1D] h-72 lg:h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center">

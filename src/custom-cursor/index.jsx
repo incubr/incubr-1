@@ -1,5 +1,4 @@
 import React from "react";
-import { isMobile, isTablet } from "react-device-detect";
 
 export const onmouseleave = () => {
   const customCursor = document.querySelector(".cursor");
