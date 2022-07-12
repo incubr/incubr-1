@@ -110,8 +110,8 @@ export default function Navigation({ isDark = false }) {
                     setOpened(false);
                     reverseNavigation(isRight, isDark);
                   }}
-                  className={`flex text-white hover:text-white transition-colors ease-in-out duration-200 text-start ${
-                    currentLocation === item.link ? "opacity-0" : "opacity-50"
+                  className={`flex text-white hover:opacity-100 -translate-y-40 transition-colors ease-in-out duration-200 text-start ${
+                    currentLocation === item.link ? "opacity-100" : "opacity-50"
                   } `}
                 >
                   <span className="mt-6 opacity-50">0{index + 1}.</span>{" "}

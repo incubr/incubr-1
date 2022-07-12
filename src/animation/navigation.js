@@ -31,7 +31,7 @@ export const animateNavigation = (isRight=false, isDark=false) => {
     translateY: 0,
     ease: "power2.inOut",
     stagger: 0.2,
-    opacity: 1,
+    opacity: 0.5,
   });
 
   timeline.to(".navigation .innerBox #button_section", {
