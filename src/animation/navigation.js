@@ -34,6 +34,10 @@ export const animateNavigation = (isRight=false, isDark=false) => {
     opacity: 0.5,
   });
 
+  timeline.to(".navigation .innerBox #navigation__list ul li #active", {
+    opacity: 1,
+  });
+  
   timeline.to(".navigation .innerBox #button_section", {
     duration: 0.5,
     display: "flex",
