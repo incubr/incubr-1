@@ -37,21 +37,24 @@ export default function Footer({ isDark = false }) {
         } flex justify-center`}
       >
         <footer
-          className={` h-screen px-10  space-y-10 lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center`}
+          className={` h-screen px-10  space-y-6 lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center`}
         >
-          <div className="flex flex-col space-y-10 lg:space-y-[3vw] justify-start items-start">
+          <div className="flex flex-col space-y-6 lg:space-y-[3vw] justify-start items-start">
             <Link href={"/"}>
               <Image src={isDark ? DarkLogo : Logo} />
             </Link>
             <div
-              className={`w-full text-md ${
+              className={`w-full text-sm ${
                 isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-              } lg:text-[1.5vw] sm:w-2/3`}
+              } lg:text-[1.3vw] lg:leading-[1.8vw] sm:w-[75%] `}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              We are a new-age brand incubator that specializes in integrated
+              digital solutions- website, app, marketing, UX/UI, and technology.
+              We engineer, design, and help you scale your products to reach
+              your target group. Since day one, we've helped innovators and
+              founders take their startups to the next level by providing them
+              with the tools and guidance they need to turn their excellent
+              ideas into powerful companies.
             </div>
             <div
               className={`flex ${
@@ -81,7 +84,7 @@ export default function Footer({ isDark = false }) {
           <div className="flex flex-col space-y-10 w-full items-center sm:items-start ">
             <Link href={"/start-a-project"}>
               <button
-                className={`button transition-colors w-full sm:w-auto duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.5vw] px-8 ${
+                className={`button transition-colors w-full sm:w-auto lg:w-[22vw] duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.2vw] px-8 ${
                   isDark
                     ? "text-[#1F1D1D] bg-[#FDFDFD]"
                     : "text-[#FDFDFD] bg-[#1F1D1D]"

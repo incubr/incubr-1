@@ -8,6 +8,7 @@ import React from "react";
 import ArrowDown from "@/assets/arrowDown.svg";
 import ServiceCard from "@/src/components/common/serviceCard";
 import Footer from "@/src/components/footer";
+import { servicesData } from "@/data/services";
 
 export default function Services() {
   const { height } = React.useContext(Store);
@@ -22,20 +23,22 @@ export default function Services() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] text-6xl sm:text-8xl w-48 lg:w-[18vw] space-y-3 lg:text-[4.3vw] flex flex-col"
+              className=" font-[Arial] text-4xl sm:text-7xl w-60 sm:w-[80%] lg:w-[25vw] lg:leading-[4vw] space-y-3 lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col lg:flex-row">Lorem Ipsum </div>
-              <span className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw]">
-                Dolor
+              <div className="flex flex-col lg:flex-row -mb-3 ">
+                We Innovate, Nourish &amp;
+              </div>
+              <span className=" font-[Arial] text-4xl sm:text-7xl lg:text-[3.5vw]">
+                Grow Startups
               </span>
             </div>
             <span className="font-[PPNeueMontreal] lg:leading-[1.5] flex-col flex mt-10 lg:mt-0 lg:ml-10 text-sm sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`Lorem ipsum dolor sit amet, consectetur\n 
-              adipiscing elit, sed do eiusmod tempor\n 
-              incididunt ut labore et dolore magna\n 
-              aliqua.`
+              {`We are uniquely positioned with skills to\n
+               build your next big Startup. With our\n
+                high-quality development services, you\n
+                 can propel your company into the future.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
@@ -62,8 +65,8 @@ export default function Services() {
 
       <div className="flex flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
         <div className=" lg:w-[60%] pb-28 lg:pb-[10vw] flex flex-col">
-          {[1, 2, 3].map((i) => (
-            <ServiceCard key={"sdasdder" + i} />
+          {servicesData.map((data, i) => (
+            <ServiceCard data={data} key={"sdasdder" + i} />
           ))}
         </div>
       </div>
@@ -71,12 +74,11 @@ export default function Services() {
       <div className="flex font-[PPNeueMontreal] pb-10 flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
         <div className=" w-[85%] h-[78vh] bg-white flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
           <h1 className="flex text-xl lg:text-[2.2vw] text-center lg:text-start lg:leading-[2.5vw]">
-            Lorem ipsum dolor sit amet, consectetur
-             adipiscing elit, ed do eiusmod tempor i
+            Let us partner and build your dream company together.
           </h1>
           <h1 className="flex text-7xl flex-col sm:flex-row lg:text-[4.5vw] lg:ml-[4vw]">
-            <span className="border-b border-[#1F1D1D] sm:mr-5">Lorem</span>
-            ipsum{" "}
+            <span className="border-b border-[#1F1D1D] sm:mr-5">Connect</span>
+            Today{" "}
           </h1>
         </div>
       </div>

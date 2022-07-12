@@ -8,7 +8,6 @@ import Image from "next/image";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Footer from "@/src/components/footer";
 
-
 const ElevatedBox = ({ childern, title, notBorder = false }) => {
   return (
     <div className="w-full mr-5 mt-10 mb-5">
@@ -17,7 +16,9 @@ const ElevatedBox = ({ childern, title, notBorder = false }) => {
           !notBorder && "border border-[#1F1D1D]"
         } text-[#1F1D1D] h-full py-8 lg:py-[3vw] rounded-[3.5rem] sm:rounded-[5rem] px-6 sm:px-20 `}
       >
-        <div className="text-xl lg:text-[2vw] lg:leading-[2.2vw] font-[Arial]">{title}</div>
+        <div className="text-xl lg:text-[2vw] lg:leading-[2.2vw] font-[Arial]">
+          {title}
+        </div>
         <div className="mt-3 sm:ml-4">{childern}</div>
       </div>
     </div>
@@ -43,22 +44,21 @@ export default function StartAProject() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
+              className=" font-[Arial] text-4xl sm:text-7xl lg:text-[4.3vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col lg:flex-row">
-                Incididunt. tempor.
+                Want to talk about
               </div>
-              <span className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw]">
-                Consec.
+              <span className=" font-[Arial] text-4xl sm:text-7xl lg:text-[4.3vw]">
+                your project?
               </span>
             </div>
-            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
-              {`Lorem ipsum dolor sit amet, consectetur\n 
-              adipiscing elit, sed do eiusmod tempor\n 
-              incididunt ut labore et dolore magna\n 
-              aliqua.`
+            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col flex mt-10 sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+              {`Fill out the contact form for us to\n 
+              understand your needs and a Client\n 
+              Partner will be in touch right away.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
