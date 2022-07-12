@@ -8,16 +8,6 @@ import Image from "next/image";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Footer from "@/src/components/footer";
 
-const SmallText = (props) => {
-  return (
-    <div className="flex flex-col mt-5 sm:mt-0 text-white">
-      <h1 className=" capitalize">{props.title}</h1>
-      <h1 className=" uppercase text-3xl underline ">
-        <Link href={props.link}>{props.otherText}</Link>
-      </h1>
-    </div>
-  );
-};
 
 const ElevatedBox = ({ childern, title, notBorder = false }) => {
   return (

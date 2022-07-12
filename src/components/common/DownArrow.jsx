@@ -1,5 +1,6 @@
 import React from 'react'
 import ArrowDown from "@/assets/arrowDown.svg";
+import Image from 'next/image';
 
 
 export default function DownArrow() {
