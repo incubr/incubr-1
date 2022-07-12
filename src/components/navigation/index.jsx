@@ -8,16 +8,21 @@ import Instagram from "@/assets/instagram.svg";
 import LinkedIn from "@/assets/linkedin.svg";
 import Image from "next/image";
 import Cross from "@/assets/cross.svg";
+import { navigation_link } from "@/data/link";
+import Link from "next/link";
 
-export default function Navigation({isDark=false}) {
+export default function Navigation({ isDark = false }) {
   const [height, setHeight] = React.useState(0);
   const [opened, setOpened] = React.useState(false);
   const [isRight, setIsRight] = React.useState(false);
+  const [currentLocation, setCurrentLocation] = React.useState("/");
 
   React.useEffect(() => {
     const handleResize = () => {
       setHeight(window.innerHeight);
     };
+
+    setCurrentLocation(window.location.pathname);
 
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -68,7 +73,7 @@ export default function Navigation({isDark=false}) {
             if (opened) {
               reverseNavigation(true, isDark);
             } else {
-              setIsRight(true)
+              setIsRight(true);
               animateNavigation(true, isDark);
             }
             setOpened(!opened);
@@ -98,22 +103,24 @@ export default function Navigation({isDark=false}) {
           className="hidden button flex-col lg:flex-row flex-1 px-10 sm:px-20 lg:px-0 lg:ml-20"
         >
           <ul className="flex flex-col flex-[2] cursor-pointer space-y-5">
-            <li className="flex text-white text-start opacity-0 ">
-              <span className="mt-6 opacity-50">01.</span>{" "}
-              <span className="ml-5 text-5xl lg:text-[7vw]">Home</span>
-            </li>
-            <li className="flex text-gray-500 hover:text-white opacity-0 ">
-              <span className="mt-6 opacity-50">02.</span>{" "}
-              <span className="ml-5 text-5xl lg:text-[7vw]">Services</span>
-            </li>
-            <li className="flex text-gray-500 hover:text-white opacity-0 ">
-              <span className="mt-6 opacity-50">03.</span>{" "}
-              <span className="ml-5 text-5xl lg:text-[7vw]">Work</span>
-            </li>
-            <li className="flex text-gray-500 hover:text-white opacity-0 ">
-              <span className="mt-6 opacity-50">04.</span>{" "}
-              <span className="ml-5 text-5xl lg:text-[7vw]">Testimonies</span>
-            </li>
+            {navigation_link.map((item, index) => (
+              <Link key={item.id} href={item.link}>
+                <li
+                  onClick={() => {
+                    setOpened(false);
+                    reverseNavigation(isRight, isDark);
+                  }}
+                  className={`flex text-white hover:text-white transition-colors ease-in-out duration-200 text-start ${
+                    currentLocation === item.link ? "opacity-0" : "opacity-50"
+                  } `}
+                >
+                  <span className="mt-6 opacity-50">0{index + 1}.</span>{" "}
+                  <span className="ml-5 text-5xl lg:text-[7vw]">
+                    {item.name}
+                  </span>
+                </li>
+              </Link>
+            ))}
           </ul>
           <div
             id="button_section"
@@ -122,22 +129,32 @@ export default function Navigation({isDark=false}) {
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
               Let's work together
             </h1>
-            <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
-              START A PROJECT
-            </button>
+            <Link href={"/start-a-project"}>
+              <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
+                START A PROJECT
+              </button>
+            </Link>
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
               Follow us on{" "}
             </h1>
             <div className="flex space-x-3">
-              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
-                <Image src={LinkedIn} />
-              </button>
-              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
-                <Image src={Instagram} />
-              </button>
-              <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
-                <Image src={WhatsApp} />
-              </button>
+              <Link href={"https://www.linkedin.com/company/incubr/about/"}>
+                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                  <Image src={LinkedIn} />
+                </button>
+              </Link>
+              <Link href={"https://www.instagram.com/incubr.tech/"}>
+                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                  <Image src={Instagram} />
+                </button>
+              </Link>
+              <Link
+                href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
+              >
+                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                  <Image src={WhatsApp} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -12,7 +12,10 @@ import Image from "next/image";
 const Pagination = ({ activeIndex }) => {
   const swiper = useSwiper();
   return (
-    <span className="mt-10 flex button text-[1.3vw] justify-center space-x-2">
+    <span
+      
+      className="mt-10 flex button text-[1.3vw] justify-center space-x-2"
+    >
       {[1, 2, 3].map((e, index) => (
         <span
           key={"sadasd" + e}
@@ -30,7 +33,10 @@ export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
   return (
     <>
-      <div className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D] lg:h-[25vw]">
+      <div
+        id="testimonies"
+        className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D] lg:h-[25vw]"
+      >
         <div className="flex flex-1"></div>
         <div className="flex flex-1 justify-center items-center flex-col">
           <div className="flex px-5 py-2 text-5xl mt-16 lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
@@ -113,8 +119,6 @@ export default function Testimonies() {
           ))}
         </Marquee>
       </div>
-
-      
     </>
   );
 }

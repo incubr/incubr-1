@@ -4,6 +4,7 @@ import TiltedArrow from "../../../assets/tiltedarrow.svg";
 import SmallArrow from "@/assets/Vector (1).svg";
 import Image from "next/image";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
+import Link from "next/link";
 
 export default function About() {
   const { height } = React.useContext(Store);
@@ -58,9 +59,11 @@ export default function About() {
                 onMouseLeave={onMouseEnter}
                 className="flex text-white mt-16 cursor-pointer justify-center lg:justify-start transition-colors ease-in-out duration-200 hover:text-[#F0C808]  font-bold tracking-wider"
               >
-                <span className="p-2 px-8 border hover:border-[#F0C808] border-white rounded-full">
-                  &amp; much more
-                </span>
+                <Link href={"/services"}>
+                  <span className="p-2 px-8 border hover:border-[#F0C808] border-white rounded-full">
+                    &amp; much more
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

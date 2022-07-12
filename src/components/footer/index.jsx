@@ -11,6 +11,7 @@ import InstagramLight from "@/assets/instagram.svg";
 import LinkedInLight from "@/assets/linkedin.svg";
 import moment from "moment";
 import ArrowDown from "@/assets/arrowDown.svg";
+import { navigation_link } from "@/data/link";
 
 export default function Footer({ isDark = false }) {
   return (
@@ -68,10 +69,11 @@ export default function Footer({ isDark = false }) {
               </div>
               <div className="flex flex-1 sm:flex-[2]">
                 <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.7vw] opacity-50">
-                  <span className="px-[1.8vw] sm:px-0">Home</span>
-                  <span className="px-[1.8vw] sm:px-0">Services</span>
-                  <span className="px-[1.8vw] sm:px-0">Work</span>
-                  <span className="px-[1.8vw] sm:px-0">Testimonies</span>
+                  {navigation_link.map((item, index) => (
+                    <Link key={"naviga" + index} href={item.link}>
+                      <span className="px-[1.8vw] sm:px-0">{item.name}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -89,33 +91,41 @@ export default function Footer({ isDark = false }) {
               </button>
             </Link>
             <div className="button flex space-x-3">
-              <button
-                className={`w-14 ${
-                  isDark
-                    ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                    : "text-[#FDFDFD] bg-[#1F1D1D]"
-                } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+              <Link href={"https://www.linkedin.com/company/incubr/about/"}>
+                <button
+                  className={`w-14 ${
+                    isDark
+                      ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                      : "text-[#FDFDFD] bg-[#1F1D1D]"
+                  } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                >
+                  <Image src={isDark ? LinkedInLight : LinkedIn} />
+                </button>
+              </Link>
+              <Link href={"https://www.instagram.com/incubr.tech/"}>
+                <button
+                  className={`w-14 ${
+                    isDark
+                      ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                      : "text-[#FDFDFD] bg-[#1F1D1D]"
+                  } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                >
+                  <Image src={isDark ? InstagramLight : Instagram} />
+                </button>
+              </Link>
+              <Link
+                href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
               >
-                <Image src={isDark ? LinkedInLight : LinkedIn} />
-              </button>
-              <button
-                className={`w-14 ${
-                  isDark
-                    ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                    : "text-[#FDFDFD] bg-[#1F1D1D]"
-                } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
-              >
-                <Image src={isDark ? InstagramLight : Instagram} />
-              </button>
-              <button
-                className={`w-14 ${
-                  isDark
-                    ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                    : "text-[#FDFDFD] bg-[#1F1D1D]"
-                } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
-              >
-                <Image src={isDark ? WhatsAppLight : WhatsApp} />
-              </button>
+                <button
+                  className={`w-14 ${
+                    isDark
+                      ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                      : "text-[#FDFDFD] bg-[#1F1D1D]"
+                  } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                >
+                  <Image src={isDark ? WhatsAppLight : WhatsApp} />
+                </button>
+              </Link>
             </div>
 
             <div
