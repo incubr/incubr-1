@@ -18,8 +18,17 @@ export const buttonMouseEnter = () => {
   customCursor.innerHTML = "";
 };
 
+export function is_touch_enabled() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
 export default ({ children }) => {
   const container = React.useRef();
+  const [isTouchEnabled, setIsTouchEnabled] = React.useState(false)
 
   React.useEffect(() => {
     const customCursor = document.querySelector(".cursor");
@@ -28,6 +37,7 @@ export default ({ children }) => {
       customCursor.style.top = `${e.clientY}px`;
       customCursor.style.left = `${e.clientX}px`;
     };
+    setIsTouchEnabled(is_touch_enabled())
     const onMouseLeave = () => {
       customCursor.classList.add("hidden");
     };
@@ -54,12 +64,18 @@ export default ({ children }) => {
 
   return (
     <div ref={container} className="w-full">
-      <div className=" w-full h-screen fixed z-[50] pointer-events-none">
+      <div
+        className={` w-full h-screen ${
+          isTouchEnabled ? "hidden" : "block"
+        } fixed z-[50] pointer-events-none`}
+      >
         <div
           style={{
             transition: "width 0.8s, height 0.8s",
           }}
-          className={`cursor w-10 h-10 flex flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[70] -translate-x-1/2 -translate-y-1/2`}
+          className={`cursor w-10 h-10 ${
+            isTouchEnabled ? "hidden" : "flex"
+          } flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[70] -translate-x-1/2 -translate-y-1/2`}
         ></div>
       </div>
       {children}
