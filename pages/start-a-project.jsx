@@ -17,7 +17,7 @@ const ElevatedBox = ({ childern, title, notBorder = false }) => {
           !notBorder && "border border-[#1F1D1D]"
         } text-[#1F1D1D] h-full py-8 lg:py-[3vw] rounded-[3.5rem] sm:rounded-[5rem] px-6 sm:px-20 `}
       >
-        <div className="text-xl lg:text-[2vw] font-[Arial]">{title}</div>
+        <div className="text-xl lg:text-[2vw] lg:leading-[2.2vw] font-[Arial]">{title}</div>
         <div className="mt-3 sm:ml-4">{childern}</div>
       </div>
     </div>
@@ -43,14 +43,14 @@ export default function StartAProject() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
+              className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col lg:flex-row">
                 Incididunt. tempor.
               </div>
-              <span className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw]">
+              <span className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw]">
                 Consec.
               </span>
             </div>

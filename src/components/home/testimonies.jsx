@@ -78,8 +78,8 @@ export default function Testimonies() {
               className="w-full h-full flex flex-col justify-center items-center"
             >
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
-                <h1 className=" font-bold text-[1.7vw]">NAME HERE</h1>
-                <span className="text-[1.3vw]">DESIGNATION @ COMPANY</span>
+                <h1 className=" font-bold text-xl lg:text-[1.7vw]">NAME HERE</h1>
+                <span className="lg:text-[1.3vw]">DESIGNATION @ COMPANY</span>
                 <span className="mt-8 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
                   {`
                 We are a new age brand incubator. We engineer,\n

@@ -32,7 +32,7 @@ export default function Work() {
                 Dolor
               </span>
             </div>
-            <span className="font-[PPNeueMontreal] lg:leading-[1.5] flex-col flex mt-10 lg:mt-0 lg:ml-10 text-sm sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="font-[PPNeueMontreal] lg:leading-[1.5] flex-col flex mt-10 lg:mt-0 lg:ml-10 text-md sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
               {`Lorem ipsum dolor sit amet, consectetur\n 
               adipiscing elit, sed do eiusmod tempor\n 
               incididunt ut labore et dolore magna\n 
