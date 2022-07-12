@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export const animateNavigation = (isRight=false) => {
+export const animateNavigation = (isRight=false, isDark=false) => {
   const timeline = gsap.timeline();
 
   timeline.to(".navigation", {
@@ -16,6 +16,7 @@ export const animateNavigation = (isRight=false) => {
     height: "100%",
     ease: "power2.inOut",
     borderRadius: 0,
+    backgroundColor: isDark ? "#1F1D1D" : "#1F1D1D",
   });
 
   timeline.to(".navigation .innerBox #navigation__list", {
@@ -46,7 +47,7 @@ export const animateNavigation = (isRight=false) => {
   });
 };
 
-export const reverseNavigation = (isRight=false) => {
+export const reverseNavigation = (isRight=false, isDark=false) => {
   const timeline = gsap.timeline();
   timeline.to(".cross_button", {
     duration: 0.2,
@@ -77,11 +78,12 @@ export const reverseNavigation = (isRight=false) => {
     height: isRight ? "18rem": "22vw",
     ease: "power2.inOut",
     borderRadius: " 0.75rem 0.75rem 0",
+    backgroundColor: isDark ? "#fff" : "#1F1D1D",
   });
   timeline.to(".navigation", {
     rotate: isRight ? "0deg" : "0deg",
     duration: 0.3,
-    width: isRight ? "auto": "4rem",
+    width: isRight ? "auto" : "4rem",
     position: "absolute",
   });
 };

@@ -31,7 +31,7 @@ export default function Landing() {
   return (
     <div
       className="w-full relative bg-[#FDFDFD] flex flex-col"
-      style={{ height }}
+      style={{ height: height - height * 0.05 }}
     >
       <Navigation />
       <Headers />

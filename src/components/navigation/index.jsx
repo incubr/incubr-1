@@ -9,9 +9,10 @@ import LinkedIn from "@/assets/linkedin.svg";
 import Image from "next/image";
 import Cross from "@/assets/cross.svg";
 
-export default function Navigation() {
+export default function Navigation({isDark=false}) {
   const [height, setHeight] = React.useState(0);
   const [opened, setOpened] = React.useState(false);
+  const [isRight, setIsRight] = React.useState(false);
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -30,13 +31,17 @@ export default function Navigation() {
       className="navigation flex w-auto lg:w-16 font-[Arial] z-[40] absolute right-0 lg:left-0  items-center"
       style={{ height }}
     >
-      <div className="innerBox w-auto transform rotate-180 lg:rotate-0 bg-[#1F1D1D] h-72 lg:h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center">
+      <div
+        className={`innerBox w-auto transform rotate-180 lg:rotate-0 ${
+          isDark ? "bg-white" : "bg-[#1F1D1D]"
+        } h-72 lg:h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center`}
+      >
         <button
           onClick={() => {
             if (opened) {
-              reverseNavigation();
+              reverseNavigation(false, isDark);
             } else {
-              animateNavigation();
+              animateNavigation(false, isDark);
             }
             setOpened(!opened);
           }}
@@ -50,7 +55,10 @@ export default function Navigation() {
               CLOSE
             </span>
           ) : (
-            <span style={{ writingMode: "vertical-rl" }} className="text-white">
+            <span
+              style={{ writingMode: "vertical-rl" }}
+              className={`${isDark ? "text-black" : "text-white"} `}
+            >
               MENU
             </span>
           )}
@@ -58,9 +66,10 @@ export default function Navigation() {
         <button
           onClick={() => {
             if (opened) {
-              reverseNavigation(true);
+              reverseNavigation(true, isDark);
             } else {
-              animateNavigation(true);
+              setIsRight(true)
+              animateNavigation(true, isDark);
             }
             setOpened(!opened);
           }}
@@ -68,14 +77,17 @@ export default function Navigation() {
             opened ? "hidden" : "block"
           } lg:hidden lg:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white`}
         >
-          <span style={{ writingMode: "vertical-rl" }} className="text-white">
+          <span
+            style={{ writingMode: "vertical-rl" }}
+            className={`${isDark ? "text-black" : "text-white"} `}
+          >
             MENU
           </span>
         </button>
         <button
           onClick={() => {
             setOpened(false);
-            reverseNavigation(true);
+            reverseNavigation(isRight, isDark);
           }}
           className="cross_button hidden opacity-0 absolute top-8 right-8 lg:top-16 lg:right-16"
         >
@@ -107,11 +119,15 @@ export default function Navigation() {
             id="button_section"
             className=" hidden flex-1 flex-col justify-end mt-10 lg:mt-0 space-y-5 lg:space-y-[1.8vw]"
           >
-            <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">Let's work together</h1>
+            <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
+              Let's work together
+            </h1>
             <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
               START A PROJECT
             </button>
-            <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">Follow us on </h1>
+            <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
+              Follow us on{" "}
+            </h1>
             <div className="flex space-x-3">
               <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                 <Image src={LinkedIn} />
