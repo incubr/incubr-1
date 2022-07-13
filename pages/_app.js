@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider>
-      {/* <div id="mainAnimation" className="fixed card-wrapper top-0 left-0 flex flex-col w-full h-0 overflow-y-auto z-[100]">
-        <div className="w-full card-wrapper h-full flex flex-col  ">
+      <div id="mainAnimation" className="fixed card-wrapper top-0 left-0 flex flex-col w-full h-0 overflow-y-auto z-[100]">
+        {/* <div className="w-full card-wrapper h-full flex flex-col  ">
           {`We are a new-age brand incubator that specializes in integrated
               digital solutions- website, app,`
             .split("")
@@ -44,8 +44,8 @@ function MyApp({ Component, pageProps }) {
                 )
               )
             )}
-        </div>
-      </div> */}
+        </div> */}
+      </div>
       <CursorProvider>
         <Component {...pageProps} />
       </CursorProvider>
