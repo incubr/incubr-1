@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Meta from "@/src/components/meta";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -53,6 +54,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider>
+      <Meta title="Incubr.com - Leading UI/UX and Web Development" />
       <div
         id="mainAnimation"
         className="fixed card-wrapper bottom-0 left-0 flex flex-col w-full h-0 pointer-events-none overflow-y-auto z-[100]"
@@ -62,21 +64,19 @@ function MyApp({ Component, pageProps }) {
           scrollamount="110"
           className="w-full card-wrapper h-full flex flex-col bg-[#1F1D1D] "
         >
-          {
-            `this is a test`.split("").map((_, i) =>
-              ["#1D1D1D", "#1A70C0", "#FDFDFD", "#332F2F", "#F0C808"].map(
-                (item, index) => (
-                  <div
-                    key={index + item + "dashboard"}
-                    style={{
-                      background: item,
-                    }}
-                    className="card w-full h-60 flex-none "
-                  />
-                )
+          {`this is a test`.split("").map((_, i) =>
+            ["#1D1D1D", "#1A70C0", "#FDFDFD", "#332F2F", "#F0C808"].map(
+              (item, index) => (
+                <div
+                  key={index + item + "dashboard"}
+                  style={{
+                    background: item,
+                  }}
+                  className="card w-full h-20 sm:h-[20vw] lg:h-[10vw] shadow-inner flex-none "
+                />
               )
             )
-          }
+          )}
         </marquee>
       </div>
       <ToastContainer
