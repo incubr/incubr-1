@@ -8,32 +8,15 @@ export const beforeAnimationStart = () => {
 };
 
 export const afterAnimationStart = () => {
-  let tl = gsap.timeline();
+  const tl = gsap.timeline();
   tl.to("#mainAnimation", {
     duration: 0.3,
-    height: 0,
+    top: 0,
+    height: "0vh",
+    opacity: 0,
     ease: "power3.out",
   });
+  tl.to("#mainAnimation", {
+    bottom: 0,
+  });
 };
-
-export default function loading() {
-  let cwWidth = document.querySelector(".card-wrapper").offsetHeight;
-  gsap
-    .timeline({
-      repeat: -1,
-      defaults: {
-        ease: "none",
-      },
-    })
-    .fromTo(
-      ".card-wrapper",
-      {
-        y: (i, el) => cwWidth * i,
-      },
-      {
-        y: (i, el, t) => -cwWidth * (t.length - i) * 25,
-        ease: "none",
-        duration: 60,
-      }
-    );
-}

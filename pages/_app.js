@@ -2,10 +2,11 @@ import "../styles/globals.css";
 import { Provider } from "../context";
 import CursorProvider from "../src/custom-cursor";
 import React from "react";
-import loading, {
+import  {
   afterAnimationStart,
   beforeAnimationStart,
 } from "@/src/animation/loading";
+import gsap from "gsap";
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,14 +16,38 @@ function MyApp({ Component, pageProps }) {
 
   React.useEffect(() => {
     router.events.on("routeChangeStart", () => {
-      // beforeAnimationStart();
-      // loading();
+      beforeAnimationStart();
     });
     router.events.on("routeChangeComplete", () => {
       // afterAnimationStart();
+      const tl = gsap.timeline();
+      setTimeout(() => {
+        tl.to("#mainAnimation", {
+          duration: 0.3,
+          top: 0,
+          height: 0,
+          opacity: 0,
+          ease: "power3.out",
+        }).to("#mainAnimation", {
+          bottom: 0,
+        });
+      }, 2000);
     });
     router.events.on("routeChangeError", () => {
       // afterAnimationStart();
+      const tl = gsap.timeline();
+      setTimeout(() => {
+        tl.to("#mainAnimation", {
+          duration: 0.3,
+          top: 0,
+          height: 0,
+          opacity: 0,
+          ease: "power3.out",
+        });
+        tl.to("#mainAnimation", {
+          bottom: 0,
+        });
+      }, 2000)
     });
   }, [router]);
 
@@ -30,13 +55,15 @@ function MyApp({ Component, pageProps }) {
     <Provider>
       <div
         id="mainAnimation"
-        className="fixed card-wrapper top-0 left-0 flex flex-col w-full h-0 overflow-y-auto z-[100]"
+        className="fixed card-wrapper bottom-0 left-0 flex flex-col w-full h-0 pointer-events-none overflow-y-auto z-[100]"
       >
-        {/* <div className="w-full card-wrapper h-full flex flex-col  ">
-          {`We are a new-age brand incubator that specializes in integrated
-              digital solutions- website, app,`
-            .split("")
-            .map((_, i) =>
+        <marquee
+          direction="up"
+          scrollamount="110"
+          className="w-full card-wrapper h-full flex flex-col bg-[#1F1D1D] "
+        >
+          {
+            `this is a test`.split("").map((_, i) =>
               ["#1D1D1D", "#1A70C0", "#FDFDFD", "#332F2F", "#F0C808"].map(
                 (item, index) => (
                   <div
@@ -48,8 +75,9 @@ function MyApp({ Component, pageProps }) {
                   />
                 )
               )
-            )}
-        </div> */}
+            )
+          }
+        </marquee>
       </div>
       <ToastContainer
         position="bottom-left"

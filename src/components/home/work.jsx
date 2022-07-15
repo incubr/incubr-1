@@ -33,14 +33,14 @@ export default function OurWork() {
           className="flex flex-nowrap h-screen p-4 w-full my-10"
         >
           {work.map((i) => (
-            <Slides data={i} key={"sadasdasd" + i.toString()} />
+            <Slides data={i} key={"sadasdasd" + i.id.toString()} />
           ))}
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row  sm:space-y-auto flex-wrap lg:hidden w-full px-6 sm:px-10">
         {work.map((i) => (
-          <MobileSlide data={i} key={"sadasdasd" + i.toString()} />
+          <MobileSlide data={i} key={"sadasdassd" + i.id.toString()} />
         ))}
       </div>
     </>

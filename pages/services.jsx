@@ -76,7 +76,7 @@ export default function Services() {
           <h1 className="flex text-xl lg:text-[2.2vw] text-center lg:text-start lg:leading-[2.5vw]">
             Let us partner and build your dream company together.
           </h1>
-          <h1 className="flex text-7xl flex-col sm:flex-row lg:text-[4.5vw] lg:ml-[4vw]">
+          <h1 className="flex text-7xl flex-col sm:flex-row text-center sm:text-start lg:text-[4.5vw] lg:ml-[4vw]">
             <span className="border-b border-[#1F1D1D] sm:mr-5">Connect</span>
             Today{" "}
           </h1>
