@@ -18,7 +18,7 @@ export default function Footer({ isDark = false }) {
   return (
     <div className="w-full flex flex-col items-center">
       <div
-        className={`flex w-full  bottom-10 mt-10 lg:h-[28vw] items-center justify-center`}
+        className={`flex w-full  bottom-10 mt-10 h-[100vw] sm:h-[50vw] lg:h-[28vw] items-center justify-center`}
       >
         <div className="flex w-[100%] justify-center">
           <div
@@ -38,9 +38,9 @@ export default function Footer({ isDark = false }) {
         } flex justify-center`}
       >
         <footer
-          className={` h-screen px-10  space-y-6 lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center`}
+          className={` h-screen px-10  space-y-6 sm:space-y-[10vw] lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center`}
         >
-          <div className="flex flex-col space-y-6 lg:space-y-[3vw] justify-start items-start">
+          <div className="flex flex-col space-y-6 sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
             <Link href={"/"}>
               <Image src={isDark ? DarkLogo : Logo} />
             </Link>
@@ -60,10 +60,10 @@ export default function Footer({ isDark = false }) {
             <div
               className={`flex ${
                 isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-              } w-full`}
+              } w-full justify-between`}
             >
               <div className="flex flex-1 ">
-                <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
+                <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-sm sm:text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
                   <span className="px-[1.8vw] sm:px-0 font-bold">Our Work</span>
                   {work.map((item, index) => (
                     <Link key={"work" + index} href={"/work"}>
@@ -72,7 +72,7 @@ export default function Footer({ isDark = false }) {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-1 sm:flex-[2]">
+              <div className="flex flex-1 sm:flex-1 lg:flex-[2]">
                 <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.7vw] opacity-50">
                   {navigation_link.map((item, index) => (
                     <Link key={"naviga" + index} href={item.link}>

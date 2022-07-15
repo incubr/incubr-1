@@ -13,7 +13,7 @@ export default function WorkCard({data, isEven }) {
         } flex-1 text-white pb-20 px-4 mt-5 lg:pb-[6vw] font-[PPNeueMontreal]`}
       >
         <div className="flex lg:leading-[4vw] justify-end lg:text-[2vw]">
-          01.
+          0{data.id}.
         </div>
         <div className="flex w-[100%] flex-col ml-[3vw]">
           <span className="">{data.category}</span>
