@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WorkCard({ isEven }) {
+export default function WorkCard({data, isEven }) {
   return (
     <div
       className={`w-full flex ${
@@ -16,14 +16,12 @@ export default function WorkCard({ isEven }) {
           01.
         </div>
         <div className="flex w-[100%] flex-col ml-[3vw]">
-          <h1 className="lg:text-[3vw] lg:leading-[4vw] text-3xl sm:text-4xl w-[80%] sm:w-[60%]">
-            Lorem Ipsum Dolor
+          <span className="">{data.category}</span>
+          <h1 className="lg:text-[2.7vw] lg:leading-[3.5vw] text-3xl sm:text-4xl w-[80%] sm:w-[80%]">
+            {data.title}
           </h1>
           <span className=" mt-6 sm:mt-10 lg:mt-[2.7vw] lg:leading-[1.5vw] text-sm lg:text-[1.1vw]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {data.description}
           </span>
         </div>
       </div>

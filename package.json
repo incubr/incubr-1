@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "gsap": "^3.10.4",
     "gsap-trial": "^3.10.4",
     "moment": "^2.29.4",
     "mongoose": "^6.4.3",
     "next": "12.2.0",
+    "nodemailer": "^6.7.7",
     "react": "18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
@@ -23,6 +25,7 @@
     "react-nice-scroll": "^1.0.0",
     "react-special-cursor": "^1.2.1",
     "react-text-transition": "^3.0.2",
+    "react-toastify": "^9.0.5",
     "swiper": "^8.3.0"
   },
   "devDependencies": {

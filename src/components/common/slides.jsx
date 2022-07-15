@@ -1,8 +1,8 @@
+import Link from "next/link";
 import React from "react";
-import { Store } from "../../../context";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 
-export default function Slides() {
+export default function Slides({data}) {
   const onMouseEnter = () => {
     const customCursor = document.querySelector(".cursor");
     customCursor.style.width = "10rem";
@@ -26,7 +26,7 @@ export default function Slides() {
         <div className="flex flex-1 flex-col justify-end">
           <h1 className="font-bold text-[1.5vw]">. 01 -05</h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
-            Growth School
+            {data.title}
           </h1>
           <span className=" font-bold text-[1.3vw]">COLLABORATORS</span>
           <span className="font-bold mt-5">Collaborator 1</span>
@@ -34,22 +34,28 @@ export default function Slides() {
           <span className="font-bold ">Collaborator 1</span>
         </div>
         <div className="flex flex-1 flex-col h-full items-end justify-end">
-          <button onMouseMove={buttonMouseEnter} onMouseLeave={onMouseEnter} className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:text-[#F0C808] hover:shadow-md flex-none w-[15vw] px-5 py-3 text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider">
-            VIEW CASE STUDY
-          </button>
+          <Link href={"/work"}>
+            <button
+              onMouseMove={buttonMouseEnter}
+              onMouseLeave={onMouseEnter}
+              className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:text-[#F0C808] hover:shadow-md flex-none w-[15vw] px-5 py-3 text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
+            >
+              VIEW CASE STUDY
+            </button>
+          </Link>
         </div>
       </div>
     </section>
   );
 }
 
-export const MobileSlide = () => {
+export const MobileSlide = ({data}) => {
   return (
     <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#D9D9D9] rounded-xl w-full sm:w-[48%]">
       <div className="flex ">
         <h1 className="font-bold text-xl flex-1">. 01 -05</h1>
         <div className=" flex flex-[2] flex-col">
-          <h1 className="font-[500] tracking-wide text-2xl">Growth School</h1>
+          <h1 className="font-[500] tracking-wide text-2xl">{data.title}</h1>
           <span className=" font-[400] mt-3 text-xl">COLLABORATORS</span>
           <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
           <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
@@ -64,4 +70,4 @@ export const MobileSlide = () => {
       ></div>
     </div>
   );
-}
+};

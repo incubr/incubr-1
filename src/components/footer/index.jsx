@@ -12,6 +12,7 @@ import LinkedInLight from "@/assets/linkedin.svg";
 import moment from "moment";
 import ArrowDown from "@/assets/arrowDown.svg";
 import { navigation_link } from "@/data/link";
+import { work } from "@/data/work";
 
 export default function Footer({ isDark = false }) {
   return (
@@ -62,12 +63,13 @@ export default function Footer({ isDark = false }) {
               } w-full`}
             >
               <div className="flex flex-1 ">
-                <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.7vw] opacity-50">
+                <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
                   <span className="px-[1.8vw] sm:px-0 font-bold">Our Work</span>
-                  <span className="px-[1.8vw] sm:px-0">Work 1</span>
-                  <span className="px-[1.8vw] sm:px-0">Work 2</span>
-                  <span className="px-[1.8vw] sm:px-0">Work 3</span>
-                  <span className="px-[1.8vw] sm:px-0">Work 4</span>
+                  {work.map((item, index) => (
+                    <Link key={"work" + index} href={"/work"}>
+                      <span className="px-[1.8vw] sm:px-0">{item.title}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
               <div className="flex flex-1 sm:flex-[2]">

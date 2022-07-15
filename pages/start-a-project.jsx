@@ -7,6 +7,7 @@ import Headers from "@/src/components/headers";
 import Image from "next/image";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Footer from "@/src/components/footer";
+import {toast} from "react-toastify"
 
 const ElevatedBox = ({ childern, title, notBorder = false }) => {
   return (
@@ -25,13 +26,64 @@ const ElevatedBox = ({ childern, title, notBorder = false }) => {
   );
 };
 
+const validation_keys = [
+  "exist",
+  "dBussiness",
+  "serviceOffer",
+  "target",
+  "unique",
+  "features",
+  "marketing",
+  "maintaince",
+  "budget",
+  "date",
+  "guide",
+  "name",
+  "company",
+  "email",
+  "phNumber",
+];
+
 export default function StartAProject() {
   const { height } = React.useContext(Store);
-  const [form, setForm] = React.useState({});
+  const [form, setForm] = React.useState({guides: ""});
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
+  const validate_form = () => {
+    let valid = true;
+    validation_keys.forEach((key) => {
+      if (!form[key]) {
+        valid = false;
+      }
+    });
+    return valid;
+  }
+
+  const saveStartAProject = async () => {
+    
+    if (validate_form()) {
+      const response = await fetch("/api/start-a-project", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json();
+      if (data.success) {
+        toast.success("Your request has been sent successfully");
+      } else {
+        toast.error("Something went wrong");
+      }
+    } else {
+      toast.error("Please fill all the fields");
+    }
+  }
+
+
 
   return (
     <div className="w-full scroll-smooth">
@@ -76,7 +128,7 @@ export default function StartAProject() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-xl lg:text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
-                lorem ipsum
+                Scroll Down
               </h1>
             </div>
           </div>
@@ -453,10 +505,10 @@ export default function StartAProject() {
               <div className=" shadow-inherit">
                 <button
                   onClick={() => {
-                    // toast.promise(saveStartAProject(), {
-                    //   pending: "Sending information...",
-                    //   error: "Something went wrong! We are fixing the problem",
-                    // });
+                    toast.promise(saveStartAProject(), {
+                      pending: "Sending information...",
+                      error: "Something went wrong! We are fixing the problem",
+                    });
                   }}
                   className="text-white button hover:bg-[#F0C808] hover:text-black transition-colors  ease-in-out duration-200 text-3xl lg:text-[4vw] py-5 lg:py-[2vw] px-10 lg:px-[2vw] font-[PPNeueMontreal] tracking-widest rounded-3xl lg:rounded-[4vw] font-bold bg-[#1F1D1D]"
                 >

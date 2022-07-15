@@ -8,6 +8,7 @@ import { DarkHeaders } from "@/src/components/headers";
 import Image from "next/image";
 import WorkCard from "@/src/components/common/workcard";
 import Footer from "@/src/components/footer";
+import { work } from "@/data/work";
 
 export default function Work() {
   const { height } = React.useContext(Store);
@@ -27,16 +28,17 @@ export default function Work() {
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col lg:flex-row">Lorem Ipsum </div>
+              <div className="flex flex-col lg:flex-row">Featured Case </div>
               <span className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw]">
-                Dolor
+                Studies
               </span>
             </div>
-            <span className="font-[PPNeueMontreal] lg:leading-[1.5] flex-col flex mt-10 lg:mt-0 lg:ml-10 text-md sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`Lorem ipsum dolor sit amet, consectetur\n 
-              adipiscing elit, sed do eiusmod tempor\n 
-              incididunt ut labore et dolore magna\n 
-              aliqua.`
+            <span className="font-[PPNeueMontreal] lg:leading-[1.5] flex-col flex mt-10 lg:mt-0 lg:ml-10 text-sm sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+              {`From new ideas we tested to client\n
+               successes, read our case studies to\n
+                learn how we've helped various industries\n
+                 transform their businesses and stay\n
+                  at the top of the ever-changing environment.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
@@ -54,7 +56,7 @@ export default function Work() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-white text-xl lg:text-[1.3vw] font-[PPNeueMontreal] tracking-widest">
-                lorem ipsum
+                Scroll Down
               </h1>
             </div>
           </div>
@@ -63,8 +65,8 @@ export default function Work() {
 
       <div className="w-full flex bg-[#1F1D1D] justify-center pb-20 ">
         <div className=" w-full sm:w-[60%] lg:w-[70%] flex mt-10 lg:mt-[4vw] flex-col ">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <WorkCard key={"sadasder" + i} isEven={i % 2 === 0} />
+          {work.map((i) => (
+            <WorkCard data={i} key={"sadasder" + i.id} isEven={i.id % 2 === 0} />
           ))}
         </div>
       </div>

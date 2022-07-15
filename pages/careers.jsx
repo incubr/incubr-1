@@ -55,7 +55,7 @@ export default function Careers() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-xl lg:text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
-                lorem ipsum
+                Scroll Down
               </h1>
             </div>
           </div>

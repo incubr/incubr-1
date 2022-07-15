@@ -6,7 +6,7 @@ export const slides = [
     name: "Chirag Heda",
     backgroundImage: "/testimonial_1.jpg",
     description: "Head of Customer Experience, Jupiter",
-    text: "Team INCUBER is a great partner in our first brand appearance. The Firstlist campaign met its objectives and was appreciated on how different the site experience was as compared to conventional banks. The Team Showed ownership & was available + responses were prompt throughout the entire campaign period. They Pushed for clarity/closure on designs.",
+    text: `Team INCUBER is a great partner in our first brand appearance. The Firstlist campaign met its objectives and was appreciated on how different the site experience was as compared to conventional banks. The Team Showed ownership & was available + responses were prompt throughout the entire campaign period. They Pushed for clarity/closure on designs.`,
   },
   {
     id: 223,

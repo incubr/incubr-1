@@ -56,7 +56,7 @@ export default function Services() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-white text-xl lg:text-[1.3vw] font-[PPNeueMontreal] tracking-widest">
-                lorem ipsum
+                Scroll Down
               </h1>
             </div>
           </div>

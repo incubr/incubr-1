@@ -4,13 +4,12 @@ import Description from "../common/Description";
 import HeadingText from "../common/Heading";
 import Slides, { MobileSlide } from "../common/slides";
 import { onmouseleave } from "../../custom-cursor";
+import { work } from "@/data/work";
 
 export default function OurWork() {
-
   React.useEffect(() => {
     GSAPHorizontalScroll();
   }, []);
-
 
   return (
     <>
@@ -27,21 +26,21 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className="hidden lg:flex w-full h-[350vw] xl:h-[320vw] -z-10"
+        className={`hidden lg:flex w-full h-[450vw] xl:h-[420vw] -z-10`}
       >
         <div
           id="PageWrap"
           className="flex flex-nowrap h-screen p-4 w-full my-10"
         >
-          {[1, 2, 3].map((i) => (
-            <Slides key={"sadasdasd" + i.toString()} />
+          {work.map((i) => (
+            <Slides data={i} key={"sadasdasd" + i.toString()} />
           ))}
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row  sm:space-y-auto flex-wrap lg:hidden w-full px-6 sm:px-10">
-        {[1, 2, 3].map((i) => (
-          <MobileSlide key={"sadasdasd" + i.toString()} />
+        {work.map((i) => (
+          <MobileSlide data={i} key={"sadasdasd" + i.toString()} />
         ))}
       </div>
     </>
