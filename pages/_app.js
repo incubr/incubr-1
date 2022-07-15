@@ -15,14 +15,14 @@ function MyApp({ Component, pageProps }) {
 
   React.useEffect(() => {
     router.events.on("routeChangeStart", () => {
-      beforeAnimationStart();
-      loading();
+      // beforeAnimationStart();
+      // loading();
     });
     router.events.on("routeChangeComplete", () => {
-      afterAnimationStart();
+      // afterAnimationStart();
     });
     router.events.on("routeChangeError", () => {
-      afterAnimationStart();
+      // afterAnimationStart();
     });
   }, [router]);
 
