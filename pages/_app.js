@@ -59,20 +59,32 @@ function MyApp({ Component, pageProps }) {
         id="mainAnimation"
         className="fixed card-wrapper bottom-0 left-0 flex flex-col w-full h-0 pointer-events-none overflow-y-auto z-[100]"
       >
+        {["#2E5894", "#627573", "#969252", "#C8AF30", "#FDCC0D"].map(
+          (item, index) => (
+            <div
+              key={index + item + "dashboard"}
+              style={{
+                background: item,
+              }}
+              className="card w-full card-wrapper-20 h-20 sm:h-[20vw] lg:h-[10vw] shadow-inner flex-none "
+            />
+          )
+        )}
         <marquee
           direction="up"
-          scrollamount="110"
-          className="w-full card-wrapper h-full flex flex-col bg-[#1F1D1D] "
+          scrollamount="130"
+          loop={true}
+          className="w-full absolute top-0 left-0 card-wrapper-01 h-full flex flex-col bg-[#1F1D1D] "
         >
-          {`this is a test`.split("").map((_, i) =>
-            ["#1D1D1D", "#1A70C0", "#FDFDFD", "#332F2F", "#F0C808"].map(
+          {`this`.split("").map((_) =>
+            ["#2E5894", "#627573", "#969252", "#C8AF30", "#FDCC0D"].map(
               (item, index) => (
                 <div
                   key={index + item + "dashboard"}
                   style={{
                     background: item,
                   }}
-                  className="card w-full h-20 sm:h-[20vw] lg:h-[10vw] shadow-inner flex-none "
+                  className="card w-full card-wrapper-20 h-20 sm:h-[20vw] lg:h-[10vw] shadow-inner flex-none "
                 />
               )
             )

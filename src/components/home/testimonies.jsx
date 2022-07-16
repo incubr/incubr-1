@@ -16,7 +16,7 @@ const Pagination = ({ activeIndex }) => {
     <span className="mt-10 flex button text-[1.3vw] justify-center space-x-2">
       {slides.map((e, index) => (
         <span
-          key={"sadasd" + e}
+          key={"sadashjgjhd" + e}
           onClick={() => swiper.slideTo(index)}
           className={`w-4 h-4 ${
             activeIndex % 3 === index ? "bg-transparent" : "bg-white"
