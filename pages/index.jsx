@@ -7,6 +7,7 @@ import OurWork from "@/src/components/home/work";
 import { Store } from "@/context";
 import Lottie from "react-lottie";
 import Animated from "@/assets/lf20_fnddduvc.json";
+import LogoAnimated from "@/assets/animation_l5o8netn.json";
 
 export default function Home() {
   const { seconds, canShow, height } = React.useContext(Store);
@@ -14,6 +15,14 @@ export default function Home() {
     loop: true,
     autoplay: true,
     animationData: Animated,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const defaultOptionsLogo = {
+    loop: true,
+    autoplay: true,
+    animationData: LogoAnimated,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -29,7 +38,7 @@ export default function Home() {
             <div className=" mt-16 lg:mt-0 px-6 text-white sm:px-16 lg:px-0">
               <div className=" font-[Arial] text-4xl sm:text-7xl lg:text-[4.3vw] flex flex-col">
                 <span className=" font-[Arial] text-4xl sm:text-7xl lg:text-[4.3vw]">
-                  Incubr
+                  <Lottie options={defaultOptionsLogo} height={42} width={250} />
                 </span>
               </div>
             </div>

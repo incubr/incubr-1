@@ -17,23 +17,23 @@ export const Provider = ({ children }) => {
         await sleep(120);
         setSeconds(i);
         if (i === 100) {
-          gsap.to(".loading-animation", {
-            duration: 1,
-            position: "absolute",
-            opacity: 0,
-            ease: "power3.out",
-            zIndex: -1,
-          });
-          setTimeout(() => {
-            gsap.to(".loading-animation", {
-              delay: 1,
-              width: "0",
-              translateX: "-100%",
-            });
-          }, 2000);
-          setTimeout(() => {
-            setCanShow(false);
-          }, 3000);
+          // gsap.to(".loading-animation", {
+          //   duration: 1,
+          //   position: "absolute",
+          //   opacity: 0,
+          //   ease: "power3.out",
+          //   zIndex: -1,
+          // });
+          // setTimeout(() => {
+          //   gsap.to(".loading-animation", {
+          //     delay: 1,
+          //     width: "0",
+          //     translateX: "-100%",
+          //   });
+          // }, 2000);
+          // setTimeout(() => {
+          //   setCanShow(false);
+          // }, 3000);
         }
       }
     };
