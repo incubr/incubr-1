@@ -74,9 +74,9 @@ function MyApp({ Component, pageProps }) {
           direction="up"
           scrollamount="130"
           loop={true}
-          className="w-full absolute top-0 left-0 card-wrapper-01 h-full flex flex-col bg-[#1F1D1D] "
+          className="w-full absolute top-0 left-0 card-wrapper-01 h-full flex flex-col "
         >
-          {`this`.split("").map((_) =>
+          {`this is animation for page change`.split("").map((_) =>
             ["#2E5894", "#627573", "#969252", "#C8AF30", "#FDCC0D"].map(
               (item, index) => (
                 <div
