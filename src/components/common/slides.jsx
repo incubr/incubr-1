@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 
-export default function Slides({data}) {
+export default function Slides({data, index, total}) {
   const onMouseEnter = () => {
     const customCursor = document.querySelector(".cursor");
     customCursor.style.width = "10rem";
@@ -16,7 +16,7 @@ export default function Slides({data}) {
   return (
     <section
       style={{
-        backgroundImage: `url("https://cdn.pixabay.com/photo/2022/07/05/10/54/ocean-7302776__480.jpg")`,
+        backgroundImage: `url("${data.image}")`,
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onmouseleave}
@@ -24,7 +24,7 @@ export default function Slides({data}) {
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-1 flex-col justify-end">
-          <h1 className="font-bold text-[1.5vw]">. 01 -05</h1>
+          <h1 className="font-bold text-[1.5vw]">. 0{index} -0{total}</h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
             {data.title}
           </h1>
@@ -38,7 +38,7 @@ export default function Slides({data}) {
             <button
               onMouseMove={buttonMouseEnter}
               onMouseLeave={onMouseEnter}
-              className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:text-[#F0C808] hover:shadow-md flex-none w-[15vw] px-5 py-3 text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
+              className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#000] hover:shadow-md flex-none w-[15vw] px-5 py-3 text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
             >
               VIEW CASE STUDY
             </button>

@@ -32,8 +32,13 @@ export default function OurWork() {
           id="PageWrap"
           className="flex flex-nowrap h-screen p-4 w-full my-10"
         >
-          {work.map((i) => (
-            <Slides data={i} key={"sadasdasd" + i.id.toString()} />
+          {work.map((i, index) => (
+            <Slides
+              data={i}
+              index={index + 1}
+              total={work.length}
+              key={"sadasdasd" + i.id.toString()}
+            />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WorkCard({data, isEven }) {
+export default function WorkCard({ data, isEven }) {
   return (
     <div
       className={`w-full flex ${
@@ -26,7 +26,12 @@ export default function WorkCard({data, isEven }) {
         </div>
       </div>
       <div className="flex flex-1 p-4 px-0 sm:px-4 ">
-        <div className="w-full  bg-gray-400 h-60 lg:h-auto"></div>
+        <div
+          className="w-full  bg-gray-400 h-60 bg-cover lg:h-auto"
+          style={{
+            backgroundImage: `url(${data.image})`,
+          }}
+        ></div>
       </div>
     </div>
   );
