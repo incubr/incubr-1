@@ -47,7 +47,7 @@ export default function Services() {
           </div>
         </div>
         <div className="flex w-full lg:absolute bottom-10 justify-center">
-          <div className="flex w-[85%] justify-end">
+          <div className="flex w-[85%] items-end flex-col">
             <div
               onClick={() => window.scrollTo(0, height)}
               className="button cursor-pointer w-32 lg:w-44 h-32 lg:h-44 flex flex-col items-center justify-between"
@@ -55,10 +55,10 @@ export default function Services() {
               <div className="lg:w-36 w-24 h-24 lg:h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out bg-[#F0C808] flex rounded-full border justify-center items-center">
                 <Image src={ArrowDown} />
               </div>
-              <h1 className="font-bold text-white text-xl lg:text-[1.3vw] font-[PPNeueMontreal] tracking-widest">
-                Happy to serve
-              </h1>
             </div>
+            <h1 className="font-bold text-white text-xl lg:text-[1.2vw] font-[PPNeueMontreal] tracking-widest">
+              Happy to serve
+            </h1>
           </div>
         </div>
       </div>
