@@ -33,9 +33,10 @@ export default function Testimonies() {
 
   return (
     <>
+      <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
       <div
         id="testimonies"
-        className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D] lg:h-[25vw]"
+        className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
       >
         <div className="flex flex-1"></div>
         <div className="flex flex-1 justify-center items-center flex-col">
@@ -58,8 +59,7 @@ export default function Testimonies() {
           </div>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 sm:h-[50vh] lg:h-[100vh] bg-[#1F1D1D]">
-        <div className="flex w-32 h-32 lg:w-[15vw] lg:h-[15vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
+        <div className="flex w-32 h-32 lg:w-[12vw] lg:h-[12vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
           <div
             id="test_profile_pic"
             className="w-full h-full rounded-full bg-cover "
@@ -92,7 +92,7 @@ export default function Testimonies() {
                   {slides[activeIndex % slides.length].name}
                 </h1>
                 <span className="lg:text-[1.3vw]">{slides[activeIndex % slides.length].description}</span>
-                <span className="mt-8 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
+                <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
                   {slides[activeIndex % slides.length].text.split("\n").map((text) => (
                     <span key={text} className="text-white">
                       {text}
@@ -113,12 +113,12 @@ export default function Testimonies() {
         </Swiper>
       </div>
 
-      <div className="w-full sm:h-[20vh] lg:h-[22vw] items-center bg-[#1F1D1D]">
+      <div className="w-full sm:h-[20vh] lg:h-[22vw] flex items-center bg-[#1F1D1D]">
         <Marquee
           gradient={false}
           speed={60}
           direction={"left"}
-          className="w-full flex items-center overflow-x-auto"
+          className="w-full flex items-center justify-center overflow-x-auto"
         >
           {brands.map((items) => (
             <span key={items.src} className="flex-none -mr-48 sm:-mr-20 lg:mr-0">

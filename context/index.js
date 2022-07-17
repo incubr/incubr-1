@@ -14,7 +14,7 @@ export const Provider = ({ children }) => {
     };
     const doLoading = async () => {
       for (let i = 0; i <= 100; i++) {
-        await sleep(50);
+        await sleep(20);
         setSeconds(i);
         if (i === 100) {
           gsap.to(".loading-animation", {
