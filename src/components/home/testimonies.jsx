@@ -34,31 +34,30 @@ export default function Testimonies() {
   return (
     <>
       <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
-      <div
-        id="testimonies"
-        className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
-      >
-        <div className="flex flex-1"></div>
-        <div className="flex flex-1 justify-center items-center flex-col">
-          <div className="flex px-5 py-2 text-5xl mt-16 lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
-            <h1 className="uppercase">TESTIMONIES</h1>
-          </div>
-          <div className="hidden lg:flex flex-1 justify-center items-center">
-            <Description
-              text={
-                "Its truly gratifying when our customers find our\n work valuable and purposeful."
-              }
-            />
-          </div>
-          <div className="lg:hidden flex flex-1 justify-center items-center">
-            <Description
-              text={
-                "Its truly gratifying when our customers find our work valuable and purposeful."
-              }
-            />
+        <div
+          id="testimonies"
+          className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
+        >
+          <div className="flex flex-1"></div>
+          <div className="flex flex-1 justify-center items-center flex-col">
+            <div className="flex px-5 py-2 text-5xl lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
+              <h1 className="uppercase">TESTIMONIES</h1>
+            </div>
+            <div className="hidden lg:flex flex-1 justify-center items-center">
+              <Description
+                text={
+                  "Its truly gratifying when our customers find our\n work valuable and purposeful."
+                }
+              />
+            </div>
+            <div className="lg:hidden flex flex-1 justify-center items-center">
+              <span className="text-center">
+                Its truly gratifying when our customers find our work valuable
+                and purposeful.
+              </span>
+            </div>
           </div>
         </div>
-      </div>
         <div className="flex w-32 h-32 lg:w-[12vw] lg:h-[12vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
           <div
             id="test_profile_pic"
@@ -91,20 +90,26 @@ export default function Testimonies() {
                 <h1 className=" font-bold text-xl lg:text-[1.7vw]">
                   {slides[activeIndex % slides.length].name}
                 </h1>
-                <span className="lg:text-[1.3vw]">{slides[activeIndex % slides.length].description}</span>
-                <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
-                  {slides[activeIndex % slides.length].text.split("\n").map((text) => (
-                    <span key={text} className="text-white">
-                      {text}
-                    </span>
-                  ))}
+                <span className="lg:text-[1.3vw]">
+                  {slides[activeIndex % slides.length].description}
                 </span>
-                <span className="mt-8 flex lg:hidden flex-col text-center items-center">
-                  {slides[activeIndex % slides.length].text.split("\n").map((text, index) => (
-                    <span key={text + index} className="text-white">
-                      {text}
-                    </span>
-                  ))}
+                <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
+                  {slides[activeIndex % slides.length].text
+                    .split("\n")
+                    .map((text) => (
+                      <span key={text} className="text-white">
+                        {text}
+                      </span>
+                    ))}
+                </span>
+                <span className="mt-4 flex lg:hidden flex-col text-center items-center">
+                  {slides[activeIndex % slides.length].text
+                    .split("\n")
+                    .map((text, index) => (
+                      <span key={text + index} className="text-white">
+                        {text}
+                      </span>
+                    ))}
                 </span>
               </div>
             </SwiperSlide>
@@ -121,7 +126,10 @@ export default function Testimonies() {
           className="w-full flex items-center justify-center overflow-x-auto"
         >
           {brands.map((items) => (
-            <span key={items.src} className="flex-none -mr-48 sm:-mr-20 lg:mr-0">
+            <span
+              key={items.src}
+              className="flex-none -mr-48 sm:-mr-20 lg:mr-0"
+            >
               <Image key={items.src} src={items} />
             </span>
           ))}
