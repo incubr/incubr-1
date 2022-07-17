@@ -9,7 +9,7 @@ export default function Headers() {
     <div className="flex w-full justify-center absolute top-0 left-0">
       <div className="w-[85%] flex justify-between mt-16 2xl:mt-20">
         <Link href={"/"}>
-          <Image src={Logo} />
+          <Image src={Logo} className=" cursor-pointer" />
         </Link>
         <Link href={"/start-a-project"}>
           <button className="hidden button rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl">
@@ -26,7 +26,7 @@ export const DarkHeaders = () => {
     <div className="flex w-full justify-center absolute top-0 left-0">
       <div className="w-[85%] flex justify-between mt-16 2xl:mt-20">
         <Link href={"/"}>
-          <Image src={DarkLogo} />
+          <Image src={DarkLogo} className=" cursor-pointer" />
         </Link>
         <Link href={"/start-a-project"}>
           <button className="hidden button rounded-full tracking-wider hover:shadow-md text-[#1F1D1D] bg-[#fff] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl">

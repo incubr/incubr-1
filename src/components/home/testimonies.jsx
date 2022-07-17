@@ -57,9 +57,9 @@ export default function Testimonies() {
           </div>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-col justify-center items-center font-[PPNeueMontreal] p-4 sm:h-[50vh] lg:h-[100vh] bg-[#1F1D1D]">
+      <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 sm:h-[50vh] lg:h-[100vh] bg-[#1F1D1D]">
         <div className="flex w-32 h-32 lg:w-[15vw] lg:h-[15vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
-          <div className="w-full h-full rounded-full " style={{
+          <div className="w-full h-full rounded-full bg-cover " style={{
             backgroundImage: `url(${slides[activeIndex % slides.length].backgroundImage})`,
           }}></div>
         </div>

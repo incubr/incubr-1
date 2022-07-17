@@ -128,7 +128,7 @@ export default function StartAProject() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-xl lg:text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
-                Scroll Down
+                Let's start
               </h1>
             </div>
           </div>

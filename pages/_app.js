@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         }).to("#mainAnimation", {
           bottom: 0,
         });
-      }, 2000);
+      }, 700);
     });
     router.events.on("routeChangeError", () => {
       // afterAnimationStart();
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
         tl.to("#mainAnimation", {
           bottom: 0,
         });
-      }, 2000)
+      }, 700)
     });
   }, [router]);
 

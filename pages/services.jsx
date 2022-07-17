@@ -56,7 +56,7 @@ export default function Services() {
                 <Image src={ArrowDown} />
               </div>
               <h1 className="font-bold text-white text-xl lg:text-[1.3vw] font-[PPNeueMontreal] tracking-widest">
-                Scroll Down
+                Happy to serve
               </h1>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Services() {
       </div>
 
       <div className="flex font-[PPNeueMontreal] pb-10 flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
-        <div className=" w-[85%] h-[78vh] bg-white flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
+        <div className=" w-[85%] h-[78vh] bg-[#F0C808] flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
           <h1 className="flex text-xl lg:text-[2.2vw] text-center lg:text-start lg:leading-[2.5vw]">
             Let us partner and build your dream company together.
           </h1>

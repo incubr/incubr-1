@@ -4,14 +4,14 @@ export const animateNavigation = (isRight=false, isDark=false) => {
   const timeline = gsap.timeline();
 
   timeline.to(".navigation", {
-    duration: 0.2,
+    duration: 0.3,
     width: "100%",
     position: "fixed",
     rotate: isRight ? "180deg" : "0deg",
   });
   
   timeline.to(".navigation .innerBox", {
-    duration: 0.5,
+    duration: 0.4,
     width: "100%",
     height: "100%",
     ease: "power2.inOut",
@@ -20,7 +20,7 @@ export const animateNavigation = (isRight=false, isDark=false) => {
   });
 
   timeline.to(".navigation .innerBox #navigation__list", {
-    duration: 0.5,
+    duration: 0.3,
     flex: "1",
     display: "flex",
     ease: "power2.inOut",
@@ -30,7 +30,7 @@ export const animateNavigation = (isRight=false, isDark=false) => {
     duration: 0.5,
     translateY: 0,
     ease: "power2.inOut",
-    stagger: 0.2,
+    stagger: 0.1,
     opacity: 0.5,
   });
 
@@ -39,12 +39,12 @@ export const animateNavigation = (isRight=false, isDark=false) => {
   });
   
   timeline.to(".navigation .innerBox #button_section", {
-    duration: 0.5,
+    duration: 0.2,
     display: "flex",
   });
 
   timeline.to(".cross_button", {
-    duration: 0.5,
+    duration: 0.2,
     opacity: 1,
     ease: "power2.inOut",
     display: "flex",

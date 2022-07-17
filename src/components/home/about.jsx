@@ -5,29 +5,23 @@ import SmallArrow from "@/assets/Vector (1).svg";
 import Image from "next/image";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 import Link from "next/link";
+import { onMouseEnterOnTitle } from "./landing";
 
 export default function About() {
   const { height } = React.useContext(Store);
 
-  const onMouseEnter = () => {
-    const customCursor = document.querySelector(".cursor");
-    customCursor.style.width = "12rem";
-    customCursor.style.height = "12rem";
-    customCursor.classList.replace("bg-black", "bg-white");
-    customCursor.classList.replace("bg-opacity-25", "bg-opacity-100");
-    customCursor.innerHTML = `<span className="font-bold font-[PPNeueMontreal] tracking-wider">explore</span><span className="font-bold font-[PPNeueMontreal] tracking-wider">furthur</span>`;
-  };
-
   return (
     <div
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onmouseleave}
       className=" bg-[#1F1D1D] text-white flex justify-center items-center"
       style={{ height }}
     >
       <div className="flex w-full flex-col lg:flex-row">
         <div className="w-[100%] flex flex-col lg:flex-row px-6 lg:px-0">
-          <div className="flex flex-[1.5] w-full justify-center items-center  lg:-mt-[5vw]">
+          <div
+            className="flex flex-[1.5] w-full justify-center items-center  lg:-mt-[5vw]"
+            onMouseEnter={onMouseEnterOnTitle}
+            onMouseLeave={onmouseleave}
+          >
             <div className="w-[40%] hidden lg:flex justify-end mr-10">
               <Image src={TiltedArrow} />
             </div>
@@ -56,11 +50,11 @@ export default function About() {
               </div>
               <div
                 onMouseEnter={buttonMouseEnter}
-                onMouseLeave={onMouseEnter}
-                className="flex text-white mt-16 cursor-pointer justify-center lg:justify-start transition-colors ease-in-out duration-200 hover:text-[#F0C808]  font-bold tracking-wider"
+                onMouseLeave={onmouseleave}
+                className="flex text-white mt-16 cursor-pointer justify-center lg:justify-start transition-colors ease-in-out duration-200 hover:text-black  font-bold tracking-wider"
               >
                 <Link href={"/services"}>
-                  <span className="p-2 px-8 border hover:border-[#F0C808] border-white rounded-full">
+                  <span className="p-2 px-8 border hover:border-[#F0C808] hover:bg-[#F0C808] border-white rounded-full">
                     &amp; much more
                   </span>
                 </Link>

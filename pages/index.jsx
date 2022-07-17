@@ -29,7 +29,7 @@ export default function Home() {
   };
   return (
     <div className="w-full scroll-smooth">
-      {canShow && (
+      {!canShow && (
         <div
           className="fixed  loading-animation top-0 left-0  w-full bg-[#1D1D1D] z-[100]"
           style={{ height }}

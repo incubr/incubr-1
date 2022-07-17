@@ -6,7 +6,7 @@ export const Store = React.createContext();
 export const Provider = ({ children }) => {
   const [height, setHeight] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
-  const [canShow, setCanShow] = React.useState(true);
+  const [canShow, setCanShow] = React.useState(false);
 
   React.useEffect(() => {
     const sleep = (milliseconds) => {
@@ -14,7 +14,7 @@ export const Provider = ({ children }) => {
     };
     const doLoading = async () => {
       for (let i = 0; i <= 100; i++) {
-        await sleep(120);
+        await sleep(50);
         setSeconds(i);
         if (i === 100) {
           gsap.to(".loading-animation", {
@@ -32,7 +32,7 @@ export const Provider = ({ children }) => {
             });
           }, 2000);
           setTimeout(() => {
-            setCanShow(false);
+            setCanShow(true);
           }, 3000);
         }
       }
