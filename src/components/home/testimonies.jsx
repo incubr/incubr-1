@@ -1,6 +1,5 @@
 import React from "react";
 import Description from "../common/Description";
-import HeadingText from "../common/Heading";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,10 +15,12 @@ const Pagination = ({ activeIndex }) => {
     <span className="mt-10 flex button text-[1.3vw] justify-center space-x-2">
       {slides.map((e, index) => (
         <span
-          key={"sadashjgjhd" + e}
+          key={"sadashjgjhd" + e.id}
           onClick={() => swiper.slideTo(index)}
           className={`w-4 h-4 ${
-            activeIndex % 3 === index ? "bg-transparent" : "bg-white"
+            activeIndex % slides.length === index
+              ? "bg-transparent"
+              : "bg-white"
           } border border-white rounded-full cursor-pointer`}
         />
       ))}
@@ -29,7 +30,7 @@ const Pagination = ({ activeIndex }) => {
 
 export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
-  
+
   return (
     <>
       <div
@@ -59,9 +60,10 @@ export default function Testimonies() {
       </div>
       <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 sm:h-[50vh] lg:h-[100vh] bg-[#1F1D1D]">
         <div className="flex w-32 h-32 lg:w-[15vw] lg:h-[15vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
-          <div className="w-full h-full rounded-full bg-cover " style={{
-            backgroundImage: `url(${slides[activeIndex % slides.length].backgroundImage})`,
-          }}></div>
+          <div
+            id="test_profile_pic"
+            className="w-full h-full rounded-full bg-cover "
+          ></div>
         </div>
         <Swiper
           modules={[Autoplay]}
@@ -71,27 +73,34 @@ export default function Testimonies() {
           }}
           loop
           className="w-full px-10 sm:px-20 sm:w-1/2 flex flex-col"
-          onSlideChange={(e) => setActiveIndex(e.activeIndex)}
+          onSlideChange={(e) => {
+            setActiveIndex(e.activeIndex);
+            document.getElementById(
+              "test_profile_pic"
+            ).style.backgroundImage = `url(${
+              slides[e.activeIndex % slides.length].backgroundImage
+            })`;
+          }}
         >
-          {slides.map((item, index) => (
+          {slides.map((_, index) => (
             <SwiperSlide
               key={"sadasd" + index}
               className="w-full h-full flex flex-col justify-center items-center"
             >
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
                 <h1 className=" font-bold text-xl lg:text-[1.7vw]">
-                  {item.name}
+                  {slides[activeIndex % slides.length].name}
                 </h1>
-                <span className="lg:text-[1.3vw]">{item.description}</span>
+                <span className="lg:text-[1.3vw]">{slides[activeIndex % slides.length].description}</span>
                 <span className="mt-8 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
-                  {item.text.split("\n").map((text) => (
+                  {slides[activeIndex % slides.length].text.split("\n").map((text) => (
                     <span key={text} className="text-white">
                       {text}
                     </span>
                   ))}
                 </span>
                 <span className="mt-8 flex lg:hidden flex-col text-center items-center">
-                  {item.text.split("\n").map((text, index) => (
+                  {slides[activeIndex % slides.length].text.split("\n").map((text, index) => (
                     <span key={text + index} className="text-white">
                       {text}
                     </span>
@@ -111,9 +120,9 @@ export default function Testimonies() {
           direction={"left"}
           className="w-full flex items-center overflow-x-auto"
         >
-          {brands.map((item) => (
-            <span key={item.src} className="flex-none -mr-48 sm:-mr-20 lg:mr-0">
-              <Image key={item.src} src={item} />
+          {brands.map((items) => (
+            <span key={items.src} className="flex-none -mr-48 sm:-mr-20 lg:mr-0">
+              <Image key={items.src} src={items} />
             </span>
           ))}
         </Marquee>

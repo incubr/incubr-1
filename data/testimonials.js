@@ -1,6 +1,6 @@
 export const slides = [
   {
-    id: 234,
+    id: 1,
     color: "green",
     backgroundColor: "bg-green-600",
     name: "Chirag Heda",
@@ -10,7 +10,7 @@ export const slides = [
     text: `Team INCUBER is a great partner in our first brand appearance. The Firstlist campaign met its objectives and was appreciated on how different the site experience was as compared to conventional banks. The Team Showed ownership & was available + responses were prompt throughout the entire campaign period. They Pushed for clarity/closure on designs.`,
   },
   {
-    id: 223,
+    id: 2,
     color: "red",
     backgroundColor: "bg-red-600",
     name: "Bikash Dash",
@@ -20,7 +20,7 @@ export const slides = [
     text: "INCUBER is one of the most amazing team I've ever met. Their power of understanding the product and the user needs is really amazing. We have worked with them on Release loop & Factory App project.",
   },
   {
-    id: 212,
+    id: 3,
     color: "blue",
     backgroundColor: "bg-blue-600",
     name: "Sanchit Kaushal",
@@ -30,7 +30,7 @@ export const slides = [
     text: "We were fortunate to be able to have had found that right from get go with Prateek, Mayank and their team. They did an excellent job unravelling our requirements, designing a user friendly UI, and later developing a platform in a short period of time to help us launch fast. It was never a moment where we felt that we were working with contractors but our own team.",
   },
   {
-    id: 232,
+    id: 4,
     color: "gray",
     backgroundColor: "bg-gray-600",
     name: "Salil Kalia",
