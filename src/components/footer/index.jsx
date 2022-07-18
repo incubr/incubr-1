@@ -114,7 +114,7 @@ export default function Footer({ isDark = false }) {
                 </Link>
               </div>
               <div className=" items-center flex flex-col">
-                <div className="button flex space-x-3 justify-center">
+                <div className="button flex space-x-3 justify-center lg:justify-start">
                   <Link href={"https://www.linkedin.com/company/incubr/about/"}>
                     <button
                       className={`w-14 ${
