@@ -92,11 +92,11 @@ export default function Careers() {
             </thead>
             <tbody>
               {jobs.map((i) => (
-                <Link href={"mailto:gopal.batra@incubr.com"}>
-                  <tr
-                    key={"dsadasd" + i.id}
-                    className="bg-white cursor-pointer border-b border-black"
-                  >
+                <Link
+                  key={"dsadasd" + i.id}
+                  href={"mailto:gopal.batra@incubr.com"}
+                >
+                  <tr className="bg-white cursor-pointer border-b border-black">
                     <td
                       scope="row"
                       className="px-2 lg:px-6 py-8 text-xl lg:text-[3vw] font-medium text-gray-900 whitespace-nowrap"
@@ -115,11 +115,8 @@ export default function Careers() {
         <div className="sm:hidden block w-full px-5">
           <div className="sm:hidden flex flex-col w-full font-[PPNeueMontreal] sm:w-[60%] border-t border-black">
             {jobs.map((i) => (
-              <Link href={"mailto:gopal.batra@incubr.com"}>
-                <div
-                  key={"fgfrt" + i.id}
-                  className="flex flex-col w-full relative p-5 border-b border-black"
-                >
+              <Link key={"fgfrt" + i.id} href={"mailto:gopal.batra@incubr.com"}>
+                <div className="flex flex-col w-full relative p-5 border-b border-black">
                   <h1 className="text-4xl pb-3">{i.title}</h1>
                   <table className="w-full mt-5 italic text-sm text-left text-black">
                     <thead className="text-xs text-gray-500 uppercase ">
