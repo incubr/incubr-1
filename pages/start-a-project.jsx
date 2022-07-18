@@ -514,7 +514,7 @@ export default function StartAProject() {
               </div>
             </div>
             <h1 className="mt-10  lg:mt-[5vw] font-[PPNeueMontreal] text-xl lg:text-[2vw]">
-              We typically reach you in hrs.,
+              We will reach you in 24 hours.
             </h1>
           </div>
         </div>

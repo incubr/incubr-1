@@ -22,7 +22,7 @@ export default function OurWork() {
           <HeadingText text={"explore our work"} />
           <div className="flex flex-1 justify-center pt-[2.5vw] ">
             <Description
-              text={"From metaverse of projects delivered and happy."}
+              text={"Take a look at some of our favourite projects."}
             />
           </div>
         </div>
