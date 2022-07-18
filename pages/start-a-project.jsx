@@ -104,7 +104,7 @@ export default function StartAProject() {
                 your project?
               </span>
             </div>
-            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col flex mt-10 sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="font-[PPNeueMontreal] lg:leading-[1.8vw] flex-col flex mt-10 sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
               {`Fill out the contact form for us to\n 
               understand your needs and a Client\n 
               Partner will be in touch right away.`
