@@ -118,7 +118,7 @@ export default function Testimonies() {
         </Swiper>
       </div>
 
-      <div className="w-full sm:h-[20vh] lg:h-[22vw] flex items-center bg-[#1F1D1D]">
+      <div className="w-full h-[25vh] lg:h-[22vw] flex items-center bg-[#1F1D1D]">
         <Marquee
           gradient={false}
           speed={60}

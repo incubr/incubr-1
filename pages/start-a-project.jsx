@@ -7,7 +7,7 @@ import Headers from "@/src/components/headers";
 import Image from "next/image";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Footer from "@/src/components/footer";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 
 const ElevatedBox = ({ childern, title, notBorder = false }) => {
   return (
@@ -46,7 +46,7 @@ const validation_keys = [
 
 export default function StartAProject() {
   const { height } = React.useContext(Store);
-  const [form, setForm] = React.useState({guides: ""});
+  const [form, setForm] = React.useState({ guides: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -60,10 +60,9 @@ export default function StartAProject() {
       }
     });
     return valid;
-  }
+  };
 
   const saveStartAProject = async () => {
-    
     if (validate_form()) {
       const response = await fetch("/api/start-a-project", {
         method: "POST",
@@ -81,9 +80,7 @@ export default function StartAProject() {
     } else {
       toast.error("Please fill all the fields");
     }
-  }
-
-
+  };
 
   return (
     <div className="w-full scroll-smooth">
@@ -522,7 +519,7 @@ export default function StartAProject() {
           </div>
         </div>
       </div>
-
+      <div className="h-[20vh]"></div>
       <Footer isDark />
     </div>
   );

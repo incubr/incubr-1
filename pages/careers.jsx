@@ -7,6 +7,8 @@ import ArrowDown from "@/assets/arrowDown.svg";
 import React from "react";
 import { Store } from "@/context";
 import Footer from "@/src/components/footer";
+import { jobs } from "@/data/jobs";
+import Link from "next/link";
 
 export default function Careers() {
   const { height } = React.useContext(Store);
@@ -21,23 +23,35 @@ export default function Careers() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
+              className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col lg:leading-[5vw] lg:flex-row">
                 Creative. Passionate.
               </div>
-              <span className=" font-[Arial] text-6xl sm:text-8xl lg:text-[4.3vw]">
+              <span className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw]">
                 Dedicated.
               </span>
             </div>
-            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col hidden sm:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
               {`We know that finding a meaningful and rewarding\n
                job can be difficult at times. Our goal is to simplify\n
                 that process for you. Ready to join the\n
                  revolution? Browse through the available\n
                   jobs and apply today. `
+                .split("\n")
+                .map((line, i) => (
+                  <span key={i + line}>{line}</span>
+                ))}
+            </span>
+            <span className="font-[PPNeueMontreal] leading-[1.5] flex-col flex sm:hidden mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
+              {`We know that finding a meaningful and\n 
+              rewarding job can be difficult at times.\n
+               Our goal is to simplify that process for \n
+               you. Ready to join the revolution? Browse\n
+                through the available jobs and apply\n
+                 today. `
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
@@ -77,20 +91,22 @@ export default function Careers() {
               </tr>
             </thead>
             <tbody>
-              {[1, 2, 3].map((i) => (
-                <tr
-                  key={"dsadasd" + i}
-                  className="bg-white border-b border-black"
-                >
-                  <th
-                    scope="row"
-                    className="px-2 lg:px-6 py-8 text-xl lg:text-[3vw] font-medium text-gray-900 whitespace-nowrap"
+              {jobs.map((i) => (
+                <Link href={"mailto:gopal.batra@incubr.com"}>
+                  <tr
+                    key={"dsadasd" + i.id}
+                    className="bg-white cursor-pointer border-b border-black"
                   >
-                    Job Title Here
-                  </th>
-                  <td className="px-6 py-4 lg:text-[1.2vw]">Lorem Ipsum</td>
-                  <td className="px-6 py-4 lg:text-[1.2vw]">Lorem Ipsum</td>
-                </tr>
+                    <td
+                      scope="row"
+                      className="px-2 lg:px-6 py-8 text-xl lg:text-[3vw] font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      {i.title}
+                    </td>
+                    <td className="px-6 py-4 lg:text-[1.2vw]">{i.hours}</td>
+                    <td className="px-6 py-4 lg:text-[1.2vw]">{i.location}</td>
+                  </tr>
+                </Link>
               ))}
             </tbody>
           </table>
@@ -98,36 +114,38 @@ export default function Careers() {
 
         <div className="sm:hidden block w-full px-5">
           <div className="sm:hidden flex flex-col w-full font-[PPNeueMontreal] sm:w-[60%] border-t border-black">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={"fgfrt" + i}
-                className="flex flex-col w-full relative p-5 border-b border-black"
-              >
-                <h1 className="text-4xl pb-3">Job Title Here</h1>
-                <table className="w-full mt-5 italic text-sm text-left text-black">
-                  <thead className="text-xs text-gray-500 uppercase ">
-                    <tr>
-                      <th scope="col" className=" py-1">
-                        Hours
-                      </th>
-                      <th scope="col" className=" py-1">
-                        Location
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-white text-xl ">
-                      <td className=" py-2">Lorem Ipsum</td>
-                      <td className=" py-2">Lorem Ipsum</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            {jobs.map((i) => (
+              <Link href={"mailto:gopal.batra@incubr.com"}>
+                <div
+                  key={"fgfrt" + i.id}
+                  className="flex flex-col w-full relative p-5 border-b border-black"
+                >
+                  <h1 className="text-4xl pb-3">{i.title}</h1>
+                  <table className="w-full mt-5 italic text-sm text-left text-black">
+                    <thead className="text-xs text-gray-500 uppercase ">
+                      <tr>
+                        <th scope="col" className=" py-1">
+                          Hours
+                        </th>
+                        <th scope="col" className=" py-1">
+                          Location
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="bg-white text-xl ">
+                        <td className=" py-2">{i.hours}</td>
+                        <td className=" py-2">{i.location}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </div>
-
+      <div className="h-[20vh]"></div>
       <Footer isDark />
     </div>
   );

@@ -4,7 +4,7 @@ import Description from "../common/Description";
 import HeadingText from "../common/Heading";
 import Slides, { MobileSlide } from "../common/slides";
 import { onmouseleave } from "../../custom-cursor";
-import { work } from "@/data/work";
+import { work, workForHomePage } from "@/data/work";
 
 export default function OurWork() {
   React.useEffect(() => {
@@ -26,25 +26,25 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className={`hidden sm:flex w-auto h-[550vw] lg:h-[435vw] xl:h-[410vw] -z-10`}
+        className={`hidden sm:flex w-auto h-[680vw] lg:h-[520vw] xl:h-[500vw] -z-10`}
       >
         <div
           id="PageWrap"
           className="flex h-screen items-center p-4 w-full my-10"
         >
-          {work.map((i, index) => (
+          {workForHomePage.map((i, index) => (
             <Slides
               data={i}
               index={index + 1}
-              total={work.length}
+              total={workForHomePage.length}
               key={"sadasdasd" + i.id.toString()}
             />
           ))}
         </div>
       </div>
 
-      <div className="flex flex-col  sm:space-y-auto flex-wrap sm:hidden w-full px-6 sm:px-10">
-        {work.map((i) => (
+      <div className="flex flex-col  sm:space-y-auto mb-20 flex-wrap sm:hidden w-full px-6 sm:px-10">
+        {workForHomePage.map((i) => (
           <MobileSlide data={i} key={"sadasdassd" + i.id.toString()} />
         ))}
       </div>

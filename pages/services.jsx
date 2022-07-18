@@ -9,6 +9,7 @@ import ArrowDown from "@/assets/arrowDown.svg";
 import ServiceCard from "@/src/components/common/serviceCard";
 import Footer from "@/src/components/footer";
 import { servicesData } from "@/data/services";
+import Link from "next/link";
 
 export default function Services() {
   const { height } = React.useContext(Store);
@@ -72,14 +73,16 @@ export default function Services() {
       </div>
 
       <div className="flex font-[PPNeueMontreal] pb-10 flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
-        <div className=" w-[85%] h-[78vh] bg-[#F0C808] flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
+        <div className=" w-[85%] h-[78vh] rounded-3xl bg-[#F0C808] flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
           <h1 className="flex text-xl lg:text-[2.2vw] text-center lg:text-start lg:leading-[2.5vw]">
             Let us partner and build your dream company together.
           </h1>
-          <h1 className="flex cursor-pointer text-7xl flex-col sm:flex-row text-center sm:text-start lg:text-[4.5vw] lg:ml-[4vw]">
-            <span className="border-b border-[#1F1D1D] sm:mr-5">Connect</span>
-            Today{" "}
-          </h1>
+          <Link href={"mailto:gopal.batra@incubr.com"}>
+            <h1 className="flex cursor-pointer text-7xl flex-col sm:flex-row text-center sm:text-start lg:text-[4.5vw] lg:ml-[4vw]">
+              <span className="border-b border-[#1F1D1D] sm:mr-5">Connect</span>
+              Today{" "}
+            </h1>
+          </Link>
         </div>
       </div>
 

@@ -53,21 +53,24 @@ export default function Landing() {
             </span>
           </div>
           <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
-            {`We are a new age brand incubator. We engineer,\n
-            design and scale digital products to get you
-            \n massive growth. We are customer centric, a \n
-            seasoned team and easy to work with.`
+            {`We are a new-age all-in-one digital brand incubator\n
+             that specializes in scaling your business through\n
+              integrated solutions. We engineer, design, products\n
+               and help you scale your business to reach your target\n
+                group.`
               .split("\n")
               .map((line, i) => (
                 <span key={i + line}>{line}</span>
               ))}
           </span>
           <span className="flex font-[PPNeueMontreal] leading-[1.5] flex-col lg:hidden mt-10 text-lg sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
-            {`We are a new age brand incubator.\n 
-            We engineer, design and scale\n 
-            digital products to get you massive\n
-             growth. We are customer centric, a \n
-            seasoned team and easy to work\n with.`
+            {`We are a new-age all-in-one digital\n
+             brand incubator that specializes in\n
+              scaling your business through\n
+               integrated solutions. We engineer,\n
+                design, products and help you scale\n
+                 your business to reach your target\n
+                group.`
               .split("\n")
               .map((line, i) => (
                 <span key={i + line}>{line}</span>

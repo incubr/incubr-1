@@ -24,14 +24,16 @@ export default function Slides({data, index, total}) {
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-1 flex-col justify-end">
-          <h1 className="font-bold text-[1.5vw]">. 0{index} -0{total}</h1>
+          <h1 className="font-bold text-[1.5vw]">
+            . 0{index} -0{total}
+          </h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
             {data.title}
           </h1>
           <span className=" font-bold text-[1.3vw]">COLLABORATORS</span>
-          <span className="font-bold mt-5">Collaborator 1</span>
-          <span className="font-bold ">Collaborator 1</span>
-          <span className="font-bold ">Collaborator 1</span>
+          <span className="font-bold mt-5">{data.clb_1}</span>
+          <span className="font-bold ">{data.clb_2}</span>
+          <span className="font-bold ">{data.clb_3}</span>
         </div>
         <div className="flex flex-1 flex-col h-full items-end justify-end">
           <Link href={"/work"}>
@@ -51,21 +53,21 @@ export default function Slides({data, index, total}) {
 
 export const MobileSlide = ({data}) => {
   return (
-    <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#D9D9D9] rounded-xl w-full sm:w-[48%]">
+    <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#F0C808] rounded-xl w-full sm:w-[48%]">
       <div className="flex ">
-        <h1 className="font-bold text-xl flex-1">. 01 -05</h1>
+        <h1 className="font-bold text-md flex-[0.8]">. 01 -05</h1>
         <div className=" flex flex-[2] flex-col">
           <h1 className="font-[500] tracking-wide text-2xl">{data.title}</h1>
           <span className=" font-[400] mt-3 text-xl">COLLABORATORS</span>
-          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
-          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
-          <span className="font-[400] text-sm mt-1 ">Collaborator 1</span>
+          <span className="font-[400] text-sm mt-1 ">{data.clb_1}</span>
+          <span className="font-[400] text-sm mt-1 ">{data.clb_2}</span>
+          <span className="font-[400] text-sm mt-1 ">{data.clb_3}</span>
         </div>
       </div>
       <div
         className="flex h-64 mt-5 rounded-lg bg-cover w-full "
         style={{
-          backgroundImage: `url("https://cdn.pixabay.com/photo/2022/07/05/10/54/ocean-7302776__480.jpg")`,
+          backgroundImage: `url("${data.image}")`,
         }}
       ></div>
     </div>
