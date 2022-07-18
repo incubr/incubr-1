@@ -84,8 +84,8 @@ export default function Services() {
             </h1>
           </Link>
         </div>
+        <div className="h-[15vh]"></div>
       </div>
-      <div className="h-[15vh]"></div>
       <Footer />
     </div>
   );
