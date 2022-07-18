@@ -16,39 +16,24 @@ import { work } from "@/data/work";
 
 export default function Footer({ isDark = false }) {
   return (
-    <div className="w-full flex flex-col items-center">
-      <div
-        className={`flex w-full  bottom-10 mt-10 h-[100vw] sm:h-[50vw] lg:h-[28vw] items-center justify-center`}
-      >
-        <div className="flex w-[100%] justify-center">
-          <div
-            onClick={() => window.scrollTo(0, document.body.scrollHeight)}
-            className="w-48 h-48 flex flex-col cursor-pointer items-center justify-center"
-          >
-            <div className="button w-36 h-36 bg-transparent border-black hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border justify-center items-center">
-              <Image src={ArrowDown} />
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div className="w-full flex flex-col my-[5vw] items-center">
       <div
         className={`w-full ${
           isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
-        } flex justify-center`}
+        } flex justify-center `}
       >
         <footer
-          className={` h-screen px-10  space-y-6 sm:space-y-[10vw] lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[80%] flex flex-col lg:flex-row items-center justify-center`}
+          className={` px-[6vw] py-[5vw] sm:border-black sm:border space-y-6 sm:space-y-[10vw] rounded-[3rem] lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[10vw] lg:space-y-0">
-            <div className="flex flex-col space-y-6 sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
+            <div className="flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
               <Link href={"/"}>
                 <Image src={isDark ? DarkLogo : Logo} />
               </Link>
               <div
                 className={`w-full text-sm ${
                   isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                } lg:text-[1.3vw] lg:leading-[1.8vw] sm:w-[75%] `}
+                } lg:text-[1.1vw] lg:leading-[1.8vw]  `}
               >
                 We are a new-age brand incubator that specializes in integrated
                 digital solutions- website, app, marketing, UX/UI, and
@@ -62,19 +47,23 @@ export default function Footer({ isDark = false }) {
             <div
               className={`flex ${
                 isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-              } w-full `}
+              }  lg:flex-1 flex-col  lg:space-y-[3vw]`}
             >
-              <div className="flex flex-1">
-                <div className="button flex space-y-2 lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.7vw] opacity-50">
-                  {navigation_link.map((item, index) => (
-                    <Link key={"naviga" + index} href={item.link}>
-                      <span className="px-[1.8vw] sm:px-0">{item.name}</span>
-                    </Link>
-                  ))}
+              <Image src={isDark ? DarkLogo : Logo} className="hidden lg:flex opacity-0" />
+              <div className="flex ">
+                <div className="flex flex-[3] items-center flex-col">
+                  <div className="button flex space-y-2 font-[600] lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
+                    {navigation_link.map((item, index) => (
+                      <Link key={"naviga" + index} href={item.link}>
+                        <span className="px-[1.8vw] sm:px-0">{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
+                <div className="flex flex-1 "></div>
               </div>
             </div>
-            <div className="flex flex-col space-y-10 w-full items-center  sm:items-start ">
+            <div className="flex flex-col space-y-10 items-center justify-between  sm:items-start ">
               <Link href={"/start-a-project"}>
                 <button
                   className={`button transition-colors w-full sm:w-auto lg:w-[22vw] duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.2vw] px-8 ${
@@ -86,54 +75,63 @@ export default function Footer({ isDark = false }) {
                   START A PROJECT
                 </button>
               </Link>
-              <div className="button flex space-x-3">
-                <Link href={"https://www.linkedin.com/company/incubr/about/"}>
-                  <button
-                    className={`w-14 ${
-                      isDark
-                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                        : "text-[#FDFDFD] bg-[#1F1D1D]"
-                    } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+              <div>
+                <div className="button flex space-x-3">
+                  <Link href={"https://www.linkedin.com/company/incubr/about/"}>
+                    <button
+                      className={`w-14 ${
+                        isDark
+                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                          : "text-[#FDFDFD] bg-[#1F1D1D]"
+                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                    >
+                      <Image src={isDark ? LinkedInLight : LinkedIn} />
+                    </button>
+                  </Link>
+                  <Link href={"https://www.instagram.com/incubr.tech/"}>
+                    <button
+                      className={`w-14 ${
+                        isDark
+                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                          : "text-[#FDFDFD] bg-[#1F1D1D]"
+                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                    >
+                      <Image src={isDark ? InstagramLight : Instagram} />
+                    </button>
+                  </Link>
+                  <Link
+                    href={
+                      "whatsapp://send?text=Hello World!&phone=+919999988493"
+                    }
                   >
-                    <Image src={isDark ? LinkedInLight : LinkedIn} />
-                  </button>
-                </Link>
-                <Link href={"https://www.instagram.com/incubr.tech/"}>
-                  <button
-                    className={`w-14 ${
-                      isDark
-                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                        : "text-[#FDFDFD] bg-[#1F1D1D]"
-                    } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
-                  >
-                    <Image src={isDark ? InstagramLight : Instagram} />
-                  </button>
-                </Link>
-                <Link
-                  href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
-                >
-                  <button
-                    className={`w-14 ${
-                      isDark
-                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                        : "text-[#FDFDFD] bg-[#1F1D1D]"
-                    } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
-                  >
-                    <Image src={isDark ? WhatsAppLight : WhatsApp} />
-                  </button>
-                </Link>
-              </div>
+                    <button
+                      className={`w-14 ${
+                        isDark
+                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                          : "text-[#FDFDFD] bg-[#1F1D1D]"
+                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                    >
+                      <Image src={isDark ? WhatsAppLight : WhatsApp} />
+                    </button>
+                  </Link>
+                </div>
 
-              <div
-                className={`${
-                  isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                } tracking-wider font-[PPNeueMontreal] opacity-50 text-2xl lg:text-[1.5vw]`}
-              >
-                <span>&copy; COPYRIGHT {moment().year()}</span>
+                <div className="mt-[3vw] font-[PPNeueMontreal] tracking-widest text-[1.2vw] font-[400]">
+                  We would love to help you
+                  <br /> with your next project.
+                </div>
               </div>
             </div>
           </div>
         </footer>
+      </div>
+
+      <div
+        className={`${
+          isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
+        } tracking-wider font-[PPNeueMontreal] opacity-50 text-2xl mt-[2vw] lg:text-[1.5vw]`}
+      >
+        <span>&copy; COPYRIGHT {moment().year()}</span>
       </div>
     </div>
   );

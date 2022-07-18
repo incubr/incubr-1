@@ -13,11 +13,11 @@ export default function OurWork() {
 
   return (
     <>
-      <div className="flex flex-col w-full bg-[#FDFDFD] lg:bg-[#1F1D1D] lg:h-[25vw]">
+      <div id="forMobile" className="flex flex-col w-full bg-[#FDFDFD] lg:bg-[#1F1D1D] lg:h-[25vw]">
         <div className="flex flex-1"></div>
-        <div className="flex flex-[2] lg:text-white justify-center items-center flex-col">
+        <div className="flex flex-[1.5]  lg:text-white justify-center items-center flex-col">
           <HeadingText text={"explore our work"} />
-          <div className="flex flex-1 justify-center items-center">
+          <div className="flex flex-1 justify-center pt-[2.5vw] ">
             <Description
               text={"From metaverse of projects delivered and happy."}
             />
@@ -26,11 +26,11 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className={`hidden lg:flex w-full h-[450vw] xl:h-[420vw] -z-10`}
+        className={`hidden sm:flex w-auto h-[550vw] lg:h-[435vw] xl:h-[410vw] -z-10`}
       >
         <div
           id="PageWrap"
-          className="flex flex-nowrap h-screen p-4 w-full my-10"
+          className="flex h-screen items-center p-4 w-full my-10"
         >
           {work.map((i, index) => (
             <Slides
@@ -43,7 +43,7 @@ export default function OurWork() {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row  sm:space-y-auto flex-wrap lg:hidden w-full px-6 sm:px-10">
+      <div className="flex flex-col  sm:space-y-auto flex-wrap sm:hidden w-full px-6 sm:px-10">
         {work.map((i) => (
           <MobileSlide data={i} key={"sadasdassd" + i.id.toString()} />
         ))}
