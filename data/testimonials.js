@@ -4,8 +4,7 @@ export const slides = [
     color: "green",
     backgroundColor: "bg-green-600",
     name: "Chirag Heda",
-    backgroundImage:
-      "/chirag.jpeg",
+    backgroundImage: "/chirag.jpeg",
     description: "Head of Customer Experience, Jupiter",
     text: `Team INCUBER is a great partner in our first brand appearance. The Firstlist campaign met its objectives and was appreciated on how different the site experience was as compared to conventional banks. The Team Showed ownership & was available + responses were prompt throughout the entire campaign period. They Pushed for clarity/closure on designs.`,
   },
@@ -14,8 +13,7 @@ export const slides = [
     color: "red",
     backgroundColor: "bg-red-600",
     name: "Bikash Dash",
-    backgroundImage:
-      "/bikash.jpeg",
+    backgroundImage: "/bikash.jpeg",
     description: "Co-founder, FactoryApp & Classplus",
     text: "INCUBER is one of the most amazing team I've ever met. Their power of understanding the product and the user needs is really amazing. We have worked with them on Release loop & Factory App project.",
   },
@@ -34,9 +32,17 @@ export const slides = [
     color: "gray",
     backgroundColor: "bg-gray-600",
     name: "Salil Kalia",
-    backgroundImage:
-      "/salil.jpeg",
+    backgroundImage: "/salil.jpeg",
     description: "CEO, TechCrumb and Performoo",
     text: "When you have a domain like marketing, you want to have the best design partners that are out there and this is when we ran into the team EPYC. We spent a lot of time understanding users and discovered  multiple pain points that were not catered to. Team EPYC, helped transform those pain points into features and we have received appreciation from our customers.",
+  },
+  {
+    id: 5,
+    color: "gray",
+    backgroundColor: "bg-gray-600",
+    name: "Lorem Ipsum",
+    backgroundImage: "",
+    description: "Dolor Sit Amet",
+    text: "I have been associated with Mr. Gopal and Incubr for about 12 years. Their sense of commitment, strong business and creative acumen has been an incredible and transformative experience for both me and my company thus far.",
   },
 ];

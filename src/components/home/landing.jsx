@@ -36,7 +36,7 @@ export default function Landing() {
       <Navigation />
       <Headers />
       <div className="flex flex-1 justify-center items-center">
-        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">
           <div
             className=" font-[Arial] text-5xl sm:text-8xl lg:text-[4.3vw] flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}

@@ -3,7 +3,7 @@ export const work = [
     id: 1,
     category: "Website Development",
     title: "Growth School",
-    image: "",
+    image: "/gschool.jpg",
     description:
       "Growth School is a community-led live learning platform for kickstarting your professional career.We developed a cutting-edge engaging website for Growth School that is easy to navigate, provides fresh quality content, is optimized for mobile and most importantly resonates with their target audience. ",
   },
@@ -11,7 +11,7 @@ export const work = [
     id: 2,
     category: "Growth Marketing",
     title: "Nutrition by Lovneet",
-    image: "",
+    image: "/nbl.jpg",
     description:
       "NBL is a wellness platform led by award winnning clinical nutritionist- Lovneet Batra. We developed a data-driven approach to optimize their user-experience and increase conversion and customer-retention rates. We launched various creative digital campaigns, value addition blog posts, SEO optimization and more.",
   },
@@ -19,7 +19,7 @@ export const work = [
     id: 3,
     category: "Website Development",
     title: "Breathe Software",
-    image: "",
+    image: "/breathewellbeing-full-page.jpg",
     description:
       "Breathe is a low cost & intuitive cloud-based HR software ideal for growing businesses. We developed their website by positioning them as: “ A software that puts people first” Moreover the website was built with a well-planned information architecture to attract potential businesses. ",
   },
@@ -27,7 +27,7 @@ export const work = [
     id: 4,
     category: "Website Development",
     title: "Stoa School",
-    image: "",
+    image: "/stoa-school.jpg",
     description:
       "Stoa School runs cohort-based programmes to help mid-career professionals accelerate their growth in business roles. We developed their business website by positioning them as India's best alternative to the traditional MBA. The website identified the need of the service as well as featured a seamless flow of valuable information including types of courses, resources, and effective CTA's",
   },
@@ -35,7 +35,7 @@ export const work = [
     id: 5,
     category: "Website Development",
     title: "Sybill Software",
-    image: "",
+    image: "/sybill.svg",
     description:
       "Sybill is an enterprise startup that develops Artificial Intelligence to solve the problem of video conferencing. We developed an interactive website for them that identifies the probems behind poor prospects and how it effectvely uses emotional awareness to turn their prospects into customers with an X-ray vision of their needs. It features interactive calls to actions, benefits, and social proofs of the product's efficiency. ",
   },
@@ -43,7 +43,7 @@ export const work = [
     id: 6,
     category: "Website Development",
     title: "Light Rock",
-    image: "",
+    image: "/lightrock.svg",
     description:
       "Lightrock is a global private equity platform that backs purpose-driven entrepreneurs tackling the world's biggest challenges. We developed an impactful website by positioning them as a business that invests in solutions of global challenges. Th website included various case studies, their impactful approach, purpose and more. ",
   },
@@ -51,7 +51,7 @@ export const work = [
     id: 7,
     category: "Website Development",
     title: "Anglehack",
-    image: "",
+    image: "/anglehack.jpg",
     description:
       "AngelHack is building a space where founders could meet, developers could discover opportunities and entrepreneurs could shape their ideas into reality - staying true to their founding idea of bringing creators together.",
   },

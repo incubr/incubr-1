@@ -33,7 +33,7 @@ export default function Testimonies() {
 
   return (
     <>
-      <div className="flex flex-nowrap flex-col justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
+      <div className="flex flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
         <div
           id="testimonies"
           className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
@@ -87,10 +87,10 @@ export default function Testimonies() {
               className="w-full h-full flex flex-col justify-center items-center"
             >
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
-                <h1 className=" font-bold text-xl lg:text-[1.7vw]">
+                <h1 className=" font-bold text-xl lg:leading-[2vw] lg:text-[1.7vw]">
                   {slides[activeIndex % slides.length].name}
                 </h1>
-                <span className="lg:text-[1.3vw]">
+                <span className="lg:leading-[2vw] lg:text-[1.3vw]">
                   {slides[activeIndex % slides.length].description}
                 </span>
                 <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
