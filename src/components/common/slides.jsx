@@ -51,11 +51,13 @@ export default function Slides({data, index, total}) {
   );
 }
 
-export const MobileSlide = ({data}) => {
+export const MobileSlide = ({ data, index, total }) => {
   return (
     <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#F0C808] rounded-xl w-full sm:w-[48%]">
       <div className="flex ">
-        <h1 className="font-bold text-md flex-[0.8]">. 01 -05</h1>
+        <h1 className="font-bold text-md flex-[0.8]">
+          . 0{index} -0{total}
+        </h1>
         <div className=" flex flex-[2] flex-col">
           <h1 className="font-[500] tracking-wide text-2xl">{data.title}</h1>
           <span className=" font-[400] mt-3 text-xl">COLLABORATORS</span>
