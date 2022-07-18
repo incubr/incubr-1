@@ -19,7 +19,7 @@ export const work = [
     id: 3,
     category: "Website Development",
     title: "Breathe Software",
-    image: "/breathewellbeing-full-page.jpg",
+    image: "",
     description:
       "Breathe is a low cost & intuitive cloud-based HR software ideal for growing businesses. We developed their website by positioning them as: “ A software that puts people first” Moreover the website was built with a well-planned information architecture to attract potential businesses. ",
   },
