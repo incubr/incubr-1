@@ -16,14 +16,20 @@ import { work } from "@/data/work";
 
 export default function Footer({ isDark = false }) {
   return (
-    <div className="w-full flex flex-col my-[5vw] items-center">
+    <div
+      className={`w-full ${
+        isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
+      } flex flex-col py-[5vw] items-center`}
+    >
       <div
         className={`w-full ${
           isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
         } flex justify-center `}
       >
         <footer
-          className={` px-[6vw] py-[5vw] sm:border-black sm:border space-y-6 sm:space-y-[10vw] rounded-[3rem] lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
+          className={` px-[6vw] py-[5vw] ${
+            isDark ? "sm:border-white" : "sm:border-black"
+          } sm:border space-y-6 sm:space-y-[10vw] rounded-[3rem] lg:space-y-[2vw] w-full sm:w-[80%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[10vw] lg:space-y-0">
             <div className="flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
@@ -49,7 +55,10 @@ export default function Footer({ isDark = false }) {
                 isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
               }  lg:flex-1 flex-col  lg:space-y-[3vw]`}
             >
-              <Image src={isDark ? DarkLogo : Logo} className="hidden lg:flex opacity-0" />
+              <Image
+                src={isDark ? DarkLogo : Logo}
+                className="hidden lg:flex opacity-0"
+              />
               <div className="flex ">
                 <div className="flex flex-[3] items-center flex-col">
                   <div className="button flex space-y-2 font-[600] lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
@@ -116,7 +125,11 @@ export default function Footer({ isDark = false }) {
                   </Link>
                 </div>
 
-                <div className="mt-[3vw] font-[PPNeueMontreal] tracking-widest text-[1.2vw] font-[400]">
+                <div
+                  className={`${
+                    isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
+                  } mt-[3vw] font-[PPNeueMontreal] tracking-widest text-[1.2vw] font-[400]`}
+                >
                   We would love to help you
                   <br /> with your next project.
                 </div>
