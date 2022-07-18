@@ -67,11 +67,21 @@ export const MobileSlide = ({ data, index, total }) => {
         </div>
       </div>
       <div
-        className="flex h-64 mt-5 rounded-lg bg-cover w-full "
+        className="flex h-64 mt-5 rounded-lg p-3 bg-cover w-full "
         style={{
           backgroundImage: `url("${data.image}")`,
         }}
-      ></div>
+      >
+        <div className="flex flex-1 flex-col h-full items-end justify-end">
+          <Link href={"/work"}>
+            <button
+              className=" text-white transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#fff] hover:shadow-md flex-none  px-3 py-2 text-md font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
+            >
+              VIEW CASE STUDY
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
