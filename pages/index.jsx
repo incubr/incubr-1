@@ -44,10 +44,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex w-full font-[PPNeueMontreal] absolute bottom-20 justify-center">
-            <div className="flex w-[85%] items-end justify-center flex-col">
-              <div className=" cursor-pointer w-32 lg:w-36 relative h-32 lg:h-36 flex flex-col items-center justify-between">
+            <div className="flex w-[85%] items-center lg:items-end justify-center flex-col">
+              <div className=" cursor-pointer w-28 sm:w-32 sm:h-32 lg:w-36 relative h-28 lg:h-36 flex flex-col items-center justify-between">
                 <div className=" w-full h-full animate-spin  bg-transparent  border-white hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border-b justify-center items-center"></div>
-                <span className="absolute text-white text-2xl h-full w-full flex justify-center items-center">
+                <span className="absolute text-white text-[5vw] sm:text-[3vw] lg:text-[2vw] h-full w-full flex justify-center items-center">
                   {seconds}%
                 </span>
               </div>

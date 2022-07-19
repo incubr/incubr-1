@@ -10,6 +10,8 @@ import Image from "next/image";
 import Cross from "@/assets/cross.svg";
 import { navigation_link } from "@/data/link";
 import Link from "next/link";
+import Humbargar from "@/assets/hum.svg";
+import SmallCross from "@/assets/smallcross.svg";
 
 export default function Navigation({ isDark = false }) {
   const [height, setHeight] = React.useState(0);
@@ -33,13 +35,13 @@ export default function Navigation({ isDark = false }) {
 
   return (
     <div
-      className="navigation flex w-auto lg:w-16 font-[Arial] z-[40] absolute right-0 lg:left-0 lg:items-center"
+      className="navigation flex w-auto sm:w-16 font-[Arial] z-[40] absolute right-0 sm:left-0 sm:items-center"
       style={{ height }}
     >
       <div
-        className={`innerBox w-auto transform rotate-180 lg:rotate-0 ${
-          isDark ? "bg-white" : "bg-[#1F1D1D]"
-        } h-[50vw] lg:h-[22vw] absolute top-[40vw] lg:top-0 right-0 lg:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
+        className={`innerBox w-auto transform rotate-180 sm:rotate-0 ${
+          isDark ? "sm:bg-white" : "sm:bg-[#1F1D1D]"
+        } h-[33vw] px-[8vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
       >
         <button
           onClick={() => {
@@ -50,7 +52,7 @@ export default function Navigation({ isDark = false }) {
             }
             setOpened(!opened);
           }}
-          className="w-12 hidden lg:block lg:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white"
+          className="w-12 hidden sm:block sm:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white"
         >
           {opened ? (
             <span
@@ -80,13 +82,39 @@ export default function Navigation({ isDark = false }) {
           }}
           className={`w-12 ${
             opened ? "hidden" : "block"
-          } lg:hidden lg:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white`}
+          } sm:hidden lg:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white`}
         >
           <span
             style={{ writingMode: "vertical-rl" }}
-            className={`${isDark ? "text-black" : "text-white"} `}
+            className={`${isDark ? "text-black" : "text-white"}  `}
           >
-            MENU
+            {isDark ? (
+              <svg
+                width="37"
+                height="25"
+                viewBox="0 0 37 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M36.75 24.5H0V20.4167H36.75V24.5ZM36.75 14.2917H0V10.2083H36.75V14.2917ZM36.75 4.08333H0V0H36.75V4.08333Z"
+                  fill="white"
+                />
+              </svg>
+            ) : (
+              <svg
+                width="37"
+                height="25"
+                viewBox="0 0 37 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M36.75 24.5H0V20.4167H36.75V24.5ZM36.75 14.2917H0V10.2083H36.75V14.2917ZM36.75 4.08333H0V0H36.75V4.08333Z"
+                  fill="black"
+                />
+              </svg>
+            )}
           </span>
         </button>
         <button
@@ -96,7 +124,20 @@ export default function Navigation({ isDark = false }) {
           }}
           className="cross_button hidden opacity-0 absolute top-8 right-8 lg:top-16 lg:right-16"
         >
-          <Image src={Cross} />
+          <span
+            style={{ writingMode: "vertical-rl" }}
+            className={`${isDark ? "text-black" : "text-white"} flex sm:hidden`}
+          >
+            <Image src={SmallCross} />
+          </span>
+          <span
+            style={{ writingMode: "vertical-rl" }}
+            className={`${
+              isDark ? "text-black" : "text-white"
+            } hidden sm:flex  `}
+          >
+            <Image src={Cross} />
+          </span>
         </button>
         <div
           id="navigation__list"

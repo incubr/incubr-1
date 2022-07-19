@@ -81,12 +81,18 @@ export const reverseNavigation = (isRight=false, isDark=false) => {
   timeline.to(".navigation .innerBox", {
     duration: 0.3,
     width: "auto",
-    height: isRight ? "50vw": "22vw",
-    position: isRight? "absolute": "relative",
-    top: isRight ? "40vw": "0",
+    height: isRight ? "33vw" : "22vw",
+    position: isRight ? "absolute" : "relative",
+    top: isRight ? "0" : "0",
     ease: "power2.inOut",
     borderRadius: " 0.75rem 0.75rem 0",
-    backgroundColor: isDark ? "#fff" : "#1F1D1D",
+    backgroundColor: isDark
+      ? isRight
+        ? "#1F1D1D"
+        : "#fff"
+      : isRight
+      ? "#fff"
+      : "#1F1D1D",
   });
   timeline.to(".navigation", {
     rotate: isRight ? "0deg" : "0deg",

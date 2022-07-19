@@ -7,7 +7,7 @@ import DarkLogo from "@/assets/darkIncubr.svg";
 export default function Headers() {
   return (
     <div className="flex w-full justify-center absolute top-0 left-0">
-      <div className="w-[90%] sm:w-[85%] flex justify-between mt-16 2xl:mt-20">
+      <div className="w-[83%] sm:w-[85%] flex justify-between mt-[12vw] sm:mt-16 2xl:mt-20">
         <Link href={"/"}>
           <Image src={Logo} className=" cursor-pointer" />
         </Link>
@@ -24,7 +24,7 @@ export default function Headers() {
 export const DarkHeaders = () => {
   return (
     <div className="flex w-full justify-center absolute top-0 left-0">
-      <div className="w-[90%] sm:w-[85%] flex justify-between mt-16 2xl:mt-20">
+      <div className="w-[83%] sm:w-[85%] flex justify-between mt-[12vw] sm:mt-16 2xl:mt-20">
         <Link href={"/"}>
           <Image src={DarkLogo} className=" cursor-pointer" />
         </Link>
