@@ -90,7 +90,7 @@ export default function Navigation({ isDark = false }) {
           >
             {isDark ? (
               <svg
-                width="37"
+                width="25"
                 height="25"
                 viewBox="0 0 37 25"
                 fill="none"
@@ -103,7 +103,7 @@ export default function Navigation({ isDark = false }) {
               </svg>
             ) : (
               <svg
-                width="37"
+                width="25"
                 height="25"
                 viewBox="0 0 37 25"
                 fill="none"
