@@ -40,7 +40,7 @@ export default function Testimonies() {
         >
           <div className="flex flex-1"></div>
           <div className="flex flex-1 justify-center items-center flex-col">
-            <div className="flex px-5 py-2 text-5xl lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
+            <div className="flex px-5 py-2 text-[12vw] sm:text-[9vw] lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
               <h1 className="uppercase">TESTIMONIES</h1>
             </div>
             <div className="hidden lg:flex flex-1 justify-center items-center">
@@ -51,14 +51,14 @@ export default function Testimonies() {
               />
             </div>
             <div className="lg:hidden flex flex-1 justify-center items-center">
-              <span className="text-center">
+              <span className="text-center sm:text-[3vw]">
                 Its truly gratifying when our customers find our work valuable
                 and purposeful.
               </span>
             </div>
           </div>
         </div>
-        <div className="flex w-32 h-32 lg:w-[12vw] lg:h-[12vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
+        <div className="flex w-[45vw] h-[45vw] sm:w-[30vw] sm:h-[30vw] lg:w-[12vw] lg:h-[12vw] border border-[#FDFDFD] rounded-full p-2 lg:p-[1vw]">
           <div
             id="test_profile_pic"
             className="w-full h-full rounded-full bg-cover "
@@ -71,7 +71,7 @@ export default function Testimonies() {
             disableOnInteraction: false,
           }}
           loop
-          className="w-full px-10 sm:px-20 sm:w-1/2 flex flex-col"
+          className="w-full px-10 sm:px-20 sm:w-2/3 lg:w-1/2 flex flex-col"
           onSlideChange={(e) => {
             setActiveIndex(e.activeIndex);
             document.getElementById(
@@ -87,10 +87,10 @@ export default function Testimonies() {
               className="w-full h-full flex flex-col justify-center items-center"
             >
               <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
-                <h1 className=" font-bold text-xl lg:leading-[2vw] lg:text-[1.7vw]">
+                <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
                   {slides[activeIndex % slides.length].name}
                 </h1>
-                <span className="lg:leading-[2vw] lg:text-[1.3vw]">
+                <span className="lg:leading-[2vw] text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
                   {slides[activeIndex % slides.length].description}
                 </span>
                 <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
@@ -102,7 +102,7 @@ export default function Testimonies() {
                       </span>
                     ))}
                 </span>
-                <span className="mt-4 flex lg:hidden flex-col text-center items-center">
+                <span className="mt-4 flex lg:hidden flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
                   {slides[activeIndex % slides.length].text
                     .split("\n")
                     .map((text, index) => (

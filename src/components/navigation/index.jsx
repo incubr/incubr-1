@@ -33,13 +33,13 @@ export default function Navigation({ isDark = false }) {
 
   return (
     <div
-      className="navigation flex w-auto lg:w-16 font-[Arial] z-[40] absolute right-0 lg:left-0  items-center"
+      className="navigation flex w-auto lg:w-16 font-[Arial] z-[40] absolute right-0 lg:left-0 lg:items-center"
       style={{ height }}
     >
       <div
         className={`innerBox w-auto transform rotate-180 lg:rotate-0 ${
           isDark ? "bg-white" : "bg-[#1F1D1D]"
-        } h-72 lg:h-[22vw] flex justify-center rounded-tr-xl rounded-br-xl items-center`}
+        } h-[50vw] lg:h-[22vw] absolute top-[40vw] lg:top-0 right-0 lg:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
       >
         <button
           onClick={() => {

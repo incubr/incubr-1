@@ -53,32 +53,38 @@ export default function Slides({data, index, total}) {
 
 export const MobileSlide = ({ data, index, total }) => {
   return (
-    <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#F0C808] rounded-xl w-full sm:w-[48%]">
+    <div className=" p-5 py-7 mt-4 sm:mt-2 sm:mr-2 bg-[#F9F4F2] rounded-xl w-full sm:w-[48%]">
       <div className="flex ">
-        <h1 className="font-bold text-md flex-[0.8]">
+        <h1 className="font-bold text-md font-[PPNeueMontreal] flex-[0.8]">
           . 0{index} -0{total}
         </h1>
         <div className=" flex flex-[2] flex-col">
-          <h1 className="font-[500] tracking-wide text-2xl">{data.title}</h1>
-          <span className=" font-[400] mt-3 text-xl">COLLABORATORS</span>
-          <span className="font-[400] text-sm mt-1 ">{data.clb_1}</span>
-          <span className="font-[400] text-sm mt-1 ">{data.clb_2}</span>
-          <span className="font-[400] text-sm mt-1 ">{data.clb_3}</span>
+          <h1 className="font-[500] leading-[8vw] font-[PPNeueMontreal] tracking-wide text-[8vw]">
+            {data.title}
+          </h1>
+          <span className=" font-[400] font-[PPNeueMontreal] mt-[2vw] text-[3vw]">
+            COLLABORATORS
+          </span>
         </div>
       </div>
       <div
-        className="flex h-64 mt-5 rounded-lg p-3 bg-cover w-full "
+        className="flex h-[70vw] mt-5 rounded-lg p-3 bg-cover w-full "
         style={{
           backgroundImage: `url("${data.image}")`,
         }}
       >
         <div className="flex flex-1 flex-col h-full items-end justify-end">
           <Link href={"/work"}>
-            <button className=" text-white transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#fff] hover:shadow-md flex-none  px-3 py-2 text-md font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider">
+            <button className=" text-white transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#fff] hover:shadow-md flex-none  px-3 py-2 text-[3.5vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider">
               VIEW CASE STUDIES
             </button>
           </Link>
         </div>
+      </div>
+      <div className="flex space-x-[1vw] justify-center py-2 font-[PPNeueMontreal]">
+        <span className="font-[400] text-[3.2vw] mt-1 ">{data.clb_1}.</span>
+        <span className="font-[400] text-[3.2vw] mt-1 ">{data.clb_2}.</span>
+        <span className="font-[400] text-[3.2vw] mt-1 ">{data.clb_3}</span>
       </div>
     </div>
   );
