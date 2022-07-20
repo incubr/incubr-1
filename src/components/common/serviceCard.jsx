@@ -3,7 +3,7 @@ import React from 'react'
 export default function ServiceCard({data}) {
   return (
     <div className="flex w-full text-white pt-20 lg:pt-[6vw] font-[PPNeueMontreal]">
-      <div className="flex w-[15%] lg:leading-[4vw] justify-end lg:text-[2vw]">
+      <div className="flex w-[15%] lg:w-auto lg:leading-[4vw] justify-end lg:text-[2vw]">
         0{data.id}.
       </div>
       <div className="flex w-[70%] sm:w-[56%] flex-col ml-[3vw]">

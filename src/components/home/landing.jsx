@@ -8,7 +8,7 @@ import { onmouseleave } from "../../custom-cursor";
 import Navigation from "../navigation";
 import Link from "next/link";
 
-const TEXTS = ["Centered.", "Empathized.", "Focused.", "Desired."];
+const TEXTS = ["centered", "empathized", "focused", "desired"];
 
 export const onMouseEnterOnTitle = () => {
   const customCursor = document.querySelector(".cursor");
@@ -38,18 +38,18 @@ export default function Landing() {
       <div className="flex flex-1 justify-center items-center">
         <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">
           <div
-            className=" font-[Arial] leading-[16vw] text-[14vw] sm:text-8xl lg:text-[4.3vw] justify-center flex flex-col"
+            className=" font-[Arial] leading-[16vw] text-[13vw] sm:text-8xl lg:text-[4.3vw] justify-center flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}
             onMouseLeave={onmouseleave}
           >
-            <div className="flex flex-col items-center lg:items-start lg:flex-row">
-              Human.&nbsp;
-              <TextTransition springConfig={presets.gentle}>
+            <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row">
+              Human
+              <TextTransition springConfig={presets.slow} className=" lg:ml-[2vw] overflow-y-hidden">
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>
             </div>
-            <span className=" font-[Arial] leading-[16vw] items-center lg:items-start text-center lg:text-start text-[14vw] sm:text-8xl lg:text-[4.3vw]">
-              Solutions.
+            <span className=" font-[Arial] lg:mt-[1vw] items-center lg:items-start text-center lg:text-start">
+              solutions
             </span>
           </div>
           <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">

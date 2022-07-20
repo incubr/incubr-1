@@ -23,25 +23,21 @@ export default function Work() {
         <Navigation isDark={true} />
         <DarkHeaders />
         <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+          <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:w-[25vw] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col text-center lg:text-start ">
-                <span>Featured</span>
-                <span className="">{" "}Case</span>
+                Featured Case Studies
               </div>
               <span className=" font-[Arial]  text-center lg:text-start">
-                Studies
               </span>
             </div>
-            <span className=" font-[PPNeueMontreal] text-white  text-center lg:text-start leading-[1.5] flex-col flex mt-10 lg:mt-0 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`From new ideas we tested to client\n
-               successes, read our case studies to\n
-                learn how we've helped various industries\n
-                 transform their businesses and stay\n
+            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] lg:mt-[2vw] flex-col flex mt-10 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+              {`From new ideas we tested to client successes, read our case studies to\n
+                learn how we've helped various industries transform their businesses and stay\n
                   at the top of the ever-changing environment.`
                 .split("\n")
                 .map((line, i) => (
@@ -104,7 +100,7 @@ export default function Work() {
       </div>
 
       <div className="w-full flex bg-[#1F1D1D] justify-center pb-20 ">
-        <div className=" w-full sm:w-[60%] lg:w-[70%] flex mt-10 lg:mt-[4vw] flex-col lg:space-y-[8vw] ">
+        <div className=" w-full sm:w-[60%] lg:w-[60%] flex mt-10 lg:mt-[4vw] flex-col lg:space-y-[8vw] ">
           {work.map((i) => (
             <WorkCard
               data={i}

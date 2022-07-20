@@ -17,29 +17,25 @@ export default function Services() {
     <div className="w-full scroll-smooth">
       <div
         className="w-full relative bg-[#1F1D1D] flex flex-col"
-        style={{ height: height , paddingBottom: height * 0.05 }}
+        style={{ height: height, paddingBottom: height * 0.05 }}
       >
         <Navigation isDark={true} />
         <DarkHeaders />
         <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+          <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:w-[25vw] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto lg:leading-[4vw] lg:text-[3.3vw] flex flex-col lg:flex-row"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col items-center text-center lg:text-start lg:items-start lg:flex-row">
-                We Innovate, Nourish &amp;
+                We Innovate, Nourish &amp; Grow Startups
               </div>
-              <span className=" font-[Arial] leading-[14vw] items-center lg:items-start text-center lg:text-start text-[11vw] sm:text-7xl lg:text-[3.5vw]">
-                Grow Startups
-              </span>
+              <span className=" font-[Arial] items-center lg:items-start text-center lg:text-start"></span>
             </div>
-            <span className=" font-[PPNeueMontreal] text-white  text-center lg:text-start leading-[1.5] flex-col flex mt-10 lg:mt-0 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`We are uniquely positioned with skills to\n
-               build your next big Startup. With our\n
-                high-quality development services, you\n
-                 can propel your company into the future.`
+            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-[2vw] text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+              {`We are uniquely positioned with skills to build your next big Startup. With our\n
+                high-quality development services, you can propel your company into the future.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
@@ -92,7 +88,7 @@ export default function Services() {
                   />
                 </svg>
               </div>
-              <h1 className="font-bold text-xl text-white mt-[2vw] lg:mt-0 lg:text-[1.6vw] font-[PPNeueMontreal] tracking-widest">
+              <h1 className="font-bold text-xl text-white mt-[2vw] lg:mt-0 lg:text-[1.2vw] font-[PPNeueMontreal] tracking-widest">
                 Happy to serve
               </h1>
             </div>
