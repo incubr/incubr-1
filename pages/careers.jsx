@@ -21,9 +21,9 @@ export default function Careers() {
         <Navigation />
         <Headers />
         <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:w-[25vw] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
@@ -34,7 +34,7 @@ export default function Careers() {
                 Dedicated.
               </span>
             </div>
-            <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-[2vw] text-sm lg:text-[1.5vw] tracking-wide font-[350]">
               {`We know that finding a meaningful and rewarding\n
                job can be difficult at times. Our goal is to simplify\n
                 that process for you. Ready to join the\n
