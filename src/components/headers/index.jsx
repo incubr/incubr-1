@@ -70,7 +70,7 @@ export const DarkHeaders = () => {
         </Link>
         <Link href={"/"}>
           <svg
-            width="130"
+            width="140"
             height="29"
             viewBox="0 0 94 18"
             fill="none"

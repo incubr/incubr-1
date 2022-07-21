@@ -5,6 +5,7 @@ export const Store = React.createContext();
 
 export const Provider = ({ children }) => {
   const [height, setHeight] = React.useState(0);
+  const [width, setWidth] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
   const [canShow, setCanShow] = React.useState(false);
 
@@ -48,7 +49,7 @@ export const Provider = ({ children }) => {
     };
 
     handleResize();
-
+    setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
 
     return () => {

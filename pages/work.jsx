@@ -12,13 +12,13 @@ import { work } from "@/data/work";
 import Link from "next/link";
 
 export default function Work() {
-  const { height } = React.useContext(Store);
+  const { height, width } = React.useContext(Store);
 
   return (
     <div className="w-full scroll-smooth">
       <div
         className="w-full relative bg-[#1F1D1D] flex flex-col"
-        style={{ height: height, paddingBottom: height * 0.05 }}
+        style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
       >
         <Navigation isDark={true} />
         <DarkHeaders />
