@@ -36,9 +36,10 @@ export default function Work() {
               </span>
             </div>
             <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] lg:mt-[2vw] flex-col flex mt-10 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`From new ideas we tested to client successes, read our case studies to\n
-                learn how we've helped various industries transform their businesses and stay\n
-                  at the top of the ever-changing environment.`
+              {`From new ideas we tested to client successes,\n
+               read our case studies to learn how we've helped\n
+                various industries transform their businesses and\n
+                 stay at the top of the ever-changing environment.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>

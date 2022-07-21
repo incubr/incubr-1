@@ -34,8 +34,10 @@ export default function Services() {
               <span className=" font-[Arial] items-center lg:items-start text-center lg:text-start"></span>
             </div>
             <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-[2vw] text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`We are uniquely positioned with skills to build your next big Startup. With our\n
-                high-quality development services, you can propel your company into the future.`
+              {`We are uniquely positioned with skills to\n
+               build your next big Startup. With our\n
+                high-quality development services, you can\n
+                 propel your company into the future.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
