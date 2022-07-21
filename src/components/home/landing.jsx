@@ -19,19 +19,21 @@ export const onMouseEnterOnTitle = () => {
 export default function Landing() {
   const { height } = React.useContext(Store);
   const [index, setIndex] = React.useState(0);
+  const [width, setWidth] = React.useState(0);
 
   React.useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
       3000 // every 3 seconds
     );
+    setWidth(window.innerWidth);
     return () => clearTimeout(intervalId);
   }, []);
 
   return (
     <div
       className="w-full relative bg-[#FDFDFD] flex flex-col"
-      style={{ height: height - height * 0.05 }}
+      style={{ height: width > 1024 ? height - height * 0.05: "95vh" }}
     >
       <Navigation />
       <Headers />
