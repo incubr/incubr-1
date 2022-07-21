@@ -44,7 +44,7 @@ export const Provider = ({ children }) => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      setHeight(window.innerHeight);
+      setHeight("100vh");
     };
 
     handleResize();
