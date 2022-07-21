@@ -91,18 +91,18 @@ export default function StartAProject() {
         <Navigation />
         <Headers />
         <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:w-[25vw] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-7xl w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col text-center lg:text-start ">
-                Want to talk about
+                Want to talk about your project?
               </div>
-              <span className=" font-[Arial]  text-center lg:text-start">
-                your project?
-              </span>
+              {/* <span className=" font-[Arial]  text-center lg:text-start">
+                
+              </span> */}
             </div>
             <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
               {`Fill out the contact form for us to\n 
