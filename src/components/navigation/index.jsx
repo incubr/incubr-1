@@ -41,7 +41,7 @@ export default function Navigation({ isDark = false }) {
       <div
         className={`innerBox w-auto transform rotate-180 sm:rotate-0 ${
           isDark ? "sm:bg-white" : "sm:bg-[#1F1D1D]"
-        } h-[33vw] px-[8vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
+        } h-[37vw] px-[8vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
       >
         <button
           onClick={() => {
@@ -88,33 +88,19 @@ export default function Navigation({ isDark = false }) {
             style={{ writingMode: "vertical-rl" }}
             className={`${isDark ? "text-black" : "text-white"}  `}
           >
-            {isDark ? (
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 37 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M36.75 24.5H0V20.4167H36.75V24.5ZM36.75 14.2917H0V10.2083H36.75V14.2917ZM36.75 4.08333H0V0H36.75V4.08333Z"
-                  fill="white"
-                />
-              </svg>
-            ) : (
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 37 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M36.75 24.5H0V20.4167H36.75V24.5ZM36.75 14.2917H0V10.2083H36.75V14.2917ZM36.75 4.08333H0V0H36.75V4.08333Z"
-                  fill="black"
-                />
-              </svg>
-            )}
+            <svg
+              viewBox="0 0 54 53"
+              fill="none"
+              className=" w-[2.5vw] h-[2.5vw]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="26.7246"
+                cy="26.5"
+                r="26.5"
+                fill={isDark ? "#fff" : "#1F1D1D"}
+              />
+            </svg>
           </span>
         </button>
         <button

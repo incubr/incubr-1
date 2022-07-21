@@ -81,7 +81,7 @@ export const reverseNavigation = (isRight=false, isDark=false) => {
   timeline.to(".navigation .innerBox", {
     duration: 0.3,
     width: "auto",
-    height: isRight ? "33vw" : "22vw",
+    height: isRight ? "37vw" : "22vw",
     position: isRight ? "absolute" : "relative",
     top: isRight ? "0" : "0",
     ease: "power2.inOut",

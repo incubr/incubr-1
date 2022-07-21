@@ -23,14 +23,14 @@ export default function Slides({ data, index, total }) {
       className="flex-none mr-4 h-[60%] lg:h-full font-[PPNeueMontreal] w-full lg:w-[90%] bg-cover "
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
-        <div className="flex flex-1 flex-col justify-end">
+        <div className="flex flex-[2] flex-col justify-end">
           <h1 className="font-bold text-[1.5vw]">
             . 0{index} -0{total}
           </h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
             {data.title}
           </h1>
-          <span className=" font-bold text-[1.3vw]">COLLABORATORS</span>
+          <span className=" font-bold text-[1.3vw]">{data.description}</span>
           <span className="font-bold mt-5">{data.clb_1}</span>
           <span className="font-bold ">{data.clb_2}</span>
           <span className="font-bold ">{data.clb_3}</span>
@@ -40,7 +40,7 @@ export default function Slides({ data, index, total }) {
             <button
               onMouseMove={buttonMouseEnter}
               onMouseLeave={onMouseEnter}
-              className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#000] hover:shadow-md flex-none lg:w-[15vw] px-5 py-3 text-xl lg:text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
+              className=" transition-colors duration-200 ease-in-out hover:border-[#F0C808] hover:bg-[#F0C808] hover:text-[#000] hover:shadow-md flex-none lg:w-[17vw] px-5 py-3 text-xl lg:text-[1.2vw] font-bold font-[PPNeueMontreal] border border-white rounded-full tracking-wider"
             >
               VIEW CASE STUDIES
             </button>
@@ -68,11 +68,11 @@ export const MobileSlide = ({ data, index, total }) => {
         <div className="flex h-[70vw] mt-5 rounded-lg p-3 bg-cover w-full ">
           <div className="flex flex-1 flex-col h-full items-center justify-end">
             <div className=" flex flex-[2] flex-col items-center ">
-              <h1 className="font-[600] leading-[8vw] font-[PPNeueMontreal] tracking-widest text-[9vw]">
+              <h1 className="font-[600] text-center leading-[8vw] font-[PPNeueMontreal] tracking-widest text-[9vw]">
                 {data.title}
               </h1>
-              <span className=" font-[600] font-[PPNeueMontreal] mt-[2vw] text-[3vw] tracking-widest">
-                COLLABORATORS
+              <span className=" font-[600] text-center font-[PPNeueMontreal] mt-[4vw] text-[3vw] tracking-widest">
+                {data.description}
               </span>
             </div>
             <Link href={"/work"}>
