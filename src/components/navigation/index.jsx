@@ -35,7 +35,7 @@ export default function Navigation({ isDark = false }) {
 
   return (
     <div
-      className="navigation hidden z-[100] sm:flex w-auto sm:w-16 font-[Arial] absolute right-0 sm:left-0 sm:items-center"
+      className="navigation hidden z-[90] sm:flex w-auto sm:w-16 font-[Arial] absolute right-0 sm:left-0 sm:items-center"
       style={{ height }}
     >
       <div
