@@ -49,12 +49,12 @@ export default function MobileNavigation({ isDark = false }) {
             document.getElementById("hanger").style.opacity = 0;
             document.getElementById("navigation__list__mobile").style.display =
               "flex";
+            document.getElementById("navigation__mobile").style.zIndex = 100;
           }}
           onTouchMove={(e) => {
             const { clientY, clientX } = e.touches[0];
             document.getElementById("navigation__mobile").style.height =
               clientY + "px";
-            document.getElementById("navigation__mobile").style.zIndex = 100;
             document.getElementById("innerbox__mobile").style.height =
               clientY + "px";
 
@@ -86,7 +86,6 @@ export default function MobileNavigation({ isDark = false }) {
             }
             document.body.style.overflowY = "auto";
           }}
-          
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
