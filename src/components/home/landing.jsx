@@ -38,7 +38,7 @@ export default function Landing() {
       <Navigation />
       <Headers />
       <div className="flex flex-1 justify-center items-center">
-        <div className="lg:w-[60%] w-full mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">
+        <div className="lg:w-[60%] w-full mt-[16vw] sm:mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">
           <div
             className=" font-[Arial] leading-[14vw] text-[12vw] sm:text-8xl lg:text-[4.3vw] justify-center flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}
@@ -68,7 +68,7 @@ export default function Landing() {
                 <span key={i + line}>{line}</span>
               ))}
           </span>
-          <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
+          <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[5vw] text-[3.5vw] sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
             {`We are a new-age all-in-one digital\n
              brand incubator that specializes in\n
               scaling your business through\n

@@ -41,7 +41,7 @@ export default function Navigation({ isDark = false }) {
       <div
         className={`innerBox w-auto transform rotate-180 sm:rotate-0 ${
           isDark ? "sm:bg-white" : "sm:bg-[#1F1D1D]"
-        } h-[37vw] px-[8vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
+        } h-[31vw] px-[8vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tr-xl rounded-br-xl items-center`}
       >
         <button
           onClick={() => {
