@@ -42,10 +42,10 @@ export default function Footer({ isDark = false }) {
                 We are a new-age brand incubator that specializes in integrated
                 digital solutions- website, app, marketing, UX/UI, and
                 technology. We engineer, design, and help you scale your
-                products to reach your target group. Since day one, we've helped
-                innovators and founders take their startups to the next level by
-                providing them with the tools and guidance they need to turn
-                their excellent ideas into powerful companies.
+                products to reach your target group. Since the beginning, we've
+                given entrepreneurs the tools and direction they need to
+                transform their great ideas into successful businesses,
+                assisting them in taking their businesses to the next level.
               </div>
             </div>
             <div className="flex lg:hidden justify-center items-center">

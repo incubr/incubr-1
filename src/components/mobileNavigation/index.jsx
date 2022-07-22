@@ -26,7 +26,11 @@ export default function MobileNavigation({ isDark = false }) {
 
   return (
     <div className="navigation__mobile  flex sm:hidden h-[31vw]  w-full sm:w-16 font-[Arial] z-[40] fixed right-0 sm:left-0 sm:items-center">
-      <div className=" innerbox__mobile bg-[#1F1D1D] w-full flex z-[41] h-[2vw]">
+      <div
+        className={`innerbox__mobile ${
+          isDark ? "bg-[#fff]" : "bg-[#1F1D1D]"
+        } w-full flex z-[41] h-[2vw]`}
+      >
         <div
           onClick={() => {
             setOpened(!opened);
@@ -43,9 +47,9 @@ export default function MobileNavigation({ isDark = false }) {
           >
             <path
               d="M12.6166 60.6799C12.9921 60.3044 13.6009 60.3044 13.9764 60.6799L22.1353 68.8388C27.0169 73.7204 27.0169 81.635 22.1353 86.5165V86.5165C17.2537 91.3981 9.29431 91.3532 4.41276 86.4716V86.4716C-0.419483 81.6394 -0.463898 73.7604 4.36835 68.9281L12.6166 60.6799Z"
-              fill="#1F1D1D"
+              fill={isDark ? "#fff" : "#1F1D1D"}
             />
-            <path d="M12 0H14.5V66H12V0Z" fill="#1F1D1D" />
+            <path d="M12 0H14.5V66H12V0Z" fill={isDark ? "#fff" : "#1F1D1D"} />
           </svg>
         </div>
         <button

@@ -8,6 +8,7 @@ import Image from "next/image";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Footer from "@/src/components/footer";
 import { toast } from "react-toastify";
+import MobileNavigation from "@/src/components/mobileNavigation";
 
 const ElevatedBox = ({ childern, title, notBorder = false }) => {
   return (
@@ -89,6 +90,7 @@ export default function StartAProject() {
         style={{ height: height, paddingBottom: height * 0.05 }}
       >
         <Navigation />
+        <MobileNavigation />
         <Headers />
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">

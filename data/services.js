@@ -15,7 +15,7 @@ export const servicesData = [
     id: 3,
     title: "Find & Deploy Tech Resources",
     description:
-      "We help you find, compare and deploy the right technologies for your business. We recruit, hire, train, upskill, and deploy entry-to-senior-level domestic tech talent. We understand what it takes to get technology deployed, including all change management aspects related to new ways of working. ",
+      "We help you find, compare and deploy the right technologies for your business. We find, hire, train, upskill, and deploy local tech talent at all levels, from entry to senior. We understand what it takes to get technology deployed, including all change management aspects related to new ways of working.",
   },
   {
     id: 4,

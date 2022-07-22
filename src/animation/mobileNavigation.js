@@ -8,7 +8,8 @@ export const mobileAnimateNavigation = (isDark = false) => {
     duration: 0.3,
     width: "100%",
     height: "100vh",
-    position: "fixed"
+    position: "fixed",
+    zIndex: 100,
   });
 
   timeline.to("#navigation__trigger", {
@@ -98,7 +99,8 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
 
   timeline.to(".navigation__mobile", {
     duration: 0.3,
-    height: "31vw"
+    height: "31vw",
+    zIndex: 40,
   });
 };
 

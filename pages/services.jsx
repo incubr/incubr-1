@@ -8,6 +8,7 @@ import ServiceCard from "@/src/components/common/serviceCard";
 import Footer from "@/src/components/footer";
 import { servicesData } from "@/data/services";
 import Link from "next/link";
+import MobileNavigation from "@/src/components/mobileNavigation";
 
 export default function Services() {
   const { height, width } = React.useContext(Store);
@@ -18,6 +19,7 @@ export default function Services() {
         style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
       >
         <Navigation isDark />
+        <MobileNavigation isDark />
         <Headers isDark />
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
@@ -27,15 +29,15 @@ export default function Services() {
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col items-center text-center lg:text-start lg:items-start lg:flex-row">
-                We Innovate, Nourish &amp; Grow Startups
+                We nourish, innovate &amp; grow startups
               </div>
               <span className=" font-[Arial] items-center lg:items-start text-center lg:text-start"></span>
             </div>
             <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-[2vw] text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
-              {`We are uniquely positioned with skills to\n
-               build your next big Startup. With our\n
-                high-quality development services, you can\n
-                 propel your company into the future.`
+              {`We are uniquely positioned for new-age\n
+               startups and with our top-notch services,\n
+                we have the ability to take your business\n
+                 to the next big level. `
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>

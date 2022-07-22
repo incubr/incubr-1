@@ -1,13 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "@/assets/INCUBR.svg";
-import DarkLogo from "@/assets/darkIncubr.svg";
 
 export default function Headers({ isDark = false }) {
   return (
     <div className="flex w-full justify-center absolute top-0 left-0">
-      <div className="w-[83%] sm:w-[85%] flex justify-center sm:justify-between mt-[12vw] sm:mt-16 2xl:mt-20">
+      <div className="w-[83%] sm:w-[85%] z-[50] flex justify-center sm:justify-between mt-[12vw] sm:mt-16 2xl:mt-20">
         <Link href={"/"}>
           <svg
             viewBox="0 0 163 29"

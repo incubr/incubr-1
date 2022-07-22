@@ -10,6 +10,7 @@ import WorkCard from "@/src/components/common/workcard";
 import Footer from "@/src/components/footer";
 import { work } from "@/data/work";
 import Link from "next/link";
+import MobileNavigation from "@/src/components/mobileNavigation";
 
 export default function Work() {
   const { height, width } = React.useContext(Store);
@@ -20,8 +21,9 @@ export default function Work() {
         className="w-full relative bg-[#1F1D1D] flex flex-col"
         style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
       >
-        <Navigation isDark={true} />
+        <Navigation isDark />
         <Headers isDark />
+        <MobileNavigation isDark />
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
@@ -36,9 +38,10 @@ export default function Work() {
             </div>
             <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] lg:mt-[2vw] flex-col flex mt-10 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
               {`From new ideas we tested to client successes,\n
-               read our case studies to learn how we've helped\n
-                various industries transform their businesses and\n
-                 stay at the top of the ever-changing environment.`
+               read our case studies to find out how we've\n
+                assisted companies in a variety of industries\n
+                 to alter their operations and stay on top of the\n
+                  rapidly changing marketplace.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
