@@ -5,18 +5,19 @@ import LinkedIn from "@/assets/linkedin.svg";
 import Image from "next/image";
 import { navigation_link } from "@/data/link";
 import Link from "next/link";
-import SmallCross from "@/assets/smallcross.svg";
 import {
   changeBarColor,
-  changeBarColorBack,
   mobileAnimateNavigation,
   mobileReverseNavigation,
 } from "@/src/animation/mobileNavigation";
 
 export default function MobileNavigation({ isDark = false }) {
   const [opened, setOpened] = React.useState(false);
-  const [isRight, setIsRight] = React.useState(false);
+  const [currentPosition, setCurrentPosition] = React.useState({ x: 0, y: 0 });
+  const [final, setFinal] = React.useState(false);
   const [currentLocation, setCurrentLocation] = React.useState("/");
+  const navigationRef = React.useRef(null);
+  const navigationRef2 = React.useRef(null);
 
   React.useEffect(() => {
     changeBarColor(".dark__section", "#ffffff", "#1F1D1D");
@@ -25,36 +26,63 @@ export default function MobileNavigation({ isDark = false }) {
   }, []);
 
   return (
-    <div className="navigation__mobile  flex sm:hidden h-[31vw]  w-full sm:w-16 font-[Arial] z-[40] fixed right-0 sm:left-0 sm:items-center">
+    <div
+      ref={navigationRef}
+      id="navigation__mobile"
+      className="navigation__mobile  flex sm:hidden h-[31vw]  w-full sm:w-16 font-[Arial] z-[40] fixed right-0 sm:left-0 sm:items-center"
+    >
       <div
+        ref={navigationRef2}
+        id="innerbox__mobile"
         className={`innerbox__mobile ${
           isDark ? "bg-[#fff]" : "bg-[#1F1D1D]"
         } w-full flex z-[41] h-[2vw]`}
       >
         <div
-          onClick={() => {
-            setOpened(!opened);
-            mobileAnimateNavigation();
+          onTouchStart={(e) => {
+            console.log("start");
+            setCurrentPosition({
+              x: e.touches[0].clientX,
+              y: e.touches[0].clientY,
+            });
+            document.body.style.overflowY = "hidden";
+            document.getElementById("hanger").style.opacity = 0;
           }}
-          onDragOver={() => {
-            setOpened(!opened);
-            mobileAnimateNavigation();
+          onTouchMove={(e) => {
+            const { clientY, clientX } = e.touches[0];
+            document.getElementById("navigation__mobile").style.height =
+              clientY + "px";
+            document.getElementById("navigation__mobile").style.zIndex = 100;
+            document.getElementById("innerbox__mobile").style.height =
+              clientY + "px";
+            document.getElementById("navigation__list__mobile").style.display =
+              "flex";
+
+            if (clientY > currentPosition.y) {
+              setFinal(true);
+              setCurrentPosition({ x: clientX, y: clientY });
+            } else {
+              setFinal(false);
+              setCurrentPosition({ x: clientX, y: clientY });
+            }
           }}
-          onDragStart={() => {
-            setOpened(!opened);
-            mobileAnimateNavigation();
+          onTouchEnd={(e) => {
+            if (final) {
+              setOpened(true);
+              mobileAnimateNavigation();
+            } else {
+              setOpened(false);
+              mobileReverseNavigation();
+            }
+            document.body.style.overflowY = "auto";
           }}
-          onDrag={() => {
-            setOpened(!opened);
-            mobileAnimateNavigation();
-          }}
-          draggable
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
           <svg
             viewBox="0 0 26 91"
             fill="none"
+            id="hanger"
             className=" w-[4vw] h-[28vw] "
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -119,7 +147,7 @@ export default function MobileNavigation({ isDark = false }) {
           </ul>
           <div
             id="button_section__mobile"
-            className=" flex-col mt-10 opacity-0 flex items-center space-y-5 "
+            className=" flex-col mt-10 opacity-0 hidden items-center space-y-5 "
           >
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
               Let's work together

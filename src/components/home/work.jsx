@@ -31,7 +31,7 @@ export default function OurWork() {
       <div
         onMouseLeave={onmouseleave}
         id="forDesktop"
-        className={`hidden sm:block w-auto h-[700vw] lg:h-[450vw] -z-10`}
+        className={`hidden sm:block w-auto h-[700vw] lg:h-[450vw] overflow-x-hidden -z-10`}
       >
         <div
           id="PageWrap"

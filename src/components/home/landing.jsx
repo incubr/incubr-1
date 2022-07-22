@@ -48,10 +48,10 @@ export default function Landing() {
             onMouseLeave={onmouseleave}
           >
             <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row">
-              Human
+              <span className="bg-white z-[10] w-full lg:w-auto flex justify-center">Human</span>
               <TextTransition
                 springConfig={presets.slow}
-                className=" lg:ml-[2vw] overflow-y-hidden"
+                className=" lg:ml-[2vw] overflow-hidden"
               >
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>
