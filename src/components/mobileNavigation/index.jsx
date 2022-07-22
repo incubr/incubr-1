@@ -36,6 +36,19 @@ export default function MobileNavigation({ isDark = false }) {
             setOpened(!opened);
             mobileAnimateNavigation();
           }}
+          onDragOver={() => {
+            setOpened(!opened);
+            mobileAnimateNavigation();
+          }}
+          onDragStart={() => {
+            setOpened(!opened);
+            mobileAnimateNavigation();
+          }}
+          onDrag={() => {
+            setOpened(!opened);
+            mobileAnimateNavigation();
+          }}
+          draggable
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
