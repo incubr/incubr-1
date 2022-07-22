@@ -47,6 +47,8 @@ export default function MobileNavigation({ isDark = false }) {
             });
             document.body.style.overflowY = "hidden";
             document.getElementById("hanger").style.opacity = 0;
+            document.getElementById("navigation__list__mobile").style.display =
+              "flex";
           }}
           onTouchMove={(e) => {
             const { clientY, clientX } = e.touches[0];
@@ -55,8 +57,6 @@ export default function MobileNavigation({ isDark = false }) {
             document.getElementById("navigation__mobile").style.zIndex = 100;
             document.getElementById("innerbox__mobile").style.height =
               clientY + "px";
-            document.getElementById("navigation__list__mobile").style.display =
-              "flex";
 
             if (clientY > currentPosition.y) {
               setFinal(true);
@@ -65,6 +65,16 @@ export default function MobileNavigation({ isDark = false }) {
               setFinal(false);
               setCurrentPosition({ x: clientX, y: clientY });
             }
+          }}
+          onTouchCancel={(e) => {
+            if (final) {
+              setOpened(true);
+              mobileAnimateNavigation();
+            } else {
+              setOpened(false);
+              mobileReverseNavigation();
+            }
+            document.body.style.overflowY = "auto";
           }}
           onTouchEnd={(e) => {
             if (final) {
@@ -76,6 +86,7 @@ export default function MobileNavigation({ isDark = false }) {
             }
             document.body.style.overflowY = "auto";
           }}
+          
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
