@@ -37,7 +37,7 @@ export const work = [
     title: "Sybill Software",
     image: "/sybill.svg",
     description:
-      "Sybill is an enterprise startup that develops Artificial Intelligence to solve the problem of video conferencing. We developed an interactive website for them that identifies the probems behind poor prospects and how it effectvely uses emotional awareness to turn their prospects into customers with an X-ray vision of their needs. It features interactive calls to actions, benefits, and social proofs of the product's efficiency. ",
+      "Sybill is an enterprise startup that develops Artificial Intelligence to solve the problem of video conferencing. We developed an interactive website for them that identifies the problems behind poor prospects and how it effectively uses emotional awareness to turn their prospects into customers with an X-ray vision of their needs. It features interactive calls to action, benefits, and social proofs of the product's efficiency.",
   },
   {
     id: 6,
