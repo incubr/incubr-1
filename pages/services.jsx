@@ -1,11 +1,9 @@
 import { Store } from "@/context";
-import { DarkHeaders } from "@/src/components/headers";
+import Headers from "@/src/components/headers";
 import { onMouseEnterOnTitle } from "@/src/components/home/landing";
 import Navigation from "@/src/components/navigation";
 import { onmouseleave } from "@/src/custom-cursor";
-import Image from "next/image";
 import React from "react";
-import ArrowDown from "@/assets/arrowDown.svg";
 import ServiceCard from "@/src/components/common/serviceCard";
 import Footer from "@/src/components/footer";
 import { servicesData } from "@/data/services";
@@ -19,8 +17,8 @@ export default function Services() {
         className="w-full relative bg-[#1F1D1D] flex flex-col"
         style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
       >
-        <Navigation isDark={true} />
-        <DarkHeaders />
+        <Navigation isDark />
+        <Headers isDark />
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div

@@ -7,6 +7,8 @@ import TextTransition, { presets } from "react-text-transition";
 import { onmouseleave } from "../../custom-cursor";
 import Navigation from "../navigation";
 import Link from "next/link";
+import MobileNavigation from "../mobileNavigation";
+import { changeBarColorBack } from "@/src/animation/mobileNavigation";
 
 const TEXTS = ["centered", "empathized", "focused", "desired"];
 
@@ -32,10 +34,11 @@ export default function Landing() {
 
   return (
     <div
-      className="w-full relative bg-[#FDFDFD] flex flex-col"
-      style={{ height: width > 1024 ? height - height * 0.05: "95vh" }}
+      className="w-full light__section relative bg-[#FDFDFD] flex flex-col"
+      style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
     >
       <Navigation />
+      <MobileNavigation />
       <Headers />
       <div className="flex flex-1 justify-center items-center">
         <div className="lg:w-[60%] w-full mt-[16vw] sm:mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">

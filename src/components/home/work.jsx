@@ -5,6 +5,7 @@ import HeadingText from "../common/Heading";
 import Slides, { MobileSlide } from "../common/slides";
 import { onmouseleave } from "../../custom-cursor";
 import { work, workForHomePage } from "@/data/work";
+import { changeBarColorBack } from "@/src/animation/mobileNavigation";
 
 export default function OurWork() {
   React.useEffect(() => {
@@ -12,7 +13,7 @@ export default function OurWork() {
   }, []);
 
   return (
-    <>
+    <div className="light__section">
       <div
         id="forMobile"
         className="flex flex-col w-full bg-[#FDFDFD] lg:bg-[#1F1D1D] lg:h-[25vw]"
@@ -56,6 +57,6 @@ export default function OurWork() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

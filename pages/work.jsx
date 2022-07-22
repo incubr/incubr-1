@@ -4,7 +4,7 @@ import { onmouseleave } from "@/src/custom-cursor";
 import React from "react";
 import ArrowDown from "@/assets/arrowDown.svg";
 import Navigation from "@/src/components/navigation";
-import { DarkHeaders } from "@/src/components/headers";
+import Headers from "@/src/components/headers";
 import Image from "next/image";
 import WorkCard from "@/src/components/common/workcard";
 import Footer from "@/src/components/footer";
@@ -21,7 +21,7 @@ export default function Work() {
         style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
       >
         <Navigation isDark={true} />
-        <DarkHeaders />
+        <Headers isDark />
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div

@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <div
-      className=" bg-[#1F1D1D] text-white flex justify-center items-center"
+      className="dark__section bg-[#1F1D1D] text-white flex justify-center items-center"
       style={{ height }}
     >
       <div className="flex w-full flex-col justify-center  lg:flex-row">

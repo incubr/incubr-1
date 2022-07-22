@@ -33,7 +33,7 @@ export default function Testimonies() {
 
   return (
     <>
-      <div className="flex flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
+      <div className="flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
         <div
           id="testimonies"
           className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
