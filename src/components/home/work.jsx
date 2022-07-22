@@ -30,11 +30,12 @@ export default function OurWork() {
       </div>
       <div
         onMouseLeave={onmouseleave}
-        className={`hidden sm:flex w-auto h-[680vw] lg:h-[520vw] xl:h-[500vw] -z-10`}
+        id="forDesktop"
+        className={`hidden sm:block w-auto h-[700vw] lg:h-[450vw] -z-10`}
       >
         <div
           id="PageWrap"
-          className="flex h-screen items-center p-4 w-full my-10"
+          className="flex h-screen items-center p-4 w-full "
         >
           {workForHomePage.map((i, index) => (
             <Slides
