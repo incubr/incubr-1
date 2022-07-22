@@ -9,7 +9,7 @@ export const mobileAnimateNavigation = (isDark = false) => {
   });
 
   timeline.to(".navigation__mobile", {
-    duration: 0.05,
+    duration: 0.01,
     width: "100%",
     height: "100vh",
     position: "fixed",
@@ -21,7 +21,7 @@ export const mobileAnimateNavigation = (isDark = false) => {
   });
 
   timeline.to(".navigation__mobile .innerbox__mobile", {
-    duration: 0.1,
+    duration: 0.2,
     width: "100%",
     height: "100vh",
     ease: "power2.inOut",

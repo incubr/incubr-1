@@ -40,7 +40,6 @@ export default function MobileNavigation({ isDark = false }) {
       >
         <div
           onTouchStart={(e) => {
-            console.log("start");
             setCurrentPosition({
               x: e.touches[0].clientX,
               y: e.touches[0].clientY,
@@ -60,11 +59,10 @@ export default function MobileNavigation({ isDark = false }) {
 
             if (clientY > currentPosition.y) {
               setFinal(true);
-              setCurrentPosition({ x: clientX, y: clientY });
             } else {
               setFinal(false);
-              setCurrentPosition({ x: clientX, y: clientY });
             }
+            setCurrentPosition({ x: clientX, y: clientY });
           }}
           onTouchCancel={(e) => {
             if (final) {
@@ -86,6 +84,7 @@ export default function MobileNavigation({ isDark = false }) {
             }
             document.body.style.overflowY = "auto";
           }}
+          
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
