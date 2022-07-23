@@ -26,6 +26,32 @@ export default function MobileNavigation({ isDark = false }) {
     setCurrentLocation(window.location.pathname);
   }, []);
 
+  const revelElement = () => {
+    gsap.to(
+      ".navigation__mobile .innerbox__mobile #navigation__list__mobile ul li",
+      {
+        duration: 0.2,
+        translateY: 0,
+        ease: "power2.inOut",
+        stagger: 0.1,
+        opacity: 0.5,
+      }
+    );
+
+    gsap.to(".navigation__mobile .innerbox__mobile #button_section__mobile", {
+      duration: 0.2,
+      display: "flex",
+      opacity: 1,
+    });
+
+    gsap.to(".cross_button", {
+      duration: 0.2,
+      opacity: 1,
+      ease: "power2.inOut",
+      display: "flex",
+    });
+  }
+
   const onTouchStart = (e) => {
     setCurrentPosition({
       x: e.touches[0].clientX,
@@ -35,6 +61,7 @@ export default function MobileNavigation({ isDark = false }) {
     document.getElementById("hanger").style.opacity = 0;
     document.getElementById("navigation__list__mobile").style.display = "flex";
     document.getElementById("navigation__mobile").style.zIndex = 100;
+    revelElement()
   };
 
   const onTouchMove = (e) => {
@@ -59,32 +86,7 @@ export default function MobileNavigation({ isDark = false }) {
       gsap.to("#innerbox__mobile", {
         height: "100vh",
       });
-      gsap.to(
-        ".navigation__mobile .innerbox__mobile #navigation__list__mobile ul li",
-        {
-          duration: 0.2,
-          translateY: 0,
-          ease: "power2.inOut",
-          stagger: 0.1,
-          opacity: 0.5,
-        }
-      );
-
-      gsap.to(
-        ".navigation__mobile .innerbox__mobile #button_section__mobile",
-        {
-          duration: 0.2,
-          display: "flex",
-          opacity: 1,
-        }
-      );
-
-      gsap.to(".cross_button", {
-        duration: 0.2,
-        opacity: 1,
-        ease: "power2.inOut",
-        display: "flex",
-      });
+      
       // mobileAnimateNavigation();
     } else {
       setOpened(false);
@@ -181,7 +183,7 @@ export default function MobileNavigation({ isDark = false }) {
         </button>
         <div
           id="navigation__list__mobile"
-          className="hidden button bg-[#1F1D1D] flex-col w-full justify-center items-center"
+          className="hidden button overflow-hidden bg-[#1F1D1D] flex-col w-full justify-center items-center"
         >
           <ul className="flex flex-col items-center cursor-pointer space-y-5">
             {navigation_link.map((item, index) => (

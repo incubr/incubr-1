@@ -145,3 +145,7 @@ export const changeBarColor = (trigger, color, textColor) => {
     });
   });
 };
+
+
+const revelElement = () => {}
+
