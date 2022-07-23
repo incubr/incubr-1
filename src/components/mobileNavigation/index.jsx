@@ -10,6 +10,7 @@ import {
   mobileAnimateNavigation,
   mobileReverseNavigation,
 } from "@/src/animation/mobileNavigation";
+import gsap from "gsap";
 
 export default function MobileNavigation({ isDark = false }) {
   const [opened, setOpened] = React.useState(false);
@@ -25,6 +26,79 @@ export default function MobileNavigation({ isDark = false }) {
     setCurrentLocation(window.location.pathname);
   }, []);
 
+  const onTouchStart = (e) => {
+    setCurrentPosition({
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+    });
+    document.body.style.overflowY = "hidden";
+    document.getElementById("hanger").style.opacity = 0;
+    document.getElementById("navigation__list__mobile").style.display = "flex";
+    document.getElementById("navigation__mobile").style.zIndex = 100;
+  };
+
+  const onTouchMove = (e) => {
+    const { clientY, clientX } = e.touches[0];
+    document.getElementById("navigation__mobile").style.height = clientY + "px";
+    document.getElementById("innerbox__mobile").style.height = clientY + "px";
+
+    if (clientY > currentPosition.y) {
+      setFinal(true);
+    } else {
+      setFinal(false);
+    }
+    setCurrentPosition({ x: clientX, y: clientY });
+  };
+
+  const onTouchEnd = (e) => {
+    if (final) {
+      setOpened(true);
+      gsap.to("#navigation__mobile", {
+        height: "100vh",
+      });
+      gsap.to("#innerbox__mobile", {
+        height: "100vh",
+      });
+      gsap.to(
+        ".navigation__mobile .innerbox__mobile #navigation__list__mobile ul li",
+        {
+          duration: 0.2,
+          translateY: 0,
+          ease: "power2.inOut",
+          stagger: 0.1,
+          opacity: 0.5,
+        }
+      );
+
+      gsap.to(
+        ".navigation__mobile .innerbox__mobile #button_section__mobile",
+        {
+          duration: 0.2,
+          display: "flex",
+          opacity: 1,
+        }
+      );
+
+      gsap.to(".cross_button", {
+        duration: 0.2,
+        opacity: 1,
+        ease: "power2.inOut",
+        display: "flex",
+      });
+      // mobileAnimateNavigation();
+    } else {
+      setOpened(false);
+      gsap.to("#navigation__mobile", {
+        height: "31vw",
+      });
+      gsap.to("#innerbox__mobile", {
+        height: "2vw",
+      });
+      mobileReverseNavigation();
+    }
+    document.body.style.overflowY = "auto";
+  };
+
   return (
     <div
       ref={navigationRef}
@@ -39,52 +113,10 @@ export default function MobileNavigation({ isDark = false }) {
         } w-full flex z-[41] h-[2vw]`}
       >
         <div
-          onTouchStart={(e) => {
-            setCurrentPosition({
-              x: e.touches[0].clientX,
-              y: e.touches[0].clientY,
-            });
-            document.body.style.overflowY = "hidden";
-            document.getElementById("hanger").style.opacity = 0;
-            document.getElementById("navigation__list__mobile").style.display =
-              "flex";
-            document.getElementById("navigation__mobile").style.zIndex = 100;
-          }}
-          onTouchMove={(e) => {
-            const { clientY, clientX } = e.touches[0];
-            document.getElementById("navigation__mobile").style.height =
-              clientY + "px";
-            document.getElementById("innerbox__mobile").style.height =
-              clientY + "px";
-
-            if (clientY > currentPosition.y) {
-              setFinal(true);
-            } else {
-              setFinal(false);
-            }
-            setCurrentPosition({ x: clientX, y: clientY });
-          }}
-          onTouchCancel={(e) => {
-            if (final) {
-              setOpened(true);
-              mobileAnimateNavigation();
-            } else {
-              setOpened(false);
-              mobileReverseNavigation();
-            }
-            document.body.style.overflowY = "auto";
-          }}
-          onTouchEnd={(e) => {
-            if (final) {
-              setOpened(true);
-              mobileAnimateNavigation();
-            } else {
-              setOpened(false);
-              mobileReverseNavigation();
-            }
-            document.body.style.overflowY = "auto";
-          }}
-          
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchCancel={onTouchEnd}
+          onTouchEnd={onTouchEnd}
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
