@@ -99,6 +99,14 @@ export default function MobileNavigation({ isDark = false }) {
     document.body.style.overflowY = "auto";
   };
 
+  function is_touch_enabled() {
+    return (
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0
+    );
+  }
+
   return (
     <div
       ref={navigationRef}
@@ -117,6 +125,12 @@ export default function MobileNavigation({ isDark = false }) {
           onTouchMove={onTouchMove}
           onTouchCancel={onTouchEnd}
           onTouchEnd={onTouchEnd}
+          onClick={() => {
+            console.log("clicked");
+            if (!is_touch_enabled()){
+              mobileAnimateNavigation()
+            }
+          }}
           id="navigation__trigger"
           className=" flex fixed right-[5vw] top-[-5vw]"
         >
