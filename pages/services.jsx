@@ -56,9 +56,9 @@ export default function Services() {
           <div className="flex w-[85%] justify-center lg:justify-end">
             <div
               onClick={() => window.scrollTo(0, height)}
-              className="button cursor-pointer sm:w-48 sm:h-48 flex flex-col items-center lg:justify-between"
+              className="button cursor-pointer lg:w-[12.5vw] sm:w-48 sm:h-48 lg:h-[12.5vw] flex flex-col items-center lg:justify-between"
             >
-              <div className="sm:w-36 w-[22vw] h-[22vw] sm:h-36 bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full justify-center items-center">
+              <div className="lg:w-[10vw] sm:w-36 sm:h-36 w-[22vw] h-[22vw] lg:h-[10vw] bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full justify-center items-center">
                 <svg
                   width="31"
                   height="74"

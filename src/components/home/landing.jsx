@@ -1,14 +1,11 @@
 import React from "react";
 import { Store } from "../../../context";
 import Headers from "../headers";
-import ArrowDown from "../../../assets/arrowDown.svg";
-import Image from "next/image";
 import TextTransition, { presets } from "react-text-transition";
 import { onmouseleave } from "../../custom-cursor";
 import Navigation from "../navigation";
 import Link from "next/link";
 import MobileNavigation from "../mobileNavigation";
-import { changeBarColorBack } from "@/src/animation/mobileNavigation";
 
 const TEXTS = ["centered", "empathized", "focused", "desired"];
 
@@ -48,7 +45,9 @@ export default function Landing() {
             onMouseLeave={onmouseleave}
           >
             <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row">
-              <span className="bg-white z-[10] w-full lg:w-auto flex justify-center">Human</span>
+              <span className="bg-white z-[10] w-full lg:w-auto flex justify-center">
+                Human
+              </span>
               <TextTransition
                 springConfig={presets.slow}
                 className=" lg:ml-[2vw] overflow-hidden"
@@ -97,9 +96,9 @@ export default function Landing() {
         <div className="flex w-[85%] justify-center lg:justify-end">
           <div
             onClick={() => window.scrollTo(0, height)}
-            className="button cursor-pointer sm:w-48 sm:h-48 flex flex-col items-center lg:justify-between"
+            className="button cursor-pointer sm:h-48 sm:w-48 lg:w-[12.5vw] lg:h-[12.5vw] flex flex-col items-center lg:justify-between"
           >
-            <div className="sm:w-36 w-[22vw] h-[22vw] sm:h-36 border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
+            <div className="lg:w-[10vw] sm:h-36 sm:w-36 w-[22vw] h-[22vw] lg:h-[10vw] border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
               <svg
                 width="31"
                 height="74"

@@ -67,7 +67,7 @@ export default ({ children }) => {
       <div
         className={` w-full h-screen ${
           isTouchEnabled ? "hidden" : "block"
-        } fixed z-[50] pointer-events-none`}
+        } fixed z-[1000] pointer-events-none`}
       >
         <div
           style={{
@@ -75,7 +75,7 @@ export default ({ children }) => {
           }}
           className={`cursor w-10 h-10 ${
             isTouchEnabled ? "hidden" : "flex"
-          } flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[70] -translate-x-1/2 -translate-y-1/2`}
+          } flex-col justify-center items-center rounded-full pointer-events-none filter backdrop-filter backdrop-invert bg-black bg-opacity-25 absolute z-[1000] -translate-x-1/2 -translate-y-1/2`}
         ></div>
       </div>
       {children}

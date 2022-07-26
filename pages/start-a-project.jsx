@@ -130,9 +130,9 @@ export default function StartAProject() {
           <div className="flex w-[85%] justify-center lg:justify-end">
             <div
               onClick={() => window.scrollTo(0, height)}
-              className="button cursor-pointer sm:w-48 sm:h-48 flex flex-col items-center lg:justify-between"
+              className="button cursor-pointer sm:h-36 sm:w-36 lg:w-[12.5vw] lg:h-[12.5vw] flex flex-col items-center lg:justify-between"
             >
-              <div className="sm:w-36 w-[22vw] h-[22vw] sm:h-36 border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
+              <div className="lg:w-[10vw] w-[22vw] h-[22vw] sm:h-36 sm:w-36 lg:h-[10vw] border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
                 <svg
                   width="31"
                   height="74"
