@@ -199,8 +199,10 @@ export default function Footer({ isDark = false }) {
 
       <div
         className={`${
-          isDark ? "text-[#FDFDFD]" : "text-[#ffffff]"
-        } tracking-wider py-4 font-[PPNeueMontreal] bg-black w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
+          isDark
+            ? "text-[#000000] bg-[#fff] "
+            : "text-[#fcfcfc] bg-[#1F1D1D]"
+        } tracking-wider py-4 font-[PPNeueMontreal] w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
       >
         <span>&copy;INCUBR {moment().year()}</span>
       </div>
