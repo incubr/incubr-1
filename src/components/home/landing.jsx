@@ -65,14 +65,16 @@ export default function Landing() {
                   }}
                   autoplay={{
                     delay: 3000,
+                    pauseOnMouseEnter: false,
+                    disableOnInteraction: false,
                   }}
-                  speed={800}
+                  speed={500}
                   modules={[Autoplay]}
-                  className="h-[15vw] lg:h-[4.6vw] m-0 w-auto"
+                  className="h-[15vw] lg:h-[6vw] flex  m-0 w-auto"
                   loop
                 >
                   {TEXTS.map((text, index) => (
-                    <SwiperSlide key={index + text} className="w-auto flex justify-center lg:justify-start">{text}</SwiperSlide>
+                    <SwiperSlide key={index + text} className="w-auto h-full bg-white flex justify-center lg:justify-start lg:items-end">{text}</SwiperSlide>
                   ))}
                 </Swiper>
               </div>
