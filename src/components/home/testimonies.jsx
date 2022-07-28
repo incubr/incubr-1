@@ -20,8 +20,8 @@ const Pagination = ({ activeIndex }) => {
           onClick={() => swiper.slideTo(index)}
           className={`w-4 h-4 ${
             activeIndex % slides.length === index
-              ? "bg-transparent"
-              : "bg-white"
+              ? "bg-white"
+              : "bg-transparent"
           } border border-white rounded-full cursor-pointer`}
         />
       ))}
