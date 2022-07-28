@@ -6,6 +6,9 @@ import { onmouseleave } from "../../custom-cursor";
 import Navigation from "../navigation";
 import Link from "next/link";
 import MobileNavigation from "../mobileNavigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {Autoplay} from "swiper"
+import "swiper/css";
 
 const TEXTS = ["centered", "empathized", "focused", "desired"];
 
@@ -45,17 +48,36 @@ export default function Landing() {
             onMouseLeave={onmouseleave}
           >
             <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row">
-              <span className="bg-white z-[10] w-full lg:w-auto flex justify-center">
+              <span className=" z-[10] w-full lg:mr-[1.5vw] lg:w-auto flex justify-center">
                 Human
               </span>
-              <TextTransition
+              {/* <TextTransition
                 springConfig={presets.slow}
                 className=" lg:ml-[2vw] overflow-hidden"
               >
                 {TEXTS[index % TEXTS.length]}
-              </TextTransition>
+              </TextTransition> */}
+              <div className="flex">
+                <Swiper
+                  direction={"vertical"}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  autoplay={{
+                    delay: 3000,
+                  }}
+                  speed={800}
+                  modules={[Autoplay]}
+                  className="h-[15vw] lg:h-[4.5vw] m-0 w-auto"
+                  loop
+                >
+                  {TEXTS.map((text, index) => (
+                    <SwiperSlide key={index + text} className="w-auto flex justify-center lg:justify-start">{text}</SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
-            <span className=" font-[Arial] lg:mt-[1vw] items-center lg:items-start text-center lg:text-start">
+            <span className=" font-[Arial] lg:mt-[0.5vw] items-center lg:items-start text-center lg:text-start">
               solutions
             </span>
           </div>

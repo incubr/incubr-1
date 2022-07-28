@@ -26,7 +26,7 @@
     "react-special-cursor": "^1.2.1",
     "react-text-transition": "^3.0.2",
     "react-toastify": "^9.0.5",
-    "swiper": "^8.3.0"
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

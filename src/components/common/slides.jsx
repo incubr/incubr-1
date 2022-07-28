@@ -25,7 +25,7 @@ export default function Slides({ data, index, total }) {
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-[2] flex-col justify-end">
           <h1 className="font-bold text-[1.5vw]">
-            . 0{index} -0{total}
+            0{index}
           </h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
             {data.title}
