@@ -27,7 +27,7 @@ export default function Footer({ isDark = false }) {
         <footer
           className={` px-[6vw] py-[5vw] ${
             isDark ? "border-white" : "border-black"
-          } border space-y-6 sm:space-y-[10vw] lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
+          } border space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[5vw] lg:space-y-0">
             <div className="hidden lg:flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">

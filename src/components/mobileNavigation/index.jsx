@@ -50,7 +50,7 @@ export default function MobileNavigation({ isDark = false }) {
       ease: "power2.inOut",
       display: "flex",
     });
-  }
+  };
 
   const onTouchStart = (e) => {
     setCurrentPosition({
@@ -61,7 +61,7 @@ export default function MobileNavigation({ isDark = false }) {
     document.getElementById("hanger").style.opacity = 0;
     document.getElementById("navigation__list__mobile").style.display = "flex";
     document.getElementById("navigation__mobile").style.zIndex = 100;
-    revelElement()
+    revelElement();
   };
 
   const onTouchMove = (e) => {
@@ -86,7 +86,7 @@ export default function MobileNavigation({ isDark = false }) {
       gsap.to("#innerbox__mobile", {
         height: "100vh",
       });
-      
+
       // mobileAnimateNavigation();
     } else {
       setOpened(false);
@@ -113,30 +113,27 @@ export default function MobileNavigation({ isDark = false }) {
     <div
       ref={navigationRef}
       id="navigation__mobile"
-      className="navigation__mobile  flex sm:hidden h-[31vw]  w-full sm:w-16 font-[Arial] z-[40] fixed right-0 sm:left-0 sm:items-center"
+      className="navigation__mobile  flex sm:hidden h-[0vw]  w-full sm:w-16 font-[Arial] z-[40] absolute right-0 sm:left-0 sm:items-center"
     >
       <div
         ref={navigationRef2}
         id="innerbox__mobile"
         className={`innerbox__mobile ${
           isDark ? "bg-[#fff]" : "bg-[#1F1D1D]"
-        } w-full flex z-[41] h-[2vw]`}
+        } w-full flex z-[41] h-[0vw]`}
       >
         <div
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchCancel={onTouchEnd}
-          onTouchEnd={onTouchEnd}
+          // onTouchStart={onTouchStart}
+          // onTouchMove={onTouchMove}
+          // onTouchCancel={onTouchEnd}
+          // onTouchEnd={onTouchEnd}
           onClick={() => {
-            console.log("clicked");
-            if (!is_touch_enabled()){
-              mobileAnimateNavigation()
-            }
+            mobileAnimateNavigation();
           }}
           id="navigation__trigger"
-          className=" flex fixed right-[5vw] top-[-5vw]"
+          className=" flex absolute right-[10vw] z-[1001] top-[12.6vw]"
         >
-          <svg
+          {/* <svg
             viewBox="0 0 26 91"
             fill="none"
             id="hanger"
@@ -148,6 +145,30 @@ export default function MobileNavigation({ isDark = false }) {
               fill={isDark ? "#fff" : "#1F1D1D"}
             />
             <path d="M12 0H14.5V66H12V0Z" fill={isDark ? "#fff" : "#1F1D1D"} />
+          </svg> */}
+          <svg
+            // width="6"
+            // height="24"
+            className=" w-[4vw] h-[5.5vw] "
+            viewBox="0 0 6 24"
+            fill="none"
+            id="hanger"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="3"
+              cy="3"
+              r="3"
+              // fill="black"
+              fill={isDark ? "#fff" : "#1F1D1D"}
+            />
+            <circle
+              cx="3"
+              cy="12"
+              r="2.5"
+              stroke={isDark ? "#fff" : "#1F1D1D"}
+            />
+            <circle cx="3" cy="21" r="3" fill={isDark ? "#fff" : "#1F1D1D"} />
           </svg>
         </div>
         <button

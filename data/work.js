@@ -31,14 +31,14 @@ export const work = [
     description:
       "Stoa School runs cohort-based programmes to help mid-career professionals accelerate their growth in business roles. We developed their business website by positioning them as India's best alternative to the traditional MBA. The website identified the need of the service as well as featured a seamless flow of valuable information including types of courses, resources, and effective CTA's",
   },
-  {
-    id: 5,
-    category: "Website Development",
-    title: "Sybill Software",
-    image: "/sybill.svg",
-    description:
-      "Sybill is an enterprise startup that develops Artificial Intelligence to solve the problem of video conferencing. We developed an interactive website for them that identifies the problems behind poor prospects and how it effectively uses emotional awareness to turn their prospects into customers with an X-ray vision of their needs. It features interactive calls to action, benefits, and social proofs of the product's efficiency.",
-  },
+  // {
+  //   id: 5,
+  //   category: "Website Development",
+  //   title: "Sybill Software",
+  //   image: "/sybill.svg",
+  //   description:
+  //     "Sybill is an enterprise startup that develops Artificial Intelligence to solve the problem of video conferencing. We developed an interactive website for them that identifies the problems behind poor prospects and how it effectively uses emotional awareness to turn their prospects into customers with an X-ray vision of their needs. It features interactive calls to action, benefits, and social proofs of the product's efficiency.",
+  // },
   {
     id: 6,
     category: "Website Development",

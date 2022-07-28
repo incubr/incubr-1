@@ -104,11 +104,11 @@ export default function Work() {
 
       <div className="w-full flex bg-[#1F1D1D] justify-center pb-20 ">
         <div className=" w-full sm:w-[60%] lg:w-[60%] flex mt-10 lg:mt-[4vw] flex-col lg:space-y-[8vw] ">
-          {work.map((i) => (
+          {work.map((i, index) => (
             <WorkCard
               data={i}
               key={"sadasder" + i.id}
-              isEven={i.id % 2 === 0}
+              isEven={index % 2 === 0}
             />
           ))}
         </div>

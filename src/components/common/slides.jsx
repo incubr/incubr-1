@@ -20,7 +20,7 @@ export default function Slides({ data, index, total }) {
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onmouseleave}
-      className="flex-none mr-4 h-[60%] lg:h-full font-[PPNeueMontreal] w-full lg:w-[90%] bg-cover "
+      className="flex-none mr-4 h-[60%] rounded-2xl overflow-hidden lg:h-full font-[PPNeueMontreal] w-full lg:w-[90%] bg-cover "
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-[2] flex-col justify-end">

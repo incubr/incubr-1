@@ -99,7 +99,7 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
 
   timeline.to(".navigation__mobile .innerbox__mobile", {
     duration: 0.1,
-    height: "2vw",
+    height: "0vw",
     ease: "power2.inOut",
   });
 
@@ -109,7 +109,8 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
 
   timeline.to(".navigation__mobile", {
     duration: 0.1,
-    height: "31vw",
+    height: "0vw",
+    position: "absolute",
     zIndex: 40,
   });
   timeline.to("#hanger", {

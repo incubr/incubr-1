@@ -29,7 +29,7 @@ export default function WorkCard({ data, isEven }) {
         className={`flex flex-1 p-4 px-0 ${isEven ? "lg:pr-4" : "lg:pl-4"} `}
       >
         <div
-          className="w-full  bg-gray-400 h-60 bg-cover lg:h-[22vw]"
+          className="w-full  bg-gray-400 h-60 rounded-xl bg-cover lg:h-[22vw]"
           style={{
             backgroundImage: `url(${data.image})`,
           }}
