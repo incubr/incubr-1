@@ -17,7 +17,7 @@ export default function Footer({ isDark = false }) {
     <div
       className={`w-full ${
         isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
-      } flex flex-col py-[5vw] items-center`}
+      } flex flex-col pt-[5vw] items-center`}
     >
       <div
         className={`w-full ${
@@ -27,7 +27,7 @@ export default function Footer({ isDark = false }) {
         <footer
           className={` px-[6vw] py-[5vw] ${
             isDark ? "border-white" : "border-black"
-          } border space-y-6 sm:space-y-[10vw] rounded-3xl lg:rounded-[3rem] lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
+          } border space-y-6 sm:space-y-[10vw] lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[5vw] lg:space-y-0">
             <div className="hidden lg:flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
@@ -199,8 +199,8 @@ export default function Footer({ isDark = false }) {
 
       <div
         className={`${
-          isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-        } tracking-wider py-4 font-[PPNeueMontreal] opacity-50 text-xl mt-[2vw] lg:text-[1.5vw]`}
+          isDark ? "text-[#FDFDFD]" : "text-[#ffffff]"
+        } tracking-wider py-4 font-[PPNeueMontreal] bg-black w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
       >
         <span>&copy;INCUBR {moment().year()}</span>
       </div>

@@ -47,7 +47,7 @@ export default function Landing() {
             onMouseEnter={onMouseEnterOnTitle}
             onMouseLeave={onmouseleave}
           >
-            <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row">
+            <div className="flex flex-col items-center overflow-hidden lg:items-end lg:flex-row">
               <span className=" z-[10] w-full lg:mr-[1.5vw] lg:w-auto flex justify-center">
                 Human
               </span>
@@ -68,7 +68,7 @@ export default function Landing() {
                   }}
                   speed={800}
                   modules={[Autoplay]}
-                  className="h-[15vw] lg:h-[4.5vw] m-0 w-auto"
+                  className="h-[15vw] lg:h-[4.6vw] m-0 w-auto"
                   loop
                 >
                   {TEXTS.map((text, index) => (

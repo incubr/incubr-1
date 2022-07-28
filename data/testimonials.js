@@ -40,9 +40,9 @@ export const slides = [
     id: 5,
     color: "gray",
     backgroundColor: "bg-gray-600",
-    name: "Lorem Ipsum",
-    backgroundImage: "",
+    name: "Lovneet Batra",
+    backgroundImage: "/lovneet.jpeg",
     description: "Dolor Sit Amet",
-    text: "I have been associated with Mr. Gopal and Incubr for about 12 years. Their sense of commitment, strong business and creative acumen has been an incredible and transformative experience for both me and my company thus far.",
+    text: "Working with Incubr is a seamless experience. They worked hard understanding our segment, personas and their needs. They gave us an immaculate experience and built a great asset for us. Highly recommend them.",
   },
 ];
