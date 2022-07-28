@@ -95,7 +95,7 @@ export default function StartAProject() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-7xl w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
@@ -115,7 +115,7 @@ export default function StartAProject() {
                   <span key={i + line}>{line}</span>
                 ))}
             </span>
-            <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
               {`Fill out the contact form for us to\n 
               understand your needs and a Client\n 
               Partner will be in touch right away.`
@@ -126,13 +126,13 @@ export default function StartAProject() {
             </span>
           </div>
         </div>
-        <div className="flex w-full lg:absolute h-[18vh]  lg:h-auto bottom-10 justify-center">
+        <div className="flex w-full lg:absolute h-[18vh] sm:h-[20vh]  lg:h-auto bottom-10 justify-center">
           <div className="flex w-[85%] justify-center lg:justify-end">
             <div
               onClick={() => window.scrollTo(0, height)}
-              className="button cursor-pointer sm:h-36 sm:w-36 lg:w-[12.5vw] lg:h-[12.5vw] flex flex-col items-center lg:justify-between"
+              className="button cursor-pointer sm:w-48 sm:h-48 lg:w-[12.5vw] lg:h-[12.5vw] flex flex-col items-center lg:justify-between"
             >
-              <div className="lg:w-[10vw] w-[22vw] h-[22vw] sm:h-36 sm:w-36 lg:h-[10vw] border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
+              <div className="lg:w-[10vw] w-[22vw] h-[22vw] sm:w-36 sm:h-36 lg:h-[10vw] border-black border bg-transparent hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center">
                 <svg
                   width="31"
                   height="74"

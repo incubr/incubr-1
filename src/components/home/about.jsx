@@ -76,7 +76,7 @@ export default function About() {
                       <svg
                         width="6"
                         viewBox="0 0 6 55"
-                        className=" h-[7vw] sm:h-16 lg:h-[2.8vw] "
+                        className=" h-[7vw] sm:h-[5.3vw] lg:h-[2.8vw] "
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >

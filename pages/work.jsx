@@ -27,7 +27,7 @@ export default function Work() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
@@ -36,7 +36,7 @@ export default function Work() {
               </div>
               <span className=" font-[Arial]  text-center lg:text-start"></span>
             </div>
-            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] lg:mt-[2vw] flex-col flex mt-10 text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] lg:mt-[2vw] flex-col flex mt-10 text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
               {`From new ideas we tested to client successes,\n
                read our case studies to find out how we've\n
                 assisted companies in a variety of industries\n

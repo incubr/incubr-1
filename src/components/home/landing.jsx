@@ -43,7 +43,7 @@ export default function Landing() {
       <div className="flex flex-1 justify-center items-center">
         <div className="lg:w-[60%] w-full mt-[16vw] sm:mt-16 lg:mt-0 px-5 sm:px-16 lg:px-0">
           <div
-            className=" font-[Arial] leading-[14vw] text-[12vw] sm:text-8xl lg:text-[4.3vw] justify-center flex flex-col"
+            className=" font-[Arial] leading-[14vw] text-[12vw] sm:text-[10vw] sm:leading-[11vw] lg:text-[4.3vw] justify-center flex flex-col"
             onMouseEnter={onMouseEnterOnTitle}
             onMouseLeave={onmouseleave}
           >
@@ -70,11 +70,16 @@ export default function Landing() {
                   }}
                   speed={500}
                   modules={[Autoplay]}
-                  className="h-[15vw] lg:h-[6vw] flex  m-0 w-auto"
+                  className="h-[15vw]  sm:h-[8.5vw] lg:h-[6vw] flex  m-0 w-auto"
                   loop
                 >
                   {TEXTS.map((text, index) => (
-                    <SwiperSlide key={index + text} className="w-auto h-full bg-white flex justify-center lg:justify-start lg:items-end">{text}</SwiperSlide>
+                    <SwiperSlide
+                      key={index + text}
+                      className="w-auto h-full bg-white flex justify-center items-center lg:justify-start lg:items-end"
+                    >
+                      {text}
+                    </SwiperSlide>
                   ))}
                 </Swiper>
               </div>
@@ -94,7 +99,7 @@ export default function Landing() {
                 <span key={i + line}>{line}</span>
               ))}
           </span>
-          <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[5vw] text-[3.5vw] sm:text-3xl lg:text-[1.5vw] tracking-wide font-[350]">
+          <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[5vw] sm:mt-[3.5vw] text-[3.5vw] sm:text-[2.5vw] lg:text-[1.5vw] tracking-wide font-[350]">
             {`We are a new-age all-in-one digital\n
              brand incubator that specializes in\n
               scaling your business through\n
@@ -116,7 +121,7 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <div className="flex w-full lg:absolute h-[18vh]  lg:h-auto bottom-10 justify-center">
+      <div className="flex w-full lg:absolute h-[18vh] sm:h-[20vh] lg:h-auto bottom-10 justify-center">
         <div className="flex w-[85%] justify-center lg:justify-end">
           <div
             onClick={() => window.scrollTo(0, height)}

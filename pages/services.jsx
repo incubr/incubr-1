@@ -24,7 +24,7 @@ export default function Services() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-7xl w-auto lg:leading-[4vw] lg:text-[3.3vw] flex flex-col lg:flex-row"
+              className=" font-[Arial] leading-[14vw] sm:text-[9vw] sm:leading-[11vw] text-[11vw] w-auto lg:leading-[4vw] lg:text-[3.3vw] flex flex-col lg:flex-row"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
@@ -33,7 +33,7 @@ export default function Services() {
               </div>
               <span className=" font-[Arial] items-center lg:items-start text-center lg:text-start"></span>
             </div>
-            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-[2vw] text-[4vw] sm:text-xl lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className=" font-[PPNeueMontreal] sm:w-[60%] lg:w-auto text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-[2vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
               {`We are uniquely positioned for new-age\n
                startups and with our top-notch services,\n
                 we have the ability to take your business\n
@@ -52,7 +52,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="flex w-full lg:absolute h-[18vh]  lg:h-auto bottom-10 justify-center">
+        <div className="flex w-full lg:absolute h-[18vh] sm:h-[20vh]  lg:h-auto bottom-10 justify-center">
           <div className="flex w-[85%] justify-center lg:justify-end">
             <div
               onClick={() => window.scrollTo(0, height)}
