@@ -13,7 +13,7 @@ export default function OurWork() {
   }, []);
 
   return (
-    <div className="light__section">
+    <>
       <div
         id="forMobile"
         className="flex flex-col w-full bg-[#FDFDFD] lg:bg-[#1F1D1D] lg:h-[25vw]"
@@ -48,16 +48,16 @@ export default function OurWork() {
         </div>
       </div>
 
-      <div className="flex flex-col  sm:space-y-auto mb-20 flex-wrap sm:hidden w-full px-6 sm:px-10">
+      <div id="mobileSlider" className="flex h-[57vh] sm:space-y-auto overflow-x-auto mb-20  sm:hidden w-full px-6 sm:px-10">
         {workForHomePage.map((i, index) => (
           <MobileSlide
             data={i}
             index={index + 1}
             total={workForHomePage.length}
-            key={"sadasdassd" + i.id.toString()}
+            key={"sadasda" + i.id.toString()}
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }

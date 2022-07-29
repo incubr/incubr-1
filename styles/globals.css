@@ -124,3 +124,6 @@ a {
   }
 }
 
+#mobileSlider::-webkit-scrollbar {
+  display: none;
+}
