@@ -24,9 +24,7 @@ export default function Slides({ data, index, total }) {
     >
       <div className="flex text-white tracking-widest flex-1 h-full bg-gradient-to-t from-black to-transparent w-full p-10 2xl:p-16">
         <div className="flex flex-[2] flex-col justify-end">
-          <h1 className="font-bold text-[1.5vw]">
-            0{index}
-          </h1>
+          <h1 className="font-bold text-[1.5vw]">0{index}</h1>
           <h1 className="font-bold tracking-widest text-[4.3vw]">
             {data.title}
           </h1>
@@ -34,6 +32,7 @@ export default function Slides({ data, index, total }) {
           <span className="font-bold mt-5">{data.clb_1}</span>
           <span className="font-bold ">{data.clb_2}</span>
           <span className="font-bold ">{data.clb_3}</span>
+          <span className="font-bold mt-[1vw]">Patners: Mayank and Keshav</span>
         </div>
         <div className="flex flex-1 flex-col h-full items-end justify-end">
           <Link href={"/work"}>
@@ -82,10 +81,13 @@ export const MobileSlide = ({ data, index, total }) => {
             </Link>
           </div>
         </div>
-        <div className="flex space-x-[1vw] font-[500] text-[3.5vw] justify-center py-2 font-[PPNeueMontreal]">
+        <div className="flex space-x-[1vw] tracking-wider font-[500] text-[3.5vw] justify-center py-2 font-[PPNeueMontreal]">
           <span className=" mt-1 ">Web Dev.</span>
           <span className=" mt-1 ">{data.clb_2}.</span>
           <span className=" mt-1 ">{data.clb_3}</span>
+        </div>
+        <div className="flex space-x-[1vw] font-[500] text-[3.5vw] justify-center py-2 font-[PPNeueMontreal]">
+          <span className=" mt-1 tracking-wider">Patners: Mayank and Keshav</span>
         </div>
       </div>
     </div>
