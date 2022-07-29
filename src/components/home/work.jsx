@@ -35,7 +35,7 @@ export default function OurWork() {
       >
         <div
           id="PageWrap"
-          className="flex h-screen items-center p-4 w-full "
+          className="flex h-screen items-center p-4  "
         >
           {workForHomePage.map((i, index) => (
             <Slides

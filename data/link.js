@@ -16,7 +16,7 @@ export const navigation_link = [
   },
   {
     id: 42324,
-    name: "Testimonies",
+    name: "Testimonials",
     link: "/#testimonies",
   },
   {

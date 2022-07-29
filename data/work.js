@@ -61,7 +61,7 @@ export const workForHomePage = [
   {
     id: 10,
     title: "Lightrock",
-    description: "BUILDING A SUSTAINABLE FUTURE",
+    description: "Building a sustainable future",
     image: "/lgr.png",
     category: "Web Development",
     clb_1: "Web Development",
