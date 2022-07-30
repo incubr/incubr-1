@@ -16,7 +16,7 @@ export function GSAPHorizontalScroll() {
       // markers: true, // for dev server
     },
     xPercent:
-      (window.innerWidth > 1024 ? -95.5 : -105)  * (Sections.length - 1),
+      (window.innerWidth > 1024 ? -96.5 : -105)  * (Sections.length - 1),
     ease: "none",
   });
 }
