@@ -26,7 +26,7 @@ export const slides = [
     name: "Sam Nanda",
     link: "https://www.linkedin.com/in/sam-nanda/",
     backgroundImage: "/sam.jpg",
-    description: "Co-founder",
+    description: "Enterprise Sales Director",
     text: "Gopal and team are super easy to work with and invest a lot of time and effort in research and analysis to build a great product.",
   },
   {
