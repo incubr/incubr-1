@@ -45,13 +45,13 @@ export default function Home() {
           </div>
           <div className="flex w-full font-[PPNeueMontreal] absolute bottom-20 justify-center">
             <div className="flex w-[85%] items-center lg:items-end justify-center flex-col">
-              <div className=" cursor-pointer w-28 sm:w-32 sm:h-32 lg:w-[10vw] relative h-28 lg:h-[10vw] flex flex-col items-center justify-between">
+              <div className=" cursor-pointer w-28 sm:w-32 sm:h-32 lg:w-[10vw]  2xl:w-[8vw] 2xl:h-[8vw] relative h-28 lg:h-[10vw] flex flex-col items-center justify-between">
                 <div className=" w-full h-full animate-spin  bg-transparent  border-white hover:border-transparent transition-colors duration-300 ease-in-out hover:bg-[#F0C808] flex rounded-full border-b justify-center items-center"></div>
                 <span className="absolute text-white text-[5vw] sm:text-[3vw] lg:text-[2vw] h-full w-full flex justify-center items-center">
                   {seconds}%
                 </span>
               </div>
-              <h1 className="font-bold mt-5 animate-pulse flex justify-center items-center text-xl lg:text-[1.6vw] text-white font-[PPNeueMontreal] tracking-widest">
+              <h1 className="font-bold mt-5 animate-pulse flex justify-center items-center text-xl lg:text-[1.6vw] 2xl:text-[1vw] text-white font-[PPNeueMontreal] tracking-widest">
                 Loading
                 <Lottie options={defaultOptions} height={20} width={40} />
               </h1>

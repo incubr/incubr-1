@@ -84,7 +84,7 @@ export const MobileSlide = ({ data, index, total }) => {
         <div className="flex flex-[2] flex-col text-[3vw] text-center sm:text-start sm:text-[1vw] justify-end">
           {/* <h1 className="font-bold text-[1.5vw]">0{index}</h1> */}
           <span>Client</span>
-          <h1 className="font-bold tracking-widest text-[8vw] sm:text-[3vw]">
+          <h1 className="font-bold tracking-widest text-[7vw] sm:text-[3vw]">
             {data.title}
           </h1>
           <span className=" font-bold ">{data.description}</span>
