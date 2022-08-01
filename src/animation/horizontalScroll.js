@@ -25,7 +25,7 @@ export function GSAPVerticleScroll() {
   let Sections = gsap.utils.toArray(".testomony-item");
   gsap.to(Sections, {
     scrollTrigger: {
-      trigger: "#PageWrapTestomony",
+      trigger: ".testomony-item",
       pin: true,
       scrub: 1,
       endTrigger: "#PageWrapTestomony",
