@@ -20,3 +20,18 @@ export function GSAPHorizontalScroll() {
     ease: "none",
   });
 }
+
+export function GSAPVerticleScroll() {
+  let Sections = gsap.utils.toArray(".testomony-item");
+  gsap.to(Sections, {
+    scrollTrigger: {
+      trigger: "#PageWrapTestomony",
+      pin: true,
+      scrub: 1,
+      endTrigger: "#PageWrapTestomony",
+      end: "bottom bottom",
+      // markers: true, // for dev server
+    },
+    ease: "none",
+  });
+}

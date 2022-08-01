@@ -36,7 +36,7 @@ export default function Slides({ data, index, total }) {
               style={{
                 backgroundImage: `url("${data.image}")`,
               }}
-              className="flex bg-green-400 bg-cover rounded-2xl rounded-bl-2xl w-[100%] h-[95%] sm:h-full"
+              className="flex bg-green-400 border-2 border-white bg-cover rounded-2xl rounded-bl-2xl w-[100%] h-[95%] sm:h-full"
             ></div>
           </div>{" "}
           <div className="flex">
@@ -88,12 +88,12 @@ export const MobileSlide = ({ data, index, total }) => {
             {data.title}
           </h1>
           <span className=" font-bold ">{data.description}</span>
-          <div className="h-full w-full flex justify-center items-center pt-[1vw]">
+          <div className="h-full w-full flex border-2 border-white justify-center items-center pt-[1vw]">
             <div
               style={{
                 backgroundImage: `url("${data.image}")`,
               }}
-              className="flex bg-green-400 bg-cover rounded-2xl rounded-bl-2xl w-[100%] h-[95%] sm:h-full"
+              className="flex bg-black bg-cover rounded-2xl rounded-bl-2xl w-[100%] h-[95%] sm:h-full"
             ></div>
           </div>{" "}
           <div className="flex mt-[2.5vw] sm:mt-[1vw] text-[3vw] sm:text-[1.3vw] justify-around sm:justify-start sm:space-x-5">
