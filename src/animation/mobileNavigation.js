@@ -4,20 +4,12 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 export const mobileAnimateNavigation = (isDark = false) => {
   const timeline = gsap.timeline();
 
-  timeline.to("#hanger", {
-    opacity: 0,
-  });
-
   timeline.to(".navigation__mobile", {
-    duration: 0.01,
+    duration: 0.2,
     width: "100%",
     height: "100vh",
     position: "fixed",
     zIndex: 100,
-  });
-
-  timeline.to("#navigation__trigger", {
-    opacity: 0,
   });
 
   timeline.to(".navigation__mobile .innerbox__mobile", {
@@ -39,7 +31,7 @@ export const mobileAnimateNavigation = (isDark = false) => {
   timeline.to(
     ".navigation__mobile .innerbox__mobile #navigation__list__mobile ul li",
     {
-      duration: 0.2,
+      duration: 0.5,
       translateY: 0,
       ease: "power2.inOut",
       stagger: 0.1,
@@ -59,6 +51,12 @@ export const mobileAnimateNavigation = (isDark = false) => {
     ease: "power2.inOut",
     display: "flex",
   });
+  timeline.to("#navigation__trigger", {
+    opacity: 0,
+  });
+  timeline.to("#hanger", {
+    opacity: 0,
+  });
 };
 
 export const mobileReverseNavigation = (isRight = false, isDark = false) => {
@@ -69,7 +67,13 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
     ease: "power2.inOut",
     display: "none",
   });
+  timeline.to("#hanger", {
+    opacity: 1,
+  });
 
+  timeline.to("#navigation__trigger", {
+    opacity: 1,
+  });
   timeline.to(".navigation__mobile .innerbox__mobile #button_section__mobile", {
     duration: 0.1,
     display: "none",
@@ -103,18 +107,11 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
     ease: "power2.inOut",
   });
 
-  timeline.to("#navigation__trigger", {
-    opacity: 1,
-  });
-
   timeline.to(".navigation__mobile", {
     duration: 0.1,
     height: "0vw",
     position: "absolute",
     zIndex: 40,
-  });
-  timeline.to("#hanger", {
-    opacity: 1,
   });
 };
 
@@ -147,6 +144,4 @@ export const changeBarColor = (trigger, color, textColor) => {
   });
 };
 
-
-const revelElement = () => {}
-
+const revelElement = () => {};

@@ -61,7 +61,7 @@ export default function Careers() {
             </span>
             <div className=" flex justify-center">
               <Link href={"/start-a-project"}>
-                <button className="sm:hidden mt-[8vw] button rounded-full tracking-wider hover:shadow-md text-black bg-[#fff] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 flex items-center justify-center text-xl">
+                <button className="sm:hidden mt-[8vw] button rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 flex items-center justify-center text-xl">
                   START A PROJECT
                 </button>
               </Link>
@@ -87,11 +87,15 @@ export default function Careers() {
             </thead>
             <tbody>
               {jobs.map((i) => (
-                <Link
-                  key={"dsadasd" + i.id}
-                  href={"mailto:gopal.batra@incubr.com"}
-                >
-                  <tr className="bg-white cursor-pointer border-b border-black">
+                <>
+                  <tr
+                    onClick={() => {
+                      document
+                        .getElementById("jd_" + i.id)
+                        .classList.toggle("hidden");
+                    }}
+                    className="bg-white cursor-pointer border-b border-black"
+                  >
                     <td
                       scope="row"
                       className="px-2 lg:px-6 py-8 text-xl lg:text-[3vw] font-medium text-gray-900 whitespace-nowrap"
@@ -101,7 +105,56 @@ export default function Careers() {
                     <td className="px-6 py-4 lg:text-[1.2vw]">{i.hours}</td>
                     <td className="px-6 py-4 lg:text-[1.2vw]">{i.location}</td>
                   </tr>
-                </Link>
+                  <tr
+                    id={`jd_${i.id}`}
+                    className="hidden transition-all ease-in-out duration-500"
+                  >
+                    <td colSpan={3} className="px-6 py-4">
+                      <div className="flex flex-col">
+                        <span>{i.description}</span>
+                        <span className="mt-2 font-bold underline text-lg">
+                          Job Responsibilities:
+                        </span>
+                        {i.responsibilities.map((j, index) => (
+                          <span key={index + j} className="mt-1">
+                            {index + 1}. {j}
+                          </span>
+                        ))}
+
+                        <span className="mt-4 font-bold underline text-lg">
+                          Skills Required:
+                        </span>
+                        {i.skills.map((j, index) => (
+                          <span
+                            key={index + j}
+                            className="mt-1 flex items-center"
+                          >
+                            * {j}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex">
+                        <Link href={"mailto:gopal.batra@incubr.com"}>
+                          <button
+                            className={`hidden button mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                          >
+                            Apply Now
+                          </button>
+                        </Link>
+                        <button
+                          onClick={() => {
+                            document
+                              .getElementById("jd_" + i.id)
+                              .classList.toggle("hidden");
+                          }}
+                          className={`hidden button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-red-500 hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </>
               ))}
             </tbody>
           </table>
@@ -110,29 +163,88 @@ export default function Careers() {
         <div className="sm:hidden block w-full px-5">
           <div className="sm:hidden flex flex-col w-full font-[PPNeueMontreal] sm:w-[60%] border-t border-black">
             {jobs.map((i) => (
-              <Link key={"fgfrt" + i.id} href={"mailto:gopal.batra@incubr.com"}>
-                <div className="flex flex-col w-full relative p-5 border-b border-black">
-                  <h1 className="text-4xl pb-3">{i.title}</h1>
-                  <table className="w-full mt-5 italic text-sm text-left text-black">
-                    <thead className="text-xs text-gray-500 uppercase ">
-                      <tr>
-                        <th scope="col" className=" py-1">
-                          Hours
-                        </th>
-                        <th scope="col" className=" py-1">
-                          Location
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="bg-white text-xl ">
-                        <td className=" py-2">{i.hours}</td>
-                        <td className=" py-2">{i.location}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div
+                key={"fgfrt" + i.id}
+                className="flex flex-col w-full relative p-5 border-b border-black"
+              >
+                <h1
+                  onClick={() => {
+                    document
+                      .getElementById("mjd_" + i.id)
+                      .classList.toggle("hidden");
+                  }}
+                  className="text-4xl pb-3"
+                >
+                  {i.title}
+                </h1>
+                <table className="w-full mt-5 italic text-sm text-left text-black">
+                  <thead className="text-xs text-gray-500 uppercase ">
+                    <tr>
+                      <th scope="col" className=" py-1">
+                        Hours
+                      </th>
+                      <th scope="col" className=" py-1">
+                        Location
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-white text-xl ">
+                      <td className=" py-2">{i.hours}</td>
+                      <td className=" py-2">{i.location}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div
+                  id={`mjd_${i.id}`}
+                  className="hidden transition-all ease-in-out duration-500"
+                >
+                  <td colSpan={3} className="px-6 py-4">
+                    <div className="flex flex-col">
+                      <span>{i.description}</span>
+                      <span className="mt-2 font-bold underline text-lg">
+                        Job Responsibilities:
+                      </span>
+                      {i.responsibilities.map((j, index) => (
+                        <span key={index + j} className="mt-1">
+                          {index + 1}. {j}
+                        </span>
+                      ))}
+
+                      <span className="mt-4 font-bold underline text-lg">
+                        Skills Required:
+                      </span>
+                      {i.skills.map((j, index) => (
+                        <span
+                          key={index + j}
+                          className="mt-1 flex items-center"
+                        >
+                          * {j}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex">
+                      <Link href={"mailto:gopal.batra@incubr.com"}>
+                        <button
+                          className={` button mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                        >
+                          Apply Now
+                        </button>
+                      </Link>
+                      <button
+                        onClick={() => {
+                          document
+                            .getElementById("mjd_" + i.id)
+                            .classList.toggle("hidden");
+                        }}
+                        className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-red-500 hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </td>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
