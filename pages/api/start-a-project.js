@@ -52,7 +52,7 @@ const create_Message = ( questions)  => {
     let return_string = "";
 
     for (let value of names) {
-      return_string += `<li>${value.title}</li><li>${questions[value.key]}</li>`;
+      return_string += `<li>${value.title}<br />${questions[value.key]}</li>`;
     }
     return return_string;
   };
@@ -65,8 +65,8 @@ const create_Message = ( questions)  => {
 };
 
 let transporter = nodemailer.createTransport({
-  host: "smtpout.secureserver.net",
-  port: 465,
+  host: process.env.HOST || "smtp.gmail.com",
+  port: process.env.PORT || 587,
   secure: true,
   auth: {
     user: process.env.EMAIL,
