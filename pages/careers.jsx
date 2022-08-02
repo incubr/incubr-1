@@ -147,7 +147,7 @@ export default function Careers() {
                               .getElementById("jd_" + i.id)
                               .classList.toggle("hidden");
                           }}
-                          className={`hidden button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-red-500 hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                          className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-black border border-black hover:border-[#F0C808] hover:bg-[#F0C808] transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
                         >
                           Close
                         </button>
@@ -199,7 +199,7 @@ export default function Careers() {
                   id={`mjd_${i.id}`}
                   className="hidden transition-all ease-in-out duration-500"
                 >
-                  <td colSpan={3} className="px-6 py-4">
+                  <td colSpan={3} className=" py-4">
                     <div className="flex flex-col">
                       <span>{i.description}</span>
                       <span className="mt-2 font-bold underline text-lg">
@@ -237,7 +237,7 @@ export default function Careers() {
                             .getElementById("mjd_" + i.id)
                             .classList.toggle("hidden");
                         }}
-                        className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-white bg-red-500 hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+                        className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-black border border-black hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
                       >
                         Close
                       </button>
