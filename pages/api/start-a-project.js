@@ -67,10 +67,13 @@ const create_Message = ( questions)  => {
 let transporter = nodemailer.createTransport({
   host: process.env.HOST || "smtp.gmail.com",
   port: process.env.PORT || 587,
-  secure: true,
+  secure: false,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.EMAIL_PASSWORD,
+  },
+  tls: {
+    ciphers: "SSLv3",
   },
 });
 
