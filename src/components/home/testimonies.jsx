@@ -10,6 +10,7 @@ import Image from "next/image";
 import { slides } from "@/data/testimonials";
 import Link from "next/link";
 import { GSAPVerticleScroll } from "@/src/animation/horizontalScroll";
+import { motion, useInView } from "framer-motion";
 
 const Pagination = ({ activeIndex }) => {
   const swiper = useSwiper();
@@ -32,11 +33,20 @@ const Pagination = ({ activeIndex }) => {
 
 export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [autoplay, setAutoplay] = React.useState(false);
   const [link, setLink] = React.useState("");
+  const ref = React.useRef(null);
+  const isInView = useInView(ref);
 
   React.useEffect(() => {
-    GSAPVerticleScroll()
-  }, [])
+    GSAPVerticleScroll();
+  }, []);
+
+  React.useEffect(() => {
+    if (isInView) {
+      setAutoplay(true);
+    }
+  }, [isInView]);
 
   return (
     <>
@@ -44,7 +54,7 @@ export default function Testimonies() {
         id="PageWrapTestomony"
         className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal] p-4 h-[150vh]  bg-[#1F1D1D]"
       >
-        <div className="testomony-item flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
+        <div className="testomony-item relative flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
           <div
             id="testimonies"
             className="flex flex-col w-full px-6 mt-10 text-white bg-[#1F1D1D]"
@@ -93,59 +103,66 @@ export default function Testimonies() {
               </div>
             </div>
           </div>
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 6000,
-              disableOnInteraction: false,
-            }}
-            loop
-            className="w-full px-10 sm:px-20 sm:w-2/3 lg:w-1/2 flex flex-col"
-            onSlideChange={(e) => {
-              setActiveIndex(e.activeIndex);
-              document.getElementById(
-                "test_profile_pic"
-              ).style.backgroundImage = `url(${
-                slides[e.activeIndex % slides.length].backgroundImage
-              })`;
-              setLink(slides[e.activeIndex % slides.length].link);
-            }}
+          <motion.div
+            ref={ref}
+            className="flex flex-col w-full justify-around sm:justify-center flex-nowrap"
           >
-            {slides.map((_, index) => (
-              <SwiperSlide
-                key={"sadasd" + index}
-                className="w-full h-full flex flex-col justify-center items-center"
+            {autoplay && (
+              <Swiper
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                loop
+                className="w-full px-10 sm:px-20 sm:w-2/3 lg:w-1/2 flex flex-col"
+                onSlideChange={(e) => {
+                  setActiveIndex(e.activeIndex);
+                  document.getElementById(
+                    "test_profile_pic"
+                  ).style.backgroundImage = `url(${
+                    slides[e.activeIndex % slides.length].backgroundImage
+                  })`;
+                  setLink(slides[e.activeIndex % slides.length].link);
+                }}
               >
-                <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
-                  <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
-                    {slides[activeIndex % slides.length].name}
-                  </h1>
-                  <span className="lg:leading-[2vw] text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
-                    {slides[activeIndex % slides.length].description}
-                  </span>
-                  <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
-                    {slides[activeIndex % slides.length].text
-                      .split("\n")
-                      .map((text) => (
-                        <span key={text} className="text-white">
-                          {text}
-                        </span>
-                      ))}
-                  </span>
-                  <span className="mt-4 flex lg:hidden flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
-                    {slides[activeIndex % slides.length].text
-                      .split("\n")
-                      .map((text, index) => (
-                        <span key={text + index} className="text-white">
-                          {text}
-                        </span>
-                      ))}
-                  </span>
-                </div>
-              </SwiperSlide>
-            ))}
-            <Pagination activeIndex={activeIndex} />
-          </Swiper>
+                {slides.map((_, index) => (
+                  <SwiperSlide
+                    key={"sadasd" + index}
+                    className="w-full h-full flex flex-col justify-center items-center"
+                  >
+                    <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
+                      <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
+                        {slides[activeIndex % slides.length].name}
+                      </h1>
+                      <span className="lg:leading-[2vw] text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
+                        {slides[activeIndex % slides.length].description}
+                      </span>
+                      <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
+                        {slides[activeIndex % slides.length].text
+                          .split("\n")
+                          .map((text) => (
+                            <span key={text} className="text-white">
+                              {text}
+                            </span>
+                          ))}
+                      </span>
+                      <span className="mt-4 flex lg:hidden flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
+                        {slides[activeIndex % slides.length].text
+                          .split("\n")
+                          .map((text, index) => (
+                            <span key={text + index} className="text-white">
+                              {text}
+                            </span>
+                          ))}
+                      </span>
+                    </div>
+                  </SwiperSlide>
+                ))}
+                <Pagination activeIndex={activeIndex} />
+              </Swiper>
+            )}
+          </motion.div>
         </div>
       </div>
 
