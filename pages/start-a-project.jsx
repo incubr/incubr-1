@@ -140,7 +140,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="exist"
-                      value={false}
+                      value={"build new website"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -152,7 +152,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="exist"
-                      value={true}
+                      value={"redesign website"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -266,7 +266,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="marketing"
-                      value={true}
+                      value={"yes"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -278,7 +278,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="marketing"
-                      value={false}
+                      value={"no"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -298,7 +298,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="maintaince"
-                      value={true}
+                      value={"yes"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -310,7 +310,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="maintaince"
-                      value={false}
+                      value={"no"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -414,7 +414,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="guide"
-                      value={true}
+                      value={"yes"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
@@ -426,7 +426,7 @@ export default function StartAProject() {
                     <input
                       type="radio"
                       name="guide"
-                      value={false}
+                      value={"no"}
                       onChange={handleChange}
                     />
                     <span className="checkmark" style={{ top: 0 }}></span>
