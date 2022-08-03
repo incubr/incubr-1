@@ -138,7 +138,7 @@ export default function Testimonies() {
                       <span className="lg:leading-[2vw] text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
                         {slides[activeIndex % slides.length].description}
                       </span>
-                      <span className="mt-4 hidden lg:flex flex-col text-center lg:text-[1.3vw] items-center">
+                      <span className="mt-4 hidden lg:flex flex-col w-[70%] text-center lg:text-[1.3vw] items-center">
                         {slides[activeIndex % slides.length].text
                           .split("\n")
                           .map((text) => (

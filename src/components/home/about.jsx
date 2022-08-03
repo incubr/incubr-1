@@ -10,7 +10,7 @@ import { onMouseEnterOnTitle } from "./landing";
 const Texts = [
   "WEB DESIGN & DEVELOPMENT",
   "BUILD BRAND ASSETS",
-  "FIND & DEPLOY TECH. RESOURCES",
+  "FIND & DEPLOY TECH RESOURCES",
   "TECHNOLOGY SUPPORT",
 ];
 

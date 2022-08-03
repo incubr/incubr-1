@@ -100,7 +100,7 @@ export default function Footer({ isDark = false }) {
               </div>
             </div>
             <div className="flex flex-col space-y-10 items-center lg:justify-between justify-center lg:items-start ">
-              <div>
+              <div className="">
                 <Link href={"/start-a-project"}>
                   <button
                     className={`button transition-colors w-auto lg:w-[22vw] duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.2vw] px-8 ${
@@ -112,6 +112,13 @@ export default function Footer({ isDark = false }) {
                     START A PROJECT
                   </button>
                 </Link>
+                <div
+                  className={`${
+                    isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
+                  } mt-5 lg:mt-[2vw] ml-[0.5vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
+                >
+                  We would love to help you.
+                </div>
               </div>
               <div className="items-center lg:items-start flex flex-col">
                 <div className="button flex space-x-3 justify-center lg:justify-start">
@@ -154,14 +161,14 @@ export default function Footer({ isDark = false }) {
                   </Link>
                 </div>
 
-                <div
+                {/* <div
                   className={`${
                     isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
                   } mt-5 lg:mt-[3vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
                 >
-                  We would love to help you
+                  We would love to help you.
                   <br /> with your next project.
-                </div>
+                </div> */}
 
                 <div
                   className={`${

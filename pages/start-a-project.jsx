@@ -99,25 +99,29 @@ export default function StartAProject() {
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col text-center lg:text-start ">
-                Want to talk about your project?
+              Lets make it easy for both of us
               </div>
               {/* <span className=" font-[Arial]  text-center lg:text-start">
                 
               </span> */}
             </div>
             <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
-              {`Fill out the contact form for us to\n 
-              understand your needs and a Client\n 
-              Partner will be in touch right away.`
+              {`If you can help us with some details about\n
+               your project goals and some insights about\n
+                vision, we can help you build a highly desired\n
+                 product. Answer the questions below to help\n 
+                 us get you started right away.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
                 ))}
             </span>
             <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
-              {`Fill out the contact form for us to\n 
-              understand your needs and a Client\n 
-              Partner will be in touch right away.`
+              {`If you can help us with some details about
+               your project goals and some insights about
+                vision, we can help you build a highly desired
+                 product. Answer the questions below to help
+                 us get you started right away.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
