@@ -39,7 +39,7 @@ export default function Testimonies() {
   const isInView = useInView(ref);
 
   React.useEffect(() => {
-    GSAPVerticleScroll();
+    // GSAPVerticleScroll();
   }, []);
 
   React.useEffect(() => {
@@ -52,7 +52,7 @@ export default function Testimonies() {
     <>
       <div
         id="PageWrapTestomony"
-        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal] p-4 h-[150vh]  bg-[#1F1D1D]"
+        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal] p-4 h-[100vh]  bg-[#1F1D1D]"
       >
         <div className="testomony-item relative flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-0 lg:justify-around items-center font-[PPNeueMontreal] p-4 h-[100vh] lg:h-[100vh] bg-[#1F1D1D]">
           <div
