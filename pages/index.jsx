@@ -61,7 +61,7 @@ export default function Home() {
       )}
       <Landing />
       <About />
-      <OurWork />
+      {/* <OurWork /> */}
       <Testimonies />
       <Footer />
     </div>
