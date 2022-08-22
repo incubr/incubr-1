@@ -69,7 +69,7 @@ export default function About() {
         </h1>
         <div className="flex w-full h-full space-x-[4.5vw]">
           {["1", "2"].map((e, index) => (
-            <Card />
+            <Card key={"about_"+index} />
           ))}
         </div>
         <CarosuelController />
