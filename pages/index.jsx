@@ -3,7 +3,7 @@ import Footer from "@/src/components/footer";
 import About from "@/src/components/home/about";
 import Landing from "@/src/components/home/landing";
 import Testimonies from "@/src/components/home/testimonies";
-import OurWork from "@/src/components/home/work";
+import OurWork from "@/src/components/home/middle";
 import { Store } from "@/context";
 import Lottie from "react-lottie";
 import Animated from "@/assets/lf20_fnddduvc.json";
@@ -61,7 +61,7 @@ export default function Home() {
       )}
       <Landing />
       <About />
-      {/* <OurWork /> */}
+      <OurWork />
       <Testimonies />
       <Footer />
     </div>
