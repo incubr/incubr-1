@@ -34,8 +34,8 @@ export default function Landing() {
 
   return (
     <div
-      className="w-full light__section relative bg-[#FDFDFD] flex flex-col"
-      style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
+      className="w-full light__section h-screen relative bg-[#FDFDFD] flex flex-col"
+      // style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
     >
       <Navigation />
       <MobileNavigation />

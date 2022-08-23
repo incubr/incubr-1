@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import { brands } from "../../../data/brands";
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import { slides } from "@/data/testimonials";
 import Link from "next/link";

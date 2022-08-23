@@ -3,6 +3,7 @@ import { Store } from "../../../context";
 import { buttonMouseEnter, onmouseleave } from "../../custom-cursor";
 import Link from "next/link";
 import { onMouseEnterOnTitle } from "./landing";
+import { SwiperSlide, Swiper, useSwiper } from "swiper/react";
 
 const Texts = [
   "WEB DESIGN & DEVELOPMENT",
@@ -12,8 +13,9 @@ const Texts = [
 ];
 
 const CarosuelController = () => {
+  const swiper = useSwiper();
   return (
-    <div className="flex w-full pt-[6vw] items-center justify-between">
+    <div className="flex w-[91%] pt-[6vw] items-center justify-between">
       <div className=""></div>
       <div
         onMouseEnter={buttonMouseEnter}
@@ -27,11 +29,12 @@ const CarosuelController = () => {
         </Link>
       </div>
       <div
-        className="flex rounded-xl items-center justify-center bg-white bg-opacity-25 h-[3vw] w-[3vw]"
+        onClick={() => swiper.slideNext()}
+        className="flex rounded-xl cursor-pointer items-center justify-center bg-white bg-opacity-25 h-[10vw] w-[10vw] sm:w-[6vw] sm:h-[6vw] lg:h-[3vw] lg:w-[3vw]"
       >
         <svg
           viewBox="0 0 12 22"
-          className="h-[1vw]"
+          className="h-[4vw] sm:h-[3vw] lg:h-[1vw]"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -49,7 +52,7 @@ const CarosuelController = () => {
 
 const Card = () => {
   return (
-    <div className="flex w-1/2 h-full mt-[3vw]">
+    <div className="flex w-full h-full">
       <div className="w-full border border-opacity-50 rounded-xl border-white bg-white h-full flex bg-opacity-20"></div>
     </div>
   );
@@ -63,16 +66,35 @@ export default function About() {
       className="dark__section bg-[#1F1D1D] py-[2vw] text-white flex justify-center items-center"
       style={{ height }}
     >
-      <div className="flex flex-col w-[60%] py-[3.5vw] pb-[2vw] h-full">
-        <h1 onMouseEnter={onMouseEnterOnTitle} onMouseLeave={onmouseleave} className=" text-6xl sm:text-8xl lg:text-[5vw] items-center flex  font-[Arial]  cursor-pointer">
+      <div className="flex flex-col w-[80%] lg:w-[60%] overflow-x-auto py-[3.5vw] pb-[2vw] h-full justify-center">
+        <h1
+          onMouseEnter={onMouseEnterOnTitle}
+          onMouseLeave={onmouseleave}
+          className=" text-[12vw] justify-center sm:justify-start text-center sm:text-left sm:text-[8vw] lg:text-[5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
+        >
           We Do
         </h1>
-        <div className="flex w-full h-full space-x-[4.5vw]">
-          {["1", "2"].map((e, index) => (
-            <Card key={"about_"+index} />
-          ))}
-        </div>
-        <CarosuelController />
+        <Swiper
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 1,
+            },
+          }}
+          className="flex flex-col w-full overflow-x-auto mt-[3vw] h-[60vh] sm:h-[50vh] lg:h-full space-x-[4.5vw] "
+        >
+          <div>
+            {["1", "2", "3"].map((e, index) => (
+              <SwiperSlide key={"about_" + index} className=" pr-[1vw]">
+                <Card />
+              </SwiperSlide>
+            ))}
+          </div>
+          <CarosuelController />
+        </Swiper>
       </div>
     </div>
   );
