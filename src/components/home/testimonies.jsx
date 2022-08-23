@@ -61,7 +61,7 @@ const Title = () => {
 
 const ProfilePic = ({ link }) => {
   return (
-    <div className="flex w-[45vw] h-[45vw] sm:w-[30vw] sm:h-[30vw] z-20 lg:w-[12vw] lg:h-[12vw] lg:p-[1vw]">
+    <div className="flex w-[45vw] h-[45vw] sm:w-[25vw] sm:h-[25vw] z-20 lg:w-[12vw] lg:h-[12vw] lg:p-[1vw]">
       <div
         id="test_profile_pic"
         className="w-full h-full bg-cover rounded-xl flex items-end justify-end "
@@ -117,7 +117,7 @@ export default function Testimonies() {
             ref={ref}
             className="flex flex-col w-full justify-around relative sm:justify-center flex-nowrap"
           >
-            <div className="flex w-full justify-center items-center absolute top-[-5vw]">
+            <div className="flex w-full justify-center items-center absolute top-[-15vw] sm:top-[-7vw] lg:top-[-5vw]">
               <ProfilePic link={link} />
             </div>
             {autoplay && (
@@ -128,7 +128,7 @@ export default function Testimonies() {
                   disableOnInteraction: false,
                 }}
                 loop
-                className="px-10 flex w-full flex-col overflow-auto justify-between items-center sm:px-20 sm:w-2/3 lg:w-1/2 "
+                className="px-10 flex w-[90%] flex-col overflow-auto justify-between items-center sm:px-20 sm:w-[80%] lg:w-1/2 "
                 onSlideChange={(e) => {
                   setActiveIndex(e.activeIndex);
                   document.getElementById(
@@ -163,7 +163,7 @@ export default function Testimonies() {
                             </span>
                           ))}
                       </span>
-                      <span className="mt-4 flex lg:hidden flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
+                      <span className="mt-4 flex lg:hidden w-[90%] flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
                         {slides[activeIndex % slides.length].text
                           .split("\n")
                           .map((text, index) => (
@@ -182,10 +182,10 @@ export default function Testimonies() {
         </div>
       </div>
 
-      <div className="w-full h-[25vh] lg:h-[22vw] flex items-center justify-center bg-[#1F1D1D]">
-        <div className="flex w-[60%] items-center">
+      <div className="w-full h-[28vh] sm:h-[22vh] lg:h-[22vw] flex items-center justify-center bg-[#1F1D1D]">
+        <div className="flex lg:w-[60%] items-center justify-around flex-wrap px-2">
           {brands.map((items) => (
-            <span key={items.src} className="flex -mr-48 sm:-mr-20 lg:mr-0">
+            <span key={items.src} className="flex mt-2 lg:mt-0">
               <Image key={items.src} src={items} />
             </span>
           ))}

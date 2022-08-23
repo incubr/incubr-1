@@ -7,3 +7,5 @@ export default function HeadingText({text}) {
     </div>
   );
 }
+
+

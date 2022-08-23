@@ -61,15 +61,7 @@ export const mobileAnimateNavigation = (isDark = false) => {
 
 export const mobileReverseNavigation = (isRight = false, isDark = false) => {
   const timeline = gsap.timeline();
-  timeline.to(".cross_button", {
-    duration: 0.1,
-    opacity: 0,
-    ease: "power2.inOut",
-    display: "none",
-  });
-  timeline.to("#hanger", {
-    opacity: 1,
-  });
+ 
 
   timeline.to("#navigation__trigger", {
     opacity: 1,
@@ -112,6 +104,16 @@ export const mobileReverseNavigation = (isRight = false, isDark = false) => {
     height: "0vw",
     position: "absolute",
     zIndex: 40,
+  });
+
+  timeline.to(".cross_button", {
+    duration: 0.1,
+    opacity: 0,
+    ease: "power2.inOut",
+    display: "none",
+  });
+  timeline.to("#hanger", {
+    opacity: 1,
   });
 };
 

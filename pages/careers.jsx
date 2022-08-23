@@ -94,7 +94,7 @@ export default function Careers() {
                         .getElementById("jd_" + i.id)
                         .classList.toggle("hidden");
                     }}
-                    className="bg-white cursor-pointer border-b border-black"
+                    className="bg-white cursor-pointer"
                   >
                     <td
                       scope="row"
@@ -112,7 +112,7 @@ export default function Careers() {
                     <td colSpan={3} className="px-6 py-4">
                       <div className="flex flex-col">
                         <span>{i.description}</span>
-                        <span className="mt-2 font-bold underline text-lg">
+                        <span className="mt-5 font-bold text-xl">
                           Job Responsibilities:
                         </span>
                         {i.responsibilities.map((j, index) => (
@@ -121,7 +121,7 @@ export default function Careers() {
                           </span>
                         ))}
 
-                        <span className="mt-4 font-bold underline text-lg">
+                        <span className="mt-5 font-bold text-xl">
                           Skills Required:
                         </span>
                         {i.skills.map((j, index) => (
@@ -152,6 +152,11 @@ export default function Careers() {
                           Close
                         </button>
                       </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colSpan={3}>
+                      <div className="w-full border-b border-black p-1"></div>
                     </td>
                   </tr>
                 </>
@@ -202,7 +207,7 @@ export default function Careers() {
                   <td colSpan={3} className=" py-4">
                     <div className="flex flex-col">
                       <span>{i.description}</span>
-                      <span className="mt-2 font-bold underline text-lg">
+                      <span className="mt-4 font-bold text-lg">
                         Job Responsibilities:
                       </span>
                       {i.responsibilities.map((j, index) => (
@@ -211,7 +216,7 @@ export default function Careers() {
                         </span>
                       ))}
 
-                      <span className="mt-4 font-bold underline text-lg">
+                      <span className="mt-4 font-bold text-lg">
                         Skills Required:
                       </span>
                       {i.skills.map((j, index) => (

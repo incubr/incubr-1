@@ -15,10 +15,10 @@ export default function MiddleSection() {
   return (
     <div
       style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
-      className="flex h-screen w-full justify-center items-center"
+      className="flex h-screen w-full justify-center items-center px-[6vw] lg:px-0"
     >
       <div className="flex lg:w-[60%] flex-col">
-        <span className=" font-[Arial] leading-[14vw] text-[12vw] sm:text-[10vw] sm:leading-[11vw] lg:leading-[5vw] lg:text-[4.3vw] justify-center flex flex-col">
+        <span className=" font-[Arial] text-center lg:text-left leading-[13vw] text-[10vw] sm:text-[10vw] sm:leading-[11vw] lg:leading-[5vw] lg:text-[4.3vw] justify-center flex flex-col">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </span>

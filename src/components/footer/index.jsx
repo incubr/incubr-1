@@ -88,7 +88,7 @@ export default function Footer({ isDark = false }) {
               />
               <div className="flex ">
                 <div className="flex flex-[3] items-center flex-col">
-                  <div className="button flex space-y-2 font-[600] lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50">
+                  <div className="button flex space-y-2 font-[600] lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw]">
                     {navigation_link.map((item, index) => (
                       <Link key={"naviga" + index} href={item.link}>
                         <span className="px-[1.8vw] sm:px-0">{item.name}</span>
@@ -207,8 +207,8 @@ export default function Footer({ isDark = false }) {
       <div
         className={`${
           isDark
-            ? "text-[#000000] bg-[#fff] "
-            : "text-[#fcfcfc] bg-[#1F1D1D]"
+          ? "text-[#e9e9e9] bg-[#1F1D1D]"
+            : "text-[#444444] bg-[#fff] "
         } tracking-wider py-4 font-[PPNeueMontreal] w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
       >
         <span>&copy;INCUBR {moment().year()}</span>
