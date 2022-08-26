@@ -25,7 +25,7 @@ export default function Services() {
         <div className="flex flex-1 justify-center items-center">
           <div className="lg:w-[60%] text-white items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] sm:text-[9vw] sm:leading-[11vw] text-[11vw] w-auto lg:leading-[4vw] lg:text-[3.3vw] flex flex-col lg:flex-row"
+              className=" font-[Arial] leading-[14vw] sm:leading-[8vw] sm:text-[7vw] text-[11vw] w-auto lg:leading-[4vw] lg:text-[3.3vw] flex flex-col lg:flex-row"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
@@ -56,16 +56,19 @@ export default function Services() {
         <DownArrow title={"Happy to serve"} isDark />
       </div>
 
-      <div className="flex flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
-        <div className=" lg:w-[60%] pb-28 lg:pb-[10vw] flex flex-col">
+      <div className="flex flex-col w-full relative bg-[#1F1D1D] sm:py-[4vw] items-center">
+        <div className=" lg:w-[60%] sm:w-[90%] sm:pb-28 lg:pb-[10vw] flex flex-col flex-wrap">
           {servicesData.map((data, i) => (
-            <ServiceCard data={data} key={"sdasdder" + i} />
+            <div key={"sdasdder" + i} className="flex flex-col sm:flex-row sm:divide-x divide-white">
+              <ServiceCard data={data.data_1} />
+              <ServiceCard data={data.data_2} />
+            </div>
           ))}
         </div>
       </div>
 
-      <div className="flex font-[PPNeueMontreal] pb-10 flex-col w-full relative bg-[#1F1D1D] py-[4vw] items-center">
-        <div className=" w-[85%] h-[78vh] rounded-3xl bg-[#F0C808] flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
+      <div className="flex font-[PPNeueMontreal] sm:pb-10 flex-col w-full relative bg-[#1F1D1D] sm:py-[2vw] items-center">
+        <div className=" w-full sm:w-[80%] h-[60vh] sm:h-[50vh] sm:rounded-3xl bg-[#F0C808] flex flex-col lg:flex-row p-[3vw] px-16 lg:px-[6vw] justify-center space-y-10 lg:space-y-0 lg:justify-start items-center">
           <h1 className="flex text-xl lg:text-[2.2vw] text-center lg:text-start lg:leading-[2.5vw]">
             Let us partner and build your dream company together.
           </h1>
@@ -76,7 +79,7 @@ export default function Services() {
             </h1>
           </Link>
         </div>
-        <div className="h-[15vh]"></div>
+        <div className="hidden sm:block h-[15vh]"></div>
       </div>
       <Footer />
     </div>
