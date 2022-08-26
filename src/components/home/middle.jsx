@@ -46,7 +46,7 @@ export default function MiddleSection() {
               onMouseLeave={onmouseleave}
               className="flex text-black mt-[9vw] sm:mt-[6vw] lg:mt-[4vw] cursor-pointer justify-center lg:justify-start transition-colors ease-in-out duration-200 hover:text-black tracking-wider"
             >
-              <Link href={"/start"}>
+              <Link href={"/start-a-project"}>
                 <span className="p-2 px-8 border text-black hover:text-black hover:border-[#F0C808] hover:bg-[#F0C808] border-black rounded-full">
                   Click Here
                 </span>
