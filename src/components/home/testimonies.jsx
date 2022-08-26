@@ -37,7 +37,7 @@ const Title = () => {
     >
       <div className="flex flex-1"></div>
       <div className="flex flex-1 justify-center items-center flex-col">
-        <div className="flex px-5 py-2 text-[12vw] sm:text-[9vw] lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
+        <div className="flex px-5 py-2 text-[11vw] sm:text-[9vw] lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
           <h1 className="uppercase">testimonials</h1>
         </div>
         <div className="hidden lg:flex flex-1 justify-center items-center">

@@ -14,8 +14,8 @@ const ElevatedBox = ({ childern, title, notBorder = false }) => {
     <div className="w-full mr-5 mt-10 mb-5">
       <div
         className={`w-full ${
-          !notBorder && "border border-[#1F1D1D]"
-        } text-[#1F1D1D] h-full py-8 lg:py-[3vw] rounded-[3.5rem] sm:rounded-[5rem] px-6 sm:px-20 `}
+          !notBorder && "border border-[#D7D7D7]"
+        } text-[#1F1D1D] h-full py-8 lg:py-[3vw] rounded-[3rem] sm:rounded-[3rem] px-6 sm:px-20 `}
       >
         <div className="text-xl lg:text-[2vw] lg:leading-[2.2vw] font-[Arial]">
           {title}
@@ -173,7 +173,7 @@ export default function StartAProject() {
                   placeholder="Share the motivation of starting the company, its vision, mission and values in maximum of 250 words."
                   rows={6}
                   name="dBussiness"
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.dBussiness}
                   onChange={handleChange}
                 ></textarea>
@@ -187,7 +187,7 @@ export default function StartAProject() {
                 <textarea
                   placeholder="Share with us in maximum 250 words."
                   rows={6}
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.serviceOffer}
                   onChange={handleChange}
                   name="serviceOffer"
@@ -203,7 +203,7 @@ export default function StartAProject() {
                 <textarea
                   placeholder="Share the demographic factors of your target customers such as age, gender, location and other details like industry, Company size, job titles and more in maximum 250 words."
                   rows={6}
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.target}
                   name="target"
                   onChange={handleChange}
@@ -219,7 +219,7 @@ export default function StartAProject() {
                 <textarea
                   placeholder="Share your Unique Selling Point in maximum 250 words."
                   rows={6}
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.unique}
                   name="unique"
                   onChange={handleChange}
@@ -235,7 +235,7 @@ export default function StartAProject() {
                 <textarea
                   placeholder="Share your requirements maximum in 250 words."
                   rows={6}
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.features}
                   name="features"
                   onChange={handleChange}
@@ -251,7 +251,7 @@ export default function StartAProject() {
                 <textarea
                   placeholder="Share with us in maximum 250 words."
                   rows={6}
-                  className=" placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className=" placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   value={form.reference}
                   name="reference"
                   onChange={handleChange}
@@ -402,7 +402,7 @@ export default function StartAProject() {
                   value={form.date}
                   name="date"
                   onChange={handleChange}
-                  className="placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className="placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                 ></textarea>
               </div>
             }
@@ -449,7 +449,7 @@ export default function StartAProject() {
                   rows={6}
                   value={form.guides}
                   name="guides"
-                  className="placeholder:text-gray-600 bg-transparent border border-[#1F1D1D] rounded-3xl p-4 text-sm w-full"
+                  className="placeholder:text-gray-600 bg-transparent border border-[#D7D7D7] rounded-3xl p-4 text-sm w-full"
                   onChange={handleChange}
                 ></textarea>
               </div>
@@ -466,7 +466,7 @@ export default function StartAProject() {
                   type={"text"}
                   value={form.name}
                   name="name"
-                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#1F1D1D] rounded-xl p-4 px-8 text-sm w-full"
+                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#D7D7D7] rounded-xl p-4 px-8 text-sm w-full"
                   onChange={handleChange}
                 />
                 <input
@@ -474,7 +474,7 @@ export default function StartAProject() {
                   type={"text"}
                   value={form.company}
                   name="company"
-                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#1F1D1D] rounded-xl p-4 px-8 text-sm w-full"
+                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#D7D7D7] rounded-xl p-4 px-8 text-sm w-full"
                   onChange={handleChange}
                 />
                 <input
@@ -482,7 +482,7 @@ export default function StartAProject() {
                   type={"text"}
                   value={form.email}
                   name="email"
-                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#1F1D1D] rounded-xl p-4 px-8 text-sm w-full"
+                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#D7D7D7] rounded-xl p-4 px-8 text-sm w-full"
                   onChange={handleChange}
                 />
                 <input
@@ -490,7 +490,7 @@ export default function StartAProject() {
                   type={"text"}
                   value={form.phNumber}
                   name="phNumber"
-                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#1F1D1D] rounded-xl p-4 px-8 text-sm w-full"
+                  className="bg-transparent tracking-widest placeholder:tracking-widest placeholder:text-gray-600 border border-[#D7D7D7] rounded-xl p-4 px-8 text-sm w-full"
                   onChange={handleChange}
                 />
               </div>
@@ -507,7 +507,7 @@ export default function StartAProject() {
                       error: "Something went wrong! We are fixing the problem",
                     });
                   }}
-                  className="text-white button hover:bg-[#F0C808] hover:text-black transition-colors  ease-in-out duration-200 text-3xl lg:text-[4vw] py-5 lg:py-[2vw] px-10 lg:px-[2vw] font-[PPNeueMontreal] tracking-widest rounded-3xl lg:rounded-[4vw] font-bold bg-[#1F1D1D]"
+                  className="text-white button hover:bg-[#F0C808] hover:text-black transition-colors  ease-in-out duration-200 text-3xl lg:text-[3vw] py-5 lg:py-[1.7vw] px-10 lg:px-[2vw] font-[PPNeueMontreal] tracking-widest rounded-3xl lg:rounded-[4vw] font-bold bg-[#1F1D1D]"
                 >
                   SUBMIT
                 </button>
