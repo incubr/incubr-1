@@ -75,11 +75,11 @@ const Card = ({ data }) => {
   return (
     <div className="flex w-full h-full">
       <div className="w-full flex-col border justify-between border-opacity-50 p-[4vw] sm:p-[3vw] lg:p-[1.7vw] py-[7vw] sm:py-[4vw] lg:py-[2vw] rounded-xl border-white bg-white h-full flex bg-opacity-10">
-        <h1 className="text-[7vw] sm:text-[4vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-center sm:text-start">
+        <h1 className="text-[7vw] sm:text-[3.5vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-center sm:text-start">
           {data.title}
         </h1>
         <div className="flex flex-col">
-          <span className="text-[5vw] sm:text-[2.5vw] lg:text-[1.3vw] text-center sm:text-start">
+          <span className="text-[3.5vw] sm:text-[1.7vw] lg:text-[1vw] text-center sm:text-start">
             {data.description}
           </span>
           <div className="pt-[8vw] sm:pt-[5vw] lg:pt-[2vw] flex">
