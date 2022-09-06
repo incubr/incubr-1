@@ -1,26 +1,32 @@
 export const about_data = [
   {
     id: "4564",
-    title: "WEB DESIGN & DEVELOPMENT",
+    title: "UI UX Design",
     description:
-      "We develop client-focused, customer-centric, web solutions that deliver tangible business results, connects with your audience, communicates your message and elevates your brand all at the same time.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: "4564s",
-    title: "BUILD BRAND ASSETS",
+    title: "Branding and Rebranding",
     description:
-      "We design worlds of experience that connect people with brands, products or other people. We deal with corporate identities and goals; requirements and functions, needs and usability, and above all: emotions. We distinguish your brand from everyone else with the purpose of establishing successful brand recognition, creating a competitive advantage.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: "4564ew",
-    title: "FIND & DEPLOY TECH RESOURCES",
+    title: "Website Dev ",
     description:
-      "We help you find, compare and deploy the right technologies for your business. We find, hire, train, upskill, and deploy local tech talent at all levels, from entry to senior. We understand what it takes to get technology deployed, including all change management aspects related to new ways of working.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: "4564df",
-    title: "TECHNOLOGY SUPPORT",
+    title: "Application Dev",
     description:
-      "Tech support is a critical element of the overall user experience for businesses. We ensure accessibility to the right technology and technical expertise on-time, every time for business type. ",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    id: "4564dfd",
+    title: "Tech Team Deployment",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
