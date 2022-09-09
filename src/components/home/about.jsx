@@ -126,7 +126,6 @@ const Card = ({ data }) => {
 };
 
 export default function About() {
-  const [activeIndex, setActiveIndex] = React.useState(0);
 
   return (
     <div className="dark__section bg-[#1F1D1D] h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
@@ -140,7 +139,7 @@ export default function About() {
         </h1>
         <div className="flex about-section h-[45%] lg:h-[80%] py-[2.5vw] space-x-[3vw] overflow-x-auto">
           {about_data.map((e, index) => (
-            <div className="flex-none w-[48%] lg:w-[30%] h-full">
+            <div key={"about__" + index.toString()} className="flex-none w-[48%] lg:w-[30%] h-full">
               <Card data={e} key={"about_" + index.toString()} />
             </div>
           ))}
