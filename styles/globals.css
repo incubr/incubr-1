@@ -27,20 +27,45 @@ a {
   src: url("../assets/PPNeueMontreal-Book.otf");
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 5px;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: #1d1d1d;
 }
 
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.about-section::-webkit-scrollbar {
+  width: 2px;
+  height: 8px;
+  overflow: visible;
+}
+
+.about-section::-webkit-scrollbar-track {
+  background: #D9D9D959;
+  opacity: 0.5;
+  height: 3px;
+  overflow: visible;
+  border-radius: 10px;
+}
+
+.about-section::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.about-section::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 
 .container {

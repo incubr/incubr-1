@@ -67,9 +67,7 @@ const NewDownArrow = ({title, isDark = false }) => {
           className="button cursor-pointer sm:h-48 sm:w-48 lg:w-[12.5vw] 2xl:w-[10vw] 2xl:h-[10vw] lg:h-[12.5vw] flex flex-col items-end lg:justify-end"
         >
           <div
-            className={`lg:w-[4vw] sm:h-16 sm:w-16 ${
-              isDark ? "sm:bg-white sm:bg-opacity-30" : "sm:bg-black sm:bg-opacity-25"
-            } w-[15vw] h-[15vw] lg:h-[4vw] 2xl:w-[3vw] 2xl:h-[3vw] hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-xl justify-center items-center`}
+            className={`lg:w-[4vw] sm:h-16 sm:w-16 sm:bg-[#FFA400] w-[15vw] h-[15vw] lg:h-[4vw] 2xl:w-[3vw] 2xl:h-[3vw] hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center`}
           >
             <svg
               viewBox="0 0 22 12"
@@ -81,7 +79,7 @@ const NewDownArrow = ({title, isDark = false }) => {
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M21.7514 0.251753C21.8302 0.331354 21.8927 0.425917 21.9354 0.530025C21.978 0.634132 22 0.74574 22 0.858456C22 0.971171 21.978 1.08278 21.9354 1.18689C21.8927 1.29099 21.8302 1.38556 21.7514 1.46516L11.5988 11.7482C11.5202 11.828 11.4268 11.8914 11.324 11.9346C11.2213 11.9778 11.1111 12 10.9998 12C10.8885 12 10.7783 11.9778 10.6755 11.9346C10.5727 11.8914 10.4794 11.828 10.4008 11.7482L0.248117 1.46516C0.0892505 1.30425 -4.74711e-08 1.08601 -3.75243e-08 0.858455C-2.75774e-08 0.630897 0.0892505 0.41266 0.248117 0.251752C0.406984 0.0908448 0.622454 0.000447723 0.847124 0.000447733C1.0718 0.000447743 1.28726 0.0908448 1.44613 0.251752L10.9998 9.92985L20.5534 0.251753C20.632 0.171951 20.7254 0.108636 20.8282 0.0654361C20.931 0.0222361 21.0411 -4.19128e-08 21.1524 -3.70483e-08C21.2637 -3.21839e-08 21.3739 0.0222361 21.4767 0.0654361C21.5795 0.108636 21.6728 0.171951 21.7514 0.251753Z"
-                fill={isDark ? "#fff" : "#000"}
+                fill={"#000"}
               />
             </svg>
           </div>

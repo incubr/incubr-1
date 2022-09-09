@@ -122,7 +122,21 @@ export default function Navigation({ isDark = false }) {
               isDark ? "text-black" : "text-white"
             } hidden sm:flex  `}
           >
-            <Image src={Cross} />
+            <svg
+              className="w-[3vw]"
+              viewBox="0 0 67 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 63L66 1M66 63L1 1"
+                stroke="#F8F8F8"
+                strokeOpacity="0.65"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </span>
         </button>
         <div
@@ -140,8 +154,10 @@ export default function Navigation({ isDark = false }) {
                   id={currentLocation === item.link ? "active" : ""}
                   className={`flex text-white hover:opacity-100 opacity-0 -translate-y-40 transition-colors ease-in-out duration-200 text-start  `}
                 >
-                  <span className="mt-6 opacity-50">0{index + 1}.</span>{" "}
-                  <span className="ml-5 text-5xl lg:text-[7vw]">
+                  <span className=" opacity-50 items-center flex">
+                    0{index + 1}.
+                  </span>{" "}
+                  <span className="ml-5 text-5xl lg:text-[6vw]">
                     {item.name}
                   </span>
                 </li>
@@ -153,7 +169,7 @@ export default function Navigation({ isDark = false }) {
             className=" hidden flex-1 flex-col justify-end mt-10 lg:mt-0 space-y-5 lg:space-y-[1.8vw]"
           >
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
-              Let's work together
+              We would love to help you<br /> with your next project
             </h1>
             <Link href={"/start-a-project"}>
               <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
@@ -165,19 +181,19 @@ export default function Navigation({ isDark = false }) {
             </h1>
             <div className="flex space-x-3">
               <Link href={"https://www.linkedin.com/company/incubr/about/"}>
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                   <Image src={LinkedIn} />
                 </button>
               </Link>
               <Link href={"https://www.instagram.com/incubr.tech/"}>
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                   <Image src={Instagram} />
                 </button>
               </Link>
               <Link
                 href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
               >
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
                   <Image src={WhatsApp} />
                 </button>
               </Link>

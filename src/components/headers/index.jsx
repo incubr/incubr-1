@@ -23,8 +23,8 @@ export default function Headers({ isDark = false }) {
         <Link href={"/start-a-project"}>
           <button
             className={`hidden button rounded-full tracking-wider hover:shadow-md ${
-              isDark ? "text-black bg-[#fff]" : "text-white bg-[#1F1D1D]"
-            } hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+              isDark ? "bg-[#fff]" : " border border-black hover:border-none bg-[#fff]"
+            } hover:bg-[#F0C808] text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
           >
             START A PROJECT
           </button>

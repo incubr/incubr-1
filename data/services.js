@@ -27,4 +27,12 @@ export const servicesData = [
         "Tech support is a critical element of the overall user experience for businesses. We ensure accessibility to the right technology and technical expertise on-time, every time for business type. ",
     },
   },
+  {
+    data_1: {
+      id: 5,
+      title: "Media Production",
+      description:
+        "Exemplary content and top-notch visuals. Copywriting, 360° Photography & Video, Art Direction, and Video Production",
+    },
+  },
 ];

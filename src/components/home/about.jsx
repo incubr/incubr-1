@@ -91,18 +91,18 @@ const Card = ({ data }) => {
   const swiper = useSwiper();
   return (
     <div className="flex w-full h-full">
-      <div className="w-full flex-col border justify-between border-opacity-50 p-[4vw] sm:p-[3vw] lg:p-[1.7vw] py-[7vw] sm:py-[4vw] lg:py-[2vw] rounded-xl border-white bg-white h-full flex bg-opacity-10">
+      <div className="w-full flex-col border justify-between border-opacity-50 p-[4vw] sm:p-[3vw] lg:p-[1.7vw] py-[7vw] sm:py-[4vw] lg:py-[2vw] rounded-xl border-white bg-white h-full flex bg-opacity-10 hover:bg-opacity-50 hover:bg-[#FFA40040]">
         <h1 className="text-[7vw] sm:text-[3.5vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-center sm:text-start">
           {data.title}
         </h1>
         <div className="flex flex-col">
-          <span className="text-[3.5vw] sm:text-[1.7vw] lg:text-[1.1vw] text-center sm:text-start">
+          <span className="text-[3.5vw] sm:text-[2vw] lg:text-[1.1vw] text-center sm:text-start">
             {data.description}
           </span>
           <div className="pt-[8vw] sm:pt-[5vw] lg:pt-[2vw] flex">
-            {/* <div
+            <div
               onClick={() => swiper.slideNext()}
-              className="hidden sm:flex rounded-xl cursor-pointer items-center justify-center border border-white bg-opacity-25 h-[10vw] w-[10vw] sm:w-[6vw] sm:h-[6vw] lg:h-[3vw] lg:w-[3vw]"
+              className="hidden sm:flex rounded-xl cursor-pointer items-center justify-center bg-opacity-25 h-[10vw] w-[10vw] sm:w-[6vw] sm:h-[6vw] lg:h-[3vw] lg:w-[3vw]"
             >
               <svg
                 viewBox="0 0 12 22"
@@ -117,7 +117,7 @@ const Card = ({ data }) => {
                   fill="white"
                 />
               </svg>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -126,47 +126,27 @@ const Card = ({ data }) => {
 };
 
 export default function About() {
-  const { height } = React.useContext(Store);
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   return (
-    <div
-      className="dark__section bg-[#1F1D1D] py-[1.3vw] text-white flex justify-center items-center"
-      style={{ height }}
-    >
-      <div className="flex flex-col w-[80%] lg:w-[60%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
+    <div className="dark__section bg-[#1F1D1D] h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
+      <div className="flex flex-col w-[80%] lg:w-[85%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
         <h1
           onMouseEnter={onMouseEnterOnTitle}
           onMouseLeave={onmouseleave}
-          className=" text-[12vw] justify-center sm:justify-start text-center sm:text-left sm:text-[8vw] lg:text-[5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
+          className=" text-[12vw] justify-center sm:justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
         >
-          We Do
+          What We Do
         </h1>
-        <Swiper
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            640: {
-              slidesPerView: 1,
-            },
-          }}
-          onSlideChange={(e) => {
-            setActiveIndex(e.activeIndex);
-          }}
-          className="flex flex-col w-full overflow-x-auto mt-[3vw] h-[60vh] sm:h-[50vh] lg:h-full "
-        >
-          <div>
-            {about_data.map((e, index) => (
-              <SwiperSlide key={"about_" + e.id} className=" pr-[1vw]">
-                <Card data={e} />
-              </SwiperSlide>
-            ))}
-          </div>
-          <Pagination activeIndex={activeIndex} />
-          <CarosuelController />
-        </Swiper>
+        <div className="flex about-section h-[45%] lg:h-[80%] py-[2.5vw] space-x-[3vw] overflow-x-auto">
+          {about_data.map((e, index) => (
+            <div className="flex-none w-[48%] lg:w-[30%] h-full">
+              <Card data={e} key={"about_" + index.toString()} />
+            </div>
+          ))}
+        </div>
+        {/* <Pagination activeIndex={activeIndex} /> */}
+        {/* <CarosuelController /> */}
       </div>
     </div>
   );

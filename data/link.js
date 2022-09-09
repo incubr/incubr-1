@@ -9,11 +9,11 @@ export const navigation_link = [
     name: "Services",
     link: "/services",
   },
-  // {
-  //   id: 43324,
-  //   name: "Work",
-  //   link: "/work",
-  // },
+  {
+    id: 43324,
+    name: "Teams",
+    link: "/teams",
+  },
   {
     id: 42324,
     name: "Testimonials",

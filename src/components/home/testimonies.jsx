@@ -91,18 +91,18 @@ export default function Testimonies() {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [autoplay, setAutoplay] = React.useState(false);
   const [link, setLink] = React.useState("");
-  const ref = React.useRef(null);
-  const isInView = useInView(ref);
+  // const ref = React.useRef(null);
+  // const isInView = useInView(ref);
 
   React.useEffect(() => {
     // GSAPVerticleScroll();
   }, []);
 
-  React.useEffect(() => {
-    if (isInView) {
-      setAutoplay(true);
-    }
-  }, [isInView]);
+  // React.useEffect(() => {
+  //   if (isInView) {
+  //     setAutoplay(true);
+  //   }
+  // }, [isInView]);
 
   return (
     <>
@@ -113,69 +113,68 @@ export default function Testimonies() {
         <div className="testomony-item relative flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-[3vw] lg:justify-around items-center font-[PPNeueMontreal] h-[100vh] bg-[#1F1D1D]">
           <Title />
           <motion.div
-            ref={ref}
+            // ref={ref}
             className="flex flex-col w-full justify-around relative sm:justify-center flex-nowrap"
           >
             <div className="flex w-full justify-center items-center absolute top-[-15vw] sm:top-[-7vw] lg:top-[-5vw]">
               <ProfilePic link={link} />
             </div>
-            {autoplay && (
-              <Swiper
-                modules={[Autoplay]}
-                autoplay={{
-                  delay: 5000,
-                  disableOnInteraction: false,
-                }}
-                loop
-                className="px-10 flex w-[90%] flex-col overflow-auto justify-between items-center sm:px-20 sm:w-[80%] lg:w-1/2 "
-                onSlideChange={(e) => {
-                  setActiveIndex(e.activeIndex);
-                  document.getElementById(
-                    "test_profile_pic"
-                  ).style.backgroundImage = `url(${
-                    slides[e.activeIndex % slides.length].backgroundImage
-                  })`;
-                  setLink(slides[e.activeIndex % slides.length].link);
-                }}
-              >
-                {slides.map((_, index) => (
-                  <SwiperSlide
-                    key={"sadasd" + index}
-                    style={{
-                      height: "55vh",
-                    }}
-                    className="w-full flex flex-col justify-center items-center bg-opacity-20 border-white border-opacity-50 rounded-2xl bg-white"
-                  >
-                    <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
-                      <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
-                        {slides[activeIndex % slides.length].name}
-                      </h1>
-                      <span className="lg:leading-[2vw] text-[#FFA400] font-semibold text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
-                        {slides[activeIndex % slides.length].description}
-                      </span>
-                      <span className="mt-4 hidden lg:flex flex-col w-[70%] text-center lg:text-[1.3vw] items-center">
-                        {slides[activeIndex % slides.length].text
-                          .split("\n")
-                          .map((text) => (
-                            <span key={text} className="text-white">
-                              {text}
-                            </span>
-                          ))}
-                      </span>
-                      <span className="mt-4 flex lg:hidden w-[90%] flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
-                        {slides[activeIndex % slides.length].text
-                          .split("\n")
-                          .map((text, index) => (
-                            <span key={text + index} className="text-white">
-                              {text}
-                            </span>
-                          ))}
-                      </span>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            )}
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              loop
+              className="px-10 flex w-[90%] flex-col overflow-auto justify-between items-center sm:px-20 sm:w-[80%] lg:w-1/2 "
+              onSlideChange={(e) => {
+                setActiveIndex(e.activeIndex);
+                document.getElementById(
+                  "test_profile_pic"
+                ).style.backgroundImage = `url(${
+                  slides[e.activeIndex % slides.length].backgroundImage
+                })`;
+                setLink(slides[e.activeIndex % slides.length].link);
+              }}
+            >
+              {slides.map((_, index) => (
+                <SwiperSlide
+                  key={"sadasd" + index}
+                  style={{
+                    height: "55vh",
+                  }}
+                  className="w-full flex flex-col justify-center items-center bg-opacity-10 border-white border-opacity-80 rounded-2xl bg-white"
+                >
+                  <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
+                    <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
+                      {slides[activeIndex % slides.length].name}
+                    </h1>
+                    <span className="lg:leading-[2vw] text-[#FFA400] font-semibold text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
+                      {slides[activeIndex % slides.length].description}
+                    </span>
+                    <span className="mt-4 hidden lg:flex flex-col w-[70%] text-center lg:text-[1.3vw] items-center">
+                      {slides[activeIndex % slides.length].text
+                        .split("\n")
+                        .map((text) => (
+                          <span key={text} className="text-white">
+                            {text}
+                          </span>
+                        ))}
+                    </span>
+                    <span className="mt-4 flex lg:hidden w-[90%] flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
+                      {slides[activeIndex % slides.length].text
+                        .split("\n")
+                        .map((text, index) => (
+                          <span key={text + index} className="text-white">
+                            {text}
+                          </span>
+                        ))}
+                    </span>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
             <Pagination activeIndex={activeIndex} />
           </motion.div>
         </div>

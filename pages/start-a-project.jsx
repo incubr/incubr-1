@@ -99,29 +99,14 @@ export default function StartAProject() {
               onMouseLeave={onmouseleave}
             >
               <div className="flex flex-col text-center lg:text-start ">
-              Lets make it easy for both of us
+                Lets make it easy for both of us
               </div>
               {/* <span className=" font-[Arial]  text-center lg:text-start">
                 
               </span> */}
             </div>
-            <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
-              {`If you can help us with some details about\n
-               your project goals and some insights about\n
-                vision, we can help you build a highly desired\n
-                 product. Answer the questions below to help\n 
-                 us get you started right away.`
-                .split("\n")
-                .map((line, i) => (
-                  <span key={i + line}>{line}</span>
-                ))}
-            </span>
-            <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
-              {`If you can help us with some details about
-               your project goals and some insights about
-                vision, we can help you build a highly desired
-                 product. Answer the questions below to help
-                 us get you started right away.`
+            <span className="flex lg:w-[80%] font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
+              {`If you can help us with some details about your project goals and some insights about vision, we can help you build a highly desired product. Answer the questions below to help us get you started right away.`
                 .split("\n")
                 .map((line, i) => (
                   <span key={i + line}>{line}</span>
@@ -513,8 +498,8 @@ export default function StartAProject() {
                 </button>
               </div>
             </div>
-            <h1 className="mt-10  lg:mt-[5vw] font-[PPNeueMontreal] text-xl lg:text-[2vw]">
-              We will reach you in 24 hours.
+            <h1 className="mt-10  lg:mt-[5vw] tracking-wider font-[PPNeueMontreal] text-xl lg:text-[2vw]">
+              Thank you! We'll connect with you shortly.
             </h1>
           </div>
         </div>
