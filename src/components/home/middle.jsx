@@ -14,21 +14,21 @@ export default function MiddleSection() {
             <h1
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
-              className=" text-[12vw] capitalize justify-center w-full lg:px-0 sm:justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
+              className=" text-[12vw] capitalize w-full lg:px-0 justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
             >
               How we do
             </h1>
             <div className="flex flex-col ">
-              <span className=" opacity-80 font-[Arial] text-center mt-[2vw] sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
+              <span className=" opacity-80 font-[Arial]  mt-[2vw] sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
                 We would like to showcase our work in person. Our relationships
                 are business to business and with partners and in most cases
                 bound by the NDAs.
               </span>
-              <span className=" opacity-80 mt-3 font-[Arial] text-center sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
+              <span className=" opacity-80 mt-3 font-[Arial]  sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
                 For the integrity of our business, we don't publish our projects
                 online. Please click below to explore engagement.
               </span>
-              <div className="flex justify-center sm:justify-start items-center pr-[4vw]">
+              <div className="flex justify-start items-center pr-[4vw]">
                 <div
                   onMouseEnter={buttonMouseEnter}
                   onMouseLeave={onmouseleave}

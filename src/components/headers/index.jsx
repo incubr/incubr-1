@@ -4,12 +4,12 @@ import React from "react";
 export default function Headers({ isDark = false }) {
   return (
     <div className="flex w-full justify-center absolute top-0 left-0">
-      <div className="w-[83%] sm:w-[85%] lg:z-[50] flex justify-center sm:justify-between mt-[12vw] sm:mt-16 2xl:mt-20">
+      <div className="w-[85%] lg:z-[50] flex items-center justify-between mt-[8vw] sm:mt-16 2xl:mt-20">
         <Link href={"/"}>
           <svg
             viewBox="0 0 163 29"
             fill="none"
-            className=" cursor-pointer w-[140px] h-[29px] sm:w-[163px] sm:h-[29px]"
+            className=" cursor-pointer w-[120px] h-[25px] sm:w-[163px] sm:h-[29px]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -22,9 +22,9 @@ export default function Headers({ isDark = false }) {
         {/* <Image src={Logo} className=" cursor-pointer" /> */}
         <Link href={"/start-a-project"}>
           <button
-            className={`hidden button rounded-full tracking-wider hover:shadow-md ${
+            className={`button rounded-full tracking-wider hover:shadow-md ${
               isDark ? "bg-[#fff]" : " border border-black hover:border-none bg-[#fff]"
-            } hover:bg-[#F0C808] text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
+            } hover:bg-[#F0C808] text-black transition-colors ease-in-out duration-200 py-1 lg:py-2 px-2 sm:px-4 flex items-center justify-center text-lg sm:text-xl`}
           >
             START A PROJECT
           </button>

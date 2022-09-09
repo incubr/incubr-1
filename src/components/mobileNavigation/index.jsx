@@ -11,14 +11,14 @@ import {
   mobileReverseNavigation,
 } from "@/src/animation/mobileNavigation";
 import gsap from "gsap";
+import { Store } from "@/context";
 
 export default function MobileNavigation({ isDark = false }) {
   const [opened, setOpened] = React.useState(false);
-  const [currentPosition, setCurrentPosition] = React.useState({ x: 0, y: 0 });
-  const [final, setFinal] = React.useState(false);
   const [currentLocation, setCurrentLocation] = React.useState("/");
   const navigationRef = React.useRef(null);
   const navigationRef2 = React.useRef(null);
+  const { height } = React.useContext(Store);
 
   React.useEffect(() => {
     changeBarColor(".dark__section", "#ffffff", "#1F1D1D");
@@ -26,175 +26,66 @@ export default function MobileNavigation({ isDark = false }) {
     setCurrentLocation(window.location.pathname);
   }, []);
 
-  const revelElement = () => {
-    gsap.to(
-      ".navigation__mobile .innerbox__mobile #navigation__list__mobile ul li",
-      {
-        duration: 0.2,
-        translateY: 0,
-        ease: "power2.inOut",
-        stagger: 0.1,
-        opacity: 0.5,
-      }
-    );
-
-    gsap.to(".navigation__mobile .innerbox__mobile #button_section__mobile", {
-      duration: 0.2,
-      display: "flex",
-      opacity: 1,
-    });
-
-    gsap.to(".cross_button", {
-      duration: 0.2,
-      opacity: 1,
-      ease: "power2.inOut",
-      display: "flex",
-    });
-  };
-
-  const onTouchStart = (e) => {
-    setCurrentPosition({
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY,
-    });
-    document.body.style.overflowY = "hidden";
-    document.getElementById("hanger").style.opacity = 0;
-    document.getElementById("navigation__list__mobile").style.display = "flex";
-    document.getElementById("navigation__mobile").style.zIndex = 100;
-    revelElement();
-  };
-
-  const onTouchMove = (e) => {
-    const { clientY, clientX } = e.touches[0];
-    document.getElementById("navigation__mobile").style.height = clientY + "px";
-    document.getElementById("innerbox__mobile").style.height = clientY + "px";
-
-    if (clientY > currentPosition.y) {
-      setFinal(true);
-    } else {
-      setFinal(false);
-    }
-    setCurrentPosition({ x: clientX, y: clientY });
-  };
-
-  const onTouchEnd = (e) => {
-    if (final) {
-      setOpened(true);
-      gsap.to("#navigation__mobile", {
-        height: "100vh",
-      });
-      gsap.to("#innerbox__mobile", {
-        height: "100vh",
-      });
-
-      // mobileAnimateNavigation();
-    } else {
-      setOpened(false);
-      gsap.to("#navigation__mobile", {
-        height: "31vw",
-      });
-      gsap.to("#innerbox__mobile", {
-        height: "2vw",
-      });
-      mobileReverseNavigation();
-    }
-    document.body.style.overflowY = "auto";
-  };
-
-  function is_touch_enabled() {
-    return (
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      navigator.msMaxTouchPoints > 0
-    );
-  }
-
   return (
     <div
-      ref={navigationRef}
-      id="navigation__mobile"
-      className="navigation__mobile  flex sm:hidden h-[0vw]  w-full sm:w-16 font-[Arial] z-[40] absolute right-0 sm:left-0 sm:items-center"
+      className="navigation_mobile z-[90] flex lg:hidden w-auto font-[Arial] absolute right-0 items-center"
+      style={{ height }}
     >
       <div
-        ref={navigationRef2}
-        id="innerbox__mobile"
-        className={`innerbox__mobile ${
-          isDark ? "bg-[#fff]" : "bg-[#1F1D1D]"
-        } w-full flex z-[41] h-[0vw]`}
+        className={`innerBox w-auto ${
+          isDark ? "bg-white" : "bg-[#1F1D1D]"
+        } h-[31vw] sm:px-0 sm:h-[22vw] absolute sm:top-0 right-0 sm:relative flex justify-center rounded-tl-3xl rounded-bl-3xl items-center`}
       >
-        <div
-          // onTouchStart={onTouchStart}
-          // onTouchMove={onTouchMove}
-          // onTouchCancel={onTouchEnd}
-          // onTouchEnd={onTouchEnd}
-          onClick={() => {
-            mobileAnimateNavigation();
-          }}
-          id="navigation__trigger"
-          className=" flex absolute right-[10vw] z-[1001] top-[12.6vw]"
-        >
-          {/* <svg
-            viewBox="0 0 26 91"
-            fill="none"
-            id="hanger"
-            className=" w-[4vw] h-[28vw] "
-            xmlns="http://www.w3.org/2000/svg"
+        {!opened && (
+          <button
+            onClick={() => {
+              if (opened) {
+                mobileReverseNavigation(isDark);
+              } else {
+                mobileAnimateNavigation(isDark);
+              }
+              setOpened(!opened);
+            }}
+            className="w-12 block lg:hidden sm:w-16 tracking-wider trasform rotate-180 text-xl lg:text-[2vw] text-white"
           >
-            <path
-              d="M12.6166 60.6799C12.9921 60.3044 13.6009 60.3044 13.9764 60.6799L22.1353 68.8388C27.0169 73.7204 27.0169 81.635 22.1353 86.5165V86.5165C17.2537 91.3981 9.29431 91.3532 4.41276 86.4716V86.4716C-0.419483 81.6394 -0.463898 73.7604 4.36835 68.9281L12.6166 60.6799Z"
-              fill={isDark ? "#fff" : "#1F1D1D"}
-            />
-            <path d="M12 0H14.5V66H12V0Z" fill={isDark ? "#fff" : "#1F1D1D"} />
-          </svg> */}
-          <svg
-            // width="6"
-            // height="24"
-            className=" w-[4vw] h-[5.5vw] "
-            viewBox="0 0 6 24"
-            fill="none"
-            id="hanger"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="3"
-              cy="3"
-              r="3"
-              // fill="black"
-              fill={isDark ? "#fff" : "#1F1D1D"}
-            />
-            <circle
-              cx="3"
-              cy="12"
-              r="2.5"
-              stroke={isDark ? "#fff" : "#1F1D1D"}
-            />
-            <circle cx="3" cy="21" r="3" fill={isDark ? "#fff" : "#1F1D1D"} />
-          </svg>
-        </div>
+            {opened ? (
+              <span
+                style={{ writingMode: "vertical-rl" }}
+                className="text-gray-500 hover:text-white"
+              >
+                CLOSE
+              </span>
+            ) : (
+              <span
+                style={{ writingMode: "vertical-rl" }}
+                className={`${isDark ? "text-black" : "text-white"} `}
+              >
+                MENU
+              </span>
+            )}
+          </button>
+        )}
         <button
           onClick={() => {
             setOpened(false);
-            mobileReverseNavigation();
+            mobileReverseNavigation(isDark);
           }}
-          className="cross_button hidden opacity-0 absolute top-8 right-8 lg:top-16 lg:right-16"
+          className="cross_button_mobile hidden opacity-0 absolute top-8 right-8 lg:top-16 lg:right-16"
         >
           <span
             style={{ writingMode: "vertical-rl" }}
-            className={`${
-              isDark ? "text-black" : "text-white"
-            } flex sm:hidden relative`}
+            className={`${isDark ? "text-black" : "text-white"} flex  `}
           >
             <svg
-              width="28"
-              height="27"
-              viewBox="0 0 28 27"
+              className="w-[3vw]"
+              viewBox="0 0 67 64"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1 26L27 1M27 26L1 1"
+                d="M1 63L66 1M66 63L1 1"
                 stroke="#F8F8F8"
-                strokeOpacity="0.56"
+                strokeOpacity="0.65"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -203,35 +94,40 @@ export default function MobileNavigation({ isDark = false }) {
           </span>
         </button>
         <div
-          id="navigation__list__mobile"
-          className="hidden button overflow-hidden bg-[#1F1D1D] flex-col w-full justify-center items-center"
+          id="navigation__list"
+          className="hidden button flex-col lg:flex-row flex-1 px-10 sm:px-20 lg:px-0 lg:ml-20"
         >
-          <ul className="flex flex-col items-center cursor-pointer space-y-5">
+          <ul className="flex flex-col flex-[2] cursor-pointer space-y-5">
             {navigation_link.map((item, index) => (
               <Link key={item.id} href={item.link}>
                 <li
                   onClick={() => {
                     setOpened(false);
-                    mobileReverseNavigation();
+                    reverseNavigation(isRight, isDark);
                   }}
                   id={currentLocation === item.link ? "active" : ""}
-                  className={`flex text-white mix-blend-difference hover:opacity-100 opacity-0 -translate-y-40 transition-colors ease-in-out duration-200 text-start  `}
+                  className={`flex text-white hover:opacity-100 opacity-0 -translate-y-40 transition-colors ease-in-out duration-200 text-start  `}
                 >
-                  {/* <span className="mt-6 opacity-50">0{index + 1}.</span>{" "} */}
-                  <span className="text-5xl lg:text-[7vw]">{item.name}</span>
+                  <span className=" opacity-50 items-center flex">
+                    0{index + 1}.
+                  </span>{" "}
+                  <span className="ml-5 text-5xl lg:text-[6vw]">
+                    {item.name}
+                  </span>
                 </li>
               </Link>
             ))}
           </ul>
           <div
-            id="button_section__mobile"
-            className=" flex-col mt-10 opacity-0 hidden items-center space-y-5 "
+            id="button_section"
+            className=" hidden flex-1 flex-col justify-end mt-10 lg:mt-0 space-y-5 lg:space-y-[1.8vw]"
           >
             <h1 className="text-gray-500 text-2xl lg:text-[1.5vw]">
-              Let's work together
+              We would love to help you
+              <br /> with your next project
             </h1>
             <Link href={"/start-a-project"}>
-              <button className="button start-a-project relative overflow-hidden text-black bg-white rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md  py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
+              <button className="button rounded-full w-full sm:w-[50vw] lg:w-[20vw] tracking-wider hover:bg-[#F0C808] hover:shadow-md text-[#1F1D1D] bg-white py-3 px-4 flex items-center justify-center text-xl lg:text-[1.8vw]">
                 START A PROJECT
               </button>
             </Link>
@@ -240,19 +136,19 @@ export default function MobileNavigation({ isDark = false }) {
             </h1>
             <div className="flex space-x-3">
               <Link href={"https://www.linkedin.com/company/incubr/about/"}>
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center rounded-full">
                   <Image src={LinkedIn} />
                 </button>
               </Link>
               <Link href={"https://www.instagram.com/incubr.tech/"}>
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center rounded-full">
                   <Image src={Instagram} />
                 </button>
               </Link>
               <Link
                 href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
               >
-                <button className="button w-14 h-14 flex justify-center hover:bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center rounded-full">
                   <Image src={WhatsApp} />
                 </button>
               </Link>

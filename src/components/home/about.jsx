@@ -92,11 +92,11 @@ const Card = ({ data }) => {
   return (
     <div className="flex w-full h-full">
       <div className="w-full flex-col border justify-between border-opacity-50 p-[4vw] sm:p-[3vw] lg:p-[1.7vw] py-[7vw] sm:py-[4vw] lg:py-[2vw] rounded-xl border-white bg-white h-full flex bg-opacity-10 hover:bg-opacity-50 hover:bg-[#FFA40040]">
-        <h1 className="text-[7vw] sm:text-[3.5vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-center sm:text-start">
+        <h1 className="text-[7vw] sm:text-[3.5vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-start">
           {data.title}
         </h1>
         <div className="flex flex-col">
-          <span className="text-[3.5vw] sm:text-[2vw] lg:text-[1.1vw] text-center sm:text-start">
+          <span className="text-[3.5vw] sm:text-[2vw] lg:text-[1.1vw] text-start">
             {data.description}
           </span>
           <div className="pt-[8vw] sm:pt-[5vw] lg:pt-[2vw] flex">
@@ -128,18 +128,18 @@ const Card = ({ data }) => {
 export default function About() {
 
   return (
-    <div className="dark__section bg-[#1F1D1D] h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
+    <div className="dark__section bg-[#1F1D1D] h-[90vh] lg:h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
       <div className="flex flex-col w-[80%] lg:w-[85%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
         <h1
           onMouseEnter={onMouseEnterOnTitle}
           onMouseLeave={onmouseleave}
-          className=" text-[12vw] justify-center sm:justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
+          className=" text-[12vw] justify-start ttext-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
         >
           What We Do
         </h1>
-        <div className="flex about-section h-[45%] lg:h-[80%] py-[2.5vw] space-x-[3vw] overflow-x-auto">
+        <div className="flex about-section h-[55%] lg:h-[80%] py-[2.5vw] space-x-[3vw] overflow-x-auto">
           {about_data.map((e, index) => (
-            <div key={"about__" + index.toString()} className="flex-none w-[48%] lg:w-[30%] h-full">
+            <div key={"about__" + index.toString()} className="flex-none w-[95%] sm:w-[48%] lg:w-[30%] h-full">
               <Card data={e} key={"about_" + index.toString()} />
             </div>
           ))}

@@ -30,25 +30,8 @@ export default function Footer({ isDark = false }) {
           } border space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[5vw] lg:space-y-0">
-            <div className="hidden lg:flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
-              <Link href={"/"}>
-                <Image src={isDark ? DarkLogo : Logo} />
-              </Link>
-              <div
-                className={`w-full text-sm ${
-                  isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                } lg:text-[1.1vw] lg:leading-[1.8vw]  `}
-              >
-                We are a new-age brand incubator that specializes in integrated
-                digital solutions- website, app, marketing, UX/UI, and
-                technology. We engineer, design, and help you scale your
-                products to reach your target group. Since the beginning, we've
-                given entrepreneurs the tools and direction they need to
-                transform their great ideas into successful businesses,
-                assisting them in taking their businesses to the next level.
-              </div>
-            </div>
-            <div className="flex lg:hidden justify-center items-center">
+            <div className="flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
+
               {isDark ? (
                 <svg
                   width="200"
@@ -76,6 +59,19 @@ export default function Footer({ isDark = false }) {
                   />
                 </svg>
               )}
+              <div
+                className={`w-full text-sm ${
+                  isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
+                } tracking-wider text-[4.5vw] sm:text-[2.5vw] sm:leading-[3.5vw] leading-[6vw] lg:text-[1.1vw] lg:leading-[1.8vw]  `}
+              >
+                We are a new-age brand incubator that specializes in integrated
+                digital solutions- website, app, marketing, UX/UI, and
+                technology. We engineer, design, and help you scale your
+                products to reach your target group. Since the beginning, we've
+                given entrepreneurs the tools and direction they need to
+                transform their great ideas into successful businesses,
+                assisting them in taking their businesses to the next level.
+              </div>
             </div>
             <div
               className={`hidden lg:flex ${
@@ -99,7 +95,7 @@ export default function Footer({ isDark = false }) {
                 <div className="flex flex-1 "></div>
               </div>
             </div>
-            <div className="flex flex-col space-y-10 items-center lg:justify-between justify-center lg:items-start ">
+            <div className="flex flex-col space-y-10 lg:justify-between justify-center items-start ">
               <div className="">
                 <Link href={"/start-a-project"}>
                   <button
@@ -115,13 +111,13 @@ export default function Footer({ isDark = false }) {
                 <div
                   className={`${
                     isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                  } mt-5 lg:mt-[2vw] ml-[0.5vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
+                  } mt-5 lg:mt-[2vw] lg:ml-[0.5vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
                 >
                   We would love to help you.
                 </div>
               </div>
-              <div className="items-center lg:items-start flex flex-col">
-                <div className="button flex space-x-3 justify-center lg:justify-start">
+              <div className="items-start flex flex-col">
+                <div className="button flex space-x-3 justify-start">
                   <Link href={"https://www.linkedin.com/company/incubr/about/"}>
                     <button
                       className={`w-14 ${
@@ -170,23 +166,10 @@ export default function Footer({ isDark = false }) {
                   <br /> with your next project.
                 </div> */}
 
-                <div
-                  className={`${
-                    isDark ? "text-white" : "text-black"
-                  } lg:hidden text-center w-full sm:w-[70%] font-[PPNeueMontreal] tracking-wider text-sm mt-10`}
-                >
-                  We are a new-age brand incubator that specializes in
-                  integrated digital solutions- website, app, marketing, UX/UI,
-                  and technology. We engineer, design, and help you scale your
-                  products to reach your target group. Since day one, we've
-                  helped innovators and founders take their startups to the next
-                  level by providing them with the tools and guidance they need
-                  to turn their excellent ideas into powerful companies.
-                </div>
               </div>
             </div>
             <div className="flex lg:hidden ">
-              <div className="flex flex-[3] items-center justify-center">
+              <div className="flex flex-[3] items-center">
                 <div
                   className={`${
                     isDark ? "text-white" : "text-black"

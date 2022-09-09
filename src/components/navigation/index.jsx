@@ -35,7 +35,7 @@ export default function Navigation({ isDark = false }) {
 
   return (
     <div
-      className="navigation hidden z-[90] sm:flex w-auto sm:w-16 font-[Arial] absolute right-0 sm:left-0 sm:items-center"
+      className="navigation hidden z-[90] lg:flex w-auto sm:w-16 font-[Arial] absolute right-0 sm:left-0 sm:items-center"
       style={{ height }}
     >
       <div
@@ -181,19 +181,19 @@ export default function Navigation({ isDark = false }) {
             </h1>
             <div className="flex space-x-3">
               <Link href={"https://www.linkedin.com/company/incubr/about/"}>
-                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center  rounded-full">
                   <Image src={LinkedIn} />
                 </button>
               </Link>
               <Link href={"https://www.instagram.com/incubr.tech/"}>
-                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center  rounded-full">
                   <Image src={Instagram} />
                 </button>
               </Link>
               <Link
                 href={"whatsapp://send?text=Hello World!&phone=+919999988493"}
               >
-                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center bg-white rounded-full">
+                <button className="button w-14 h-14 flex justify-center bg-[#F0C808] hover:shadow-md items-center  rounded-full">
                   <Image src={WhatsApp} />
                 </button>
               </Link>

@@ -60,14 +60,14 @@ function DownArrow({ title, isDark = false }) {
 
 const NewDownArrow = ({title, isDark = false }) => {
   return (
-    <div className="flex w-full absolute h-[5vh] sm:h-[10vh] lg:h-auto bottom-5 sm:bottom-10 justify-center">
-      <div className="flex w-[85%] justify-center sm:justify-end ">
+    <div className="flex w-full  absolute h-[8vh] sm:h-[10vh] lg:h-auto bottom-5 sm:bottom-10 justify-center">
+      <div className="flex w-[85%] justify-end ">
         <div
           onClick={() => window.scrollTo(0, window.innerHeight)}
           className="button cursor-pointer sm:h-48 sm:w-48 lg:w-[12.5vw] 2xl:w-[10vw] 2xl:h-[10vw] lg:h-[12.5vw] flex flex-col items-end lg:justify-end"
         >
           <div
-            className={`lg:w-[4vw] sm:h-16 sm:w-16 sm:bg-[#FFA400] w-[15vw] h-[15vw] lg:h-[4vw] 2xl:w-[3vw] 2xl:h-[3vw] hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center`}
+            className={`lg:w-[4vw] sm:h-16 sm:w-16 bg-[#FFA400] w-[15vw] h-[15vw] lg:h-[4vw] 2xl:w-[3vw] 2xl:h-[3vw] hover:bg-[#F0C808]  hover:border-transparent transition-colors duration-300 ease-in-out flex rounded-full justify-center items-center`}
           >
             <svg
               viewBox="0 0 22 12"
