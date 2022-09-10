@@ -40,7 +40,8 @@ export const animateNavigation = (isRight=false, isDark=false) => {
     opacity: 1,
   });
   
-  timeline.to(".navigation .innerBox #button_section", {
+  gsap.to(".navigation .innerBox #button_section", {
+    delay: 1.5,
     duration: 0.2,
     display: "flex",
   });

@@ -2,29 +2,29 @@ export const servicesData = [
   {
     data_1: {
       id: 1,
-      title: "Web Design & Development",
+      title: "User Experience",
       description:
-        "We develop client-focused, customer-centric, web solutions that deliver tangible business results, connects with your audience, communicates your message and elevates your brand all at the same time.",
+        "We create user experiences that are purposeful and captivating for the user. It requires deep user-focused research with both business and design acumen. We leverage the existing experience of founders, and brand manuals design systems for more customer satisfaction",
     },
     data_2: {
       id: 2,
-      title: "Build Brand Assets",
+      title: "Technology Team Deployment",
       description:
-        "We design worlds of experience that connect people with brands, products or other people. We deal with corporate identities and goals; requirements and functions, needs and usability, and above all: emotions. We distinguish your brand from everyone else with the purpose of establishing successful brand recognition, creating a competitive advantage.",
+        "We work with tier two colleges young graduates and help them enhance their coding skills and deploy them as valuable resource at places of mutual opportunities.\n",
     },
   },
   {
     data_1: {
       id: 3,
-      title: "Find & Deploy Tech Resources",
+      title: "Website and App Dev.",
       description:
-        "We help you find, compare and deploy the right technologies for your business. We find, hire, train, upskill, and deploy local tech talent at all levels, from entry to senior. We understand what it takes to get technology deployed, including all change management aspects related to new ways of working.",
+        "We create stunning, engaging websites and apps. CRM/ERM Platforms, Website Development, eCommerce, Mobile & Web App Development, Technical Discovery & Architecture using diverse mainstream tech stacks.",
     },
     data_2: {
       id: 4,
-      title: "Technology Support",
+      title: "Branding",
       description:
-        "Tech support is a critical element of the overall user experience for businesses. We ensure accessibility to the right technology and technical expertise on-time, every time for business type. ",
+        "We give you everything that brand needs for a great positioning and strategy. Be it existing brands or complete revamp. Brand guides and execution, robust strategy, clean Identities, visual tones, and enticing stories.",
     },
   },
   {
@@ -32,7 +32,7 @@ export const servicesData = [
       id: 5,
       title: "Media Production",
       description:
-        "Exemplary content and top-notch visuals. Copywriting, 360° Photography & Video, Art Direction, and Video Production",
+        "We mostly focus on product related media work like logo animations, graphic design, motion graphics, animations, landing page animations, ads. We have a team of superb ux and copy writers that help us build great product stories.",
     },
   },
 ];

@@ -1,3 +1,4 @@
+import teams from "@/data/teams";
 import NewDownArrow from "@/src/components/common/DownArrow";
 import Footer from "@/src/components/footer";
 import Headers from "@/src/components/headers";
@@ -8,13 +9,28 @@ import { onmouseleave } from "@/src/custom-cursor";
 import Link from "next/link";
 import React from "react";
 
-const PeopleCard = () => {
-  return (
+const PeopleCard = ({ person }) => {
+  return person.name ? (
     <div className="w-[20vw] h-[27vw] lg:w-[15vw] lg:h-[20vw] flex flex-col ">
-      <div className="flex w-full rounded-xl h-full bg-gray-400"></div>
-      <h1 className="mt-3 text-center text-[2.5vw] lg:text-[1.5vw]">Gopal Batra</h1>
-      <span className="text-center text-[1.5vw] lg:text-[1vw] text-[#FFA400]">CEO</span>
+      <div
+        style={{
+          backgroundImage: `url(${person.image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="flex w-full border-2 rounded-xl h-full overflow-hidden "
+      >
+        <div className="flex w-full h-full filter backdrop-filter backdrop-grayscale"></div>
+      </div>
+      <h1 className="mt-3 text-center text-[2.5vw] lg:text-[1.5vw]">
+        {person.name}
+      </h1>
+      <span className="text-center text-[1.5vw] lg:text-[1vw] text-[#FFA400]">
+        {person.description}
+      </span>
     </div>
+  ) : (
+    <div className="w-[20vw] h-[27vw] lg:w-[15vw] lg:h-[20vw] flex flex-col "></div>
   );
 };
 
@@ -52,16 +68,19 @@ export default function Teams() {
       </div>
       <div className="flex flex-1 justify-center items-center">
         <div className="flex flex-col items-center w-[65%] py-[3vw]">
-          <div className="flex w-full mt-[3vw] justify-between">
-            <PeopleCard />
-            <PeopleCard />
-            <PeopleCard />
-          </div>
-          <div className="flex w-full mt-[3vw] justify-between">
-            <PeopleCard />
-            <PeopleCard />
-            <PeopleCard />
-          </div>
+          {teams.map((team, index) => (
+            <div
+              key={"grouP__" + index.toString()}
+              className="flex w-full mt-[3vw] justify-between"
+            >
+              {team.map((person, index) => (
+                <PeopleCard
+                  person={person}
+                  key={"person__" + index.toString()}
+                />
+              ))}
+            </div>
+          ))}
 
           <Link href={"/careers"}>
             <button
@@ -73,7 +92,7 @@ export default function Teams() {
         </div>
       </div>
       <div className="h-[15vh] lg:h-[20vh]"></div>
-      <Footer  isDark />
+      <Footer isDark />
     </div>
   );
 }
