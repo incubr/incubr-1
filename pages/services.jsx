@@ -20,19 +20,19 @@ export default function Services() {
         <Navigation isDark />
         <MobileNavigation isDark />
         <Headers isDark />
-        <div className="flex flex-1 justify-center items-center">
+        <div className="flex flex-1 justify-center items-end pb-[35vw] sm:pb-0 sm:items-center">
           <div className="lg:w-[65%] lg:justify-between text-white items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] lg:w-[45%] leading-[14vw] sm:leading-[8vw] sm:text-[7vw] text-[11vw] w-auto lg:leading-[3.7vw] lg:text-[3vw] flex flex-col lg:flex-row"
+              className=" font-[Arial] lg:w-[45%] leading-[12vw] sm:leading-[8vw] sm:text-[7vw] text-[9.5vw] w-auto lg:leading-[3.7vw] lg:text-[3vw] flex flex-col lg:flex-row"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col items-center text-center lg:text-start lg:items-start lg:flex-row">
+              <div className="flex flex-col items-center text-start lg:items-start lg:flex-row">
                 We elevate brands by digital transformation &amp; innovation.
               </div>
               <span className=" font-[Arial] items-center lg:items-start text-center lg:text-start"></span>
             </div>
-            <span className=" font-[PPNeueMontreal] lg:w-[48%] text-white  text-center lg:text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-0 text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className=" font-[PPNeueMontreal] w-full lg:w-[48%] text-white text-start leading-[1.5] lg:leading-[2vw] flex-col flex mt-10 lg:mt-0 text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
               {`We enjoy creating and revolutionising brands\n
                that sustain.\n
                 The notion of improving business is at the\n
@@ -45,13 +45,6 @@ export default function Services() {
                   <span key={i + line}>{line}</span>
                 ))}
             </span>
-            <div className=" flex justify-center">
-              <Link href={"/start-a-project"}>
-                <button className="sm:hidden mt-[8vw] button rounded-full tracking-wider hover:shadow-md text-black bg-[#fff] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 flex items-center justify-center text-xl">
-                  START A PROJECT
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
         <DownArrow title={"Happy to serve"} isDark />

@@ -16,7 +16,7 @@ const Card = ({ data }) => {
             {data.description}
           </span>
           <div className="pt-[8vw] sm:pt-[5vw] lg:pt-[2vw] flex">
-            <div className="hidden sm:flex rounded-xl cursor-pointer items-center justify-center bg-opacity-25 h-[10vw] w-[10vw] sm:w-[6vw] sm:h-[6vw] lg:h-[3vw] lg:w-[3vw]">
+            <div className="flex rounded-xl cursor-pointer items-center justify-center bg-opacity-25 h-[10vw] w-[10vw] sm:w-[6vw] sm:h-[6vw] lg:h-[3vw] lg:w-[3vw]">
               <Link href={"/services"}>
                 <svg
                   viewBox="0 0 12 22"
@@ -42,8 +42,8 @@ const Card = ({ data }) => {
 
 export default function About() {
   return (
-    <div className="dark__section bg-[#1F1D1D] h-[90vh] lg:h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
-      <div className="flex flex-col w-[80%] lg:w-[85%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
+    <div className="dark__section bg-[#1F1D1D] h-[90vh] sm:h-[100vh] lg:h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
+      <div className="flex flex-col w-[80%] sm:w-[85%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
         <h1
           onMouseEnter={onMouseEnterOnTitle}
           onMouseLeave={onmouseleave}
@@ -51,7 +51,7 @@ export default function About() {
         >
           What We Do
         </h1>
-        <span className="font-[PPNeueMontreal] text-[#FFA400] text-[1.2vw] leading-[1.6vw]">
+        <span className="font-[PPNeueMontreal] text-[#FFA400] text-[3.5vw] leading-[4.5vw] sm:text-[2.8vw] sm:leading-[3.5vw] lg:text-[1.2vw] lg:leading-[1.6vw]">
           We enjoy creating and revolutionising brands that sustain and grow.
           The notion of improving business is at the core of all we do. Instead
           of offering our clients a solution, what motivates us is to develop
@@ -59,7 +59,7 @@ export default function About() {
           experience and make scale easy.
         </span>
 
-        <div className="flex about-section h-[55%] lg:h-[80%] py-[2.5vw] space-x-[2.9vw] overflow-x-auto">
+        <div className="flex about-section h-[55%] lg:h-[80%] mt-[4vw] sm:mt-[7vw] py-[3vw] sm:py-[4vw] lg:mt-0 lg:py-[2.5vw] space-x-[2.9vw] overflow-x-auto">
           {about_data.map((e, index) => (
             <div
               key={"about__" + index.toString()}

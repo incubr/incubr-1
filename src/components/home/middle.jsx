@@ -48,7 +48,7 @@ export default function MiddleSection() {
         <div className="flex w-full lg:w-[60%] h-full justify-end">
           <div className="flex relative w-[90%] items-center justify-end h-full">
             <svg
-              className="w-[85%] h-[95%] lg:h-[98%]"
+              className="w-[100%] lg:w-[85%] h-[100%] lg:h-[98%]"
               viewBox="0 0 933 1009"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export default function MiddleSection() {
             <svg
               // width="625"
               // height="837"
-              className="absolute h-[80%] bottom-[4%] left-[12%]"
+              className="absolute h-[90%] lg:h-[80%] bottom-[4%] left-[12%]"
               viewBox="0 0 625 837"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function MiddleSection() {
             <svg
               // width="625"
               // height="837"
-              className="absolute h-[80%] bottom-[11%] left-[28%]"
+              className="absolute h-[90%] lg:h-[80%] bottom-[11%] left-[28%]"
               viewBox="0 0 625 837"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function MiddleSection() {
             <svg
               // width="613"
               // height="837"
-              className="absolute h-[82%] bottom-[18%] left-[45%]"
+              className="absolute h-[90%] lg:h-[82%] bottom-[18%] left-[45%]"
               viewBox="0 0 613 837"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

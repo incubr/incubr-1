@@ -106,13 +106,6 @@ export default function Landing() {
                 <span key={i + line}>{line}</span>
               ))}
           </span>
-          {/* <div className=" flex justify-center">
-            <Link href={"/start-a-project"}>
-              <button className="sm:hidden mt-[8vw] button rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 flex items-center justify-center text-xl">
-                START A PROJECT
-              </button>
-            </Link>
-          </div> */}
         </div>
       </div>
       <DownArrow title={"Welcome"} />

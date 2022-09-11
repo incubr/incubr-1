@@ -11,7 +11,7 @@ import React from "react";
 
 const PeopleCard = ({ person }) => {
   return person.name ? (
-    <div className="w-[20vw] h-[27vw] lg:w-[15vw] lg:h-[20vw] flex flex-col ">
+    <div className="sm:w-[20vw] w-[25vw] h-[45vw] sm:h-[27vw] lg:w-[15vw] lg:h-[20vw] flex flex-col ">
       <div
         style={{
           backgroundImage: `url(${person.image})`,
@@ -22,10 +22,10 @@ const PeopleCard = ({ person }) => {
       >
         <div className="flex w-full h-full filter backdrop-filter backdrop-grayscale"></div>
       </div>
-      <h1 className="mt-3 text-center text-[2.5vw] lg:text-[1.5vw]">
+      <h1 className="mt-3 text-center text-[4vw] sm:text-[2.5vw] lg:text-[1.5vw]">
         {person.name}
       </h1>
-      <span className="text-center text-[1.5vw] lg:text-[1vw] text-[#FFA400]">
+      <span className="text-center h-[10vw] sm:h-auto text-[2.5vw] sm:text-[1.5vw] lg:text-[1vw] text-[#FFA400]">
         {person.description}
       </span>
     </div>
@@ -41,21 +41,21 @@ export default function Teams() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[65%] text-black items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+        <div className="flex flex-1 justify-center items-end pb-[45vw] sm:pb-0 sm:items-center">
+          <div className="lg:w-[65%] text-black items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col text-center lg:text-start ">
+              <div className="flex flex-col text-start ">
                 Team Members
               </div>
               {/* <span className=" font-[Arial]  text-center lg:text-start">
                 
               </span> */}
             </div>
-            <span className="flex w-[70%] lg:w-[80%] font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
+            <span className="flex w-[70%] lg:w-[80%] font-[PPNeueMontreal] text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
               {`We know that finding a meaningful and rewarding job can be difficult at times. Our goal is to simplify that process for you. Ready to join the revolution? Browse through the available jobs and apply today. `
                 .split("\n")
                 .map((line, i) => (
@@ -67,11 +67,11 @@ export default function Teams() {
         <NewDownArrow title={"Let's start"} />
       </div>
       <div className="flex flex-1 justify-center items-center">
-        <div className="flex flex-col items-center w-[65%] py-[3vw]">
+        <div className="flex flex-col items-center w-[85%] lg:w-[65%] py-[3vw]">
           {teams.map((team, index) => (
             <div
               key={"grouP__" + index.toString()}
-              className="flex w-full mt-[3vw] justify-between"
+              className="flex w-full mt-[6vw] lg:mt-[3vw] justify-between"
             >
               {team.map((person, index) => (
                 <PeopleCard

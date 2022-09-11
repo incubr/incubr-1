@@ -103,7 +103,7 @@ export default function MobileNavigation({ isDark = false }) {
                 <li
                   onClick={() => {
                     setOpened(false);
-                    reverseNavigation(isRight, isDark);
+                    mobileReverseNavigation(isDark);
                   }}
                   id={currentLocation === item.link ? "active" : ""}
                   className={`flex text-white hover:opacity-100 opacity-0 -translate-y-40 transition-colors ease-in-out duration-200 text-start  `}

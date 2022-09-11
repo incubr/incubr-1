@@ -22,17 +22,17 @@ export default function Careers() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full px-6 sm:px-16 lg:px-0">
+        <div className="flex flex-1 justify-center items-end pb-[32vw] sm:pb-0 sm:items-center">
+          <div className="lg:w-[60%] text-black items-start flex flex-col w-full px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col text-center lg:text-start ">
+              <div className="flex flex-col text-start ">
                 Creative. Passionate.
               </div>
-              <span className=" font-[Arial]  text-center lg:text-start">
+              <span className=" font-[Arial] text-start">
                 Dedicated.
               </span>
             </div>
@@ -47,7 +47,7 @@ export default function Careers() {
                   <span key={i + line}>{line}</span>
                 ))}
             </span>
-            <span className="flex font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
+            <span className="flex font-[PPNeueMontreal] w-full text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
               {`We know that finding a meaningful and\n 
               rewarding job can be difficult at times.\n
                Our goal is to simplify that process for \n
@@ -59,13 +59,6 @@ export default function Careers() {
                   <span key={i + line}>{line}</span>
                 ))}
             </span>
-            <div className=" flex justify-center">
-              <Link href={"/start-a-project"}>
-                <button className="sm:hidden mt-[8vw] button rounded-full tracking-wider hover:shadow-md text-white bg-[#1F1D1D] hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 flex items-center justify-center text-xl">
-                  START A PROJECT
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
         <DownArrow title={"Scroll down"} />

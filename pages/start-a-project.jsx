@@ -91,21 +91,21 @@ export default function StartAProject() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-center">
-          <div className="lg:w-[60%] text-black items-center lg:items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
+        <div className="flex flex-1 justify-center items-end pb-[35vw] sm:pb-0 sm:items-center">
+          <div className="lg:w-[60%] text-black items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
-              className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
+              className=" font-[Arial] leading-[12vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
             >
-              <div className="flex flex-col text-center lg:text-start ">
+              <div className="flex flex-col text-start w-[85%] sm:w-auto ">
                 Lets make it easy for both of us
               </div>
               {/* <span className=" font-[Arial]  text-center lg:text-start">
                 
               </span> */}
             </div>
-            <span className="flex lg:w-[80%] font-[PPNeueMontreal] text-center lg:text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
+            <span className="flex lg:w-[80%] font-[PPNeueMontreal] w-full text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
               {`If you can help us with some details about your project goals and some insights about vision, we can help you build a highly desired product. Answer the questions below to help us get you started right away.`
                 .split("\n")
                 .map((line, i) => (
@@ -498,7 +498,7 @@ export default function StartAProject() {
                 </button>
               </div>
             </div>
-            <h1 className="mt-10  lg:mt-[5vw] tracking-wider font-[PPNeueMontreal] text-xl lg:text-[2vw]">
+            <h1 className="mt-10  lg:mt-[5vw] text-center tracking-wider font-[PPNeueMontreal] text-xl lg:text-[2vw]">
               Thank you! We'll connect with you shortly.
             </h1>
           </div>
