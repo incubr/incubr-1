@@ -9,7 +9,7 @@ export default function Headers({ isDark = false }) {
           <svg
             viewBox="0 0 163 29"
             fill="none"
-            className=" cursor-pointer w-[120px] h-[25px] sm:w-[163px] sm:h-[29px]"
+            className=" cursor-pointer w-[100px] h-[25px] sm:w-[163px] sm:h-[29px]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -24,7 +24,7 @@ export default function Headers({ isDark = false }) {
           <button
             className={`button rounded-full tracking-wider hover:shadow-md ${
               isDark ? "bg-[#fff]" : " border border-black hover:border-none bg-[#fff]"
-            } hover:bg-[#F0C808] text-black transition-colors ease-in-out duration-200 py-1 lg:py-2 px-2 sm:px-4 flex items-center justify-center text-lg sm:text-xl`}
+            } hover:bg-[#F0C808] text-black transition-colors ease-in-out duration-200 py-1 lg:py-2 px-2 sm:px-4 flex items-center justify-center text-md sm:text-xl`}
           >
             START A PROJECT
           </button>

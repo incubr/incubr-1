@@ -14,7 +14,7 @@ export default function MiddleSection() {
             <h1
               onMouseEnter={onMouseEnterOnTitle}
               onMouseLeave={onmouseleave}
-              className=" text-[12vw] capitalize w-full lg:px-0 justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
+              className=" text-[10vw] mt-[4vw] sm:mt-0 capitalize w-full lg:px-0 justify-start text-center sm:text-left sm:text-[8vw] lg:text-[4.5vw] lg:leading-[5vw] items-center flex  font-[Arial]  cursor-pointer"
             >
               How we do
             </h1>

@@ -180,10 +180,10 @@ export default function Testimonies() {
         </div>
       </div>
 
-      <div className="w-full h-[28vh] sm:h-[22vh] lg:h-[22vw] flex items-center justify-center bg-[#1F1D1D]">
-        <div className="flex lg:w-[60%] items-center justify-around flex-wrap px-2">
+      <div className="w-full h-[30vh] sm:h-[22vh] lg:h-[22vw] flex items-center justify-center bg-[#1F1D1D]">
+        <div className="flex lg:w-[60%] items-center sm:justify-around flex-wrap px-2">
           {brands.map((items) => (
-            <span key={items.src} className="flex mt-2 lg:mt-0">
+            <span key={items.src} className="flex mt-2 mx-auto lg:mx-0 lg:mt-0">
               <Image key={items.src} src={items} />
             </span>
           ))}

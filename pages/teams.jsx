@@ -41,7 +41,7 @@ export default function Teams() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-end pb-[45vw] sm:pb-0 sm:items-center">
+        <div className="flex flex-1 justify-center items-center sm:pb-0 sm:items-center">
           <div className="lg:w-[65%] text-black items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"

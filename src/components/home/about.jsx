@@ -42,7 +42,7 @@ const Card = ({ data }) => {
 
 export default function About() {
   return (
-    <div className="dark__section bg-[#1F1D1D] h-[90vh] sm:h-[100vh] lg:h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
+    <div className="dark__section bg-[#1F1D1D] h-[100vh] lg:h-[105vh] py-[1.3vw] text-white flex justify-center items-center">
       <div className="flex flex-col w-[80%] sm:w-[85%] overflow-x-auto py-[2.7vw] pb-[2vw] h-full justify-center">
         <h1
           onMouseEnter={onMouseEnterOnTitle}
