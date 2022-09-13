@@ -22,7 +22,7 @@ export default function Careers() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-end pb-[40vw] sm:pb-0 sm:items-center">
+        <div className="flex flex-1 justify-center sm:pb-0 items-center">
           <div className="lg:w-[60%] text-black items-start flex flex-col w-full px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[14vw] text-[11vw] sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[80%] lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"

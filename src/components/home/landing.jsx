@@ -40,7 +40,7 @@ export default function Landing() {
       <Navigation />
       <MobileNavigation />
       <Headers />
-      <div className="flex flex-1 justify-center items-end pb-[40vw] sm:pb-0 sm:items-center">
+      <div className="flex flex-1 justify-center sm:pb-0 items-center">
         <div className="w-[85%] sm:w-full lg:w-[60%] mt-0 sm:mt-16 lg:mt-0 sm:px-16 lg:px-0">
           <div
             className=" font-[Arial] leading-[14vw] text-[12vw] sm:text-[10vw] sm:leading-[11vw] lg:leading-[5vw] lg:text-[4.3vw] justify-center flex flex-col"
