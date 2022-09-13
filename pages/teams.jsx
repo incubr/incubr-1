@@ -37,7 +37,7 @@ const PeopleCard = ({ person }) => {
 export default function Teams() {
   return (
     <div className="w-full scroll-smooth">
-      <div className="w-full relative bg-[#fff] flex h-screen flex-col">
+      <div className="w-full relative bg-[#fff] flex h-[95vh] sm:h-screen flex-col">
         <Navigation />
         <MobileNavigation />
         <Headers />

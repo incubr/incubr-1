@@ -85,13 +85,12 @@ export default function StartAProject() {
   return (
     <div className="w-full scroll-smooth">
       <div
-        className="w-full relative bg-[#fff] flex flex-col"
-        style={{ height: height, paddingBottom: height * 0.05 }}
+        className="w-full relative bg-[#fff] flex flex-col h-[95vh] sm:h-screen"
       >
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-end pb-[35vw] sm:pb-0 sm:items-center">
+        <div className="flex flex-1 justify-center sm:pt-0 pt-[10vw] items-center">
           <div className="lg:w-[60%] text-black items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[12vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
