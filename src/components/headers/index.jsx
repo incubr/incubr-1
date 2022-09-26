@@ -4,12 +4,12 @@ import React from "react";
 export default function Headers({ isDark = false }) {
   return (
     <div className="flex w-full justify-center absolute top-0 left-0">
-      <div className="w-[85%] lg:z-[50] flex items-center justify-between mt-[8vw] sm:mt-16 2xl:mt-20">
+      <div className="w-[85%] lg:z-[50] flex items-center justify-between mt-[8vw] sm:mt-16 lg:mt-[3.5vw]">
         <Link href={"/"}>
           <svg
             viewBox="0 0 163 29"
             fill="none"
-            className=" cursor-pointer w-[100px] h-[25px] sm:w-[163px] sm:h-[29px]"
+            className=" cursor-pointer w-[100px] h-[25px] sm:w-[163px] sm:h-[29px] lg:w-[10vw] lg:h-auto"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

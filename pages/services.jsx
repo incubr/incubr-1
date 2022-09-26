@@ -20,7 +20,7 @@ export default function Services() {
         <Navigation isDark />
         <MobileNavigation isDark />
         <Headers isDark />
-        <div className="flex flex-1 justify-center sm:pb-0 items-center">
+        <div className="flex flex-1 justify-center lg:mt-[2vw] items-center">
           <div className="lg:w-[65%] lg:justify-between text-white items-center lg:items-start flex flex-col lg:flex-row w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] lg:w-[45%] leading-[12vw] sm:leading-[8vw] sm:text-[7vw] text-[9.5vw] w-auto lg:leading-[3.7vw] lg:text-[3vw] flex flex-col lg:flex-row"

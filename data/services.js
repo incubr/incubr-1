@@ -10,13 +10,13 @@ export const servicesData = [
       id: 2,
       title: "Technology Team Deployment",
       description:
-        "We work with tier two colleges young graduates and help them enhance their coding skills and deploy them as valuable resource at places of mutual opportunities.\n",
+        "We work with tier two colleges' young graduates and help them enhance their coding skills and deploy them as valuable resources at places of mutual opportunities.",
     },
   },
   {
     data_1: {
       id: 3,
-      title: "Website and App Dev.",
+      title: "Website and App Development",
       description:
         "We create stunning, engaging websites and apps. CRM/ERM Platforms, Website Development, eCommerce, Mobile & Web App Development, Technical Discovery & Architecture using diverse mainstream tech stacks.",
     },

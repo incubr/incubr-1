@@ -11,7 +11,7 @@ const Card = ({ data }) => {
         <h1 className="text-[7vw] flex-1 sm:text-[3.5vw] lg:text-[2.5vw] lg:leading-[3vw] tracking-wide uppercase text-start">
           {data.title}
         </h1>
-        <div className="flex flex-[1.4] justify-between flex-col">
+        <div className="flex flex-[1.9] justify-between flex-col">
           <span className="text-[3.5vw] sm:text-[2vw] lg:text-[1.1vw] text-start">
             {data.description}
           </span>
@@ -51,12 +51,8 @@ export default function About() {
         >
           What We Do
         </h1>
-        <span className="font-[PPNeueMontreal] text-[#FFA400] text-[3.5vw] leading-[4.5vw] sm:text-[2.8vw] sm:leading-[3.5vw] lg:text-[1.2vw] lg:leading-[1.6vw]">
+        <span className="font-[PPNeueMontreal] text-[#fff] tracking-wider text-[3.5vw] leading-[4.5vw] sm:text-[2.8vw] sm:leading-[3.5vw] lg:text-[1.2vw] lg:leading-[1.6vw]">
           We enjoy creating and revolutionising brands that sustain and grow.
-          The notion of improving business is at the core of all we do. Instead
-          of offering our clients a solution, what motivates us is to develop
-          something for them that will significantly enhance their business
-          experience and make scale easy.
         </span>
 
         <div className="flex about-section h-[55%] lg:h-[80%] mt-[4vw] sm:mt-[7vw] py-[3vw] sm:py-[4vw] lg:mt-0 lg:py-[2.5vw] space-x-[2.9vw] overflow-x-auto">

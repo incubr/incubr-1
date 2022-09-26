@@ -14,7 +14,7 @@ export default function ServiceCard({ data }) {
         <h1 className="lg:text-[2.5vw] group-hover:text-black lg:leading-[3vw] text-3xl sm:text-4xl w-[80%] sm:w-70%]">
           {data.title}
         </h1>
-        <span className=" mt-6 sm:mt-10 group-hover:text-black lg:mt-[3.5vw] lg:leading-[1.5vw] text-sm lg:text-[1.1vw]">
+        <span className=" mt-6 sm:mt-10 tracking-wider group-hover:text-black lg:mt-[3.5vw] lg:leading-[1.5vw] text-sm lg:text-[1.1vw]">
           {data.description}
         </span>
       </div>

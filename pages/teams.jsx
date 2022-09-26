@@ -41,7 +41,7 @@ export default function Teams() {
         <Navigation />
         <MobileNavigation />
         <Headers />
-        <div className="flex flex-1 justify-center items-center sm:pb-0 sm:items-center">
+        <div className="flex flex-1 justify-center items-center lg:mt-[2vw] sm:items-center">
           <div className="lg:w-[65%] text-black items-start flex flex-col w-full mt-16 lg:mt-0 px-6 sm:px-16 lg:px-0">
             <div
               className=" font-[Arial] leading-[14vw] text-[11vw]  sm:text-[9.5vw] sm:leading-[11vw] w-auto sm:w-[90%] lg:w-full lg:leading-[4vw] lg:text-[3.5vw] flex flex-col"
@@ -55,7 +55,7 @@ export default function Teams() {
                 
               </span> */}
             </div>
-            <span className="flex w-[70%] lg:w-[80%] font-[PPNeueMontreal] text-start leading-[1.5] flex-col mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
+            <span className="flex w-[70%] lg:w-[80%] font-[PPNeueMontreal] text-start leading-[1.5] flex-col mt-[4vw] lg:mt-[2vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.8vw] lg:leading-[2.2vw] tracking-wide font-[350]">
               {`We know that finding a meaningful and rewarding job can be difficult at times. Our goal is to simplify that process for you. Ready to join the revolution? Browse through the available jobs and apply today. `
                 .split("\n")
                 .map((line, i) => (

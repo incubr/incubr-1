@@ -9,7 +9,7 @@ export const about_data = [
     id: "4564",
     title: "Tech Team Deployment",
     description:
-      "We work with tier two colleges young graduates and help them enhance their coding skills and deploy them as valuable resource at places of mutual opportunities.\n",
+      "We work with tier two colleges' young graduates and help them enhance their coding skills and deploy them as valuable resources at places of mutual opportunities.",
   },
   {
     id: "4564df",
