@@ -20,7 +20,7 @@ export default function Headers({ isDark = false }) {
         </Link>
 
         {/* <Image src={Logo} className=" cursor-pointer" /> */}
-        <Link href={"/start-a-project"}>
+        {/* <Link href={"/start-a-project"}>
           <button
             className={`button rounded-full tracking-wider hover:shadow-md ${
               isDark ? "bg-[#fff]" : " border border-black hover:border-none bg-[#fff]"
@@ -28,7 +28,7 @@ export default function Headers({ isDark = false }) {
           >
             START A PROJECT
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

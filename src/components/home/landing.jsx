@@ -37,8 +37,8 @@ export default function Landing() {
       className="w-full light__section h-[95vh] lg:h-screen relative bg-[#FDFDFD] flex flex-col"
     // style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
     >
-      <Navigation />
-      <MobileNavigation />
+      {/* <Navigation />
+      <MobileNavigation /> */}
       <Headers />
       <div className="flex flex-1 justify-center sm:pb-0 items-center">
         <div className="w-[85%] sm:w-full lg:w-[60%] mt-0 sm:mt-16 lg:mt-0 sm:px-16 lg:px-0">
@@ -57,14 +57,14 @@ export default function Landing() {
             </span>
           </div>
           <span className="hidden font-[PPNeueMontreal] leading-[1.5] flex-col lg:flex mt-10 text-sm lg:text-[1.5vw] tracking-wide font-[350]">
-            {`Get access to the biggest consimer market available on planet.`
+            {`Get access to the biggest consumer market available on planet`
               .split("\n")
               .map((line, i) => (
                 <span key={i+line}>{line}</span>
               ))}
           </span>
           <span className="flex font-[PPNeueMontreal] w-[85%] text-start lg:text-start leading-[1.5] flex-col lg:hidden mt-[5vw] sm:mt-[3.5vw] text-[3.5vw] sm:text-[2.5vw] lg:text-[1.5vw] tracking-wide font-[350]">
-            {`We are a new-age all-in-one digital brand incubator that specializes in scaling your business through integrated solutions. We engineer, design, products and help you scale your business to reach your target group.`
+            {`Get access to the biggest consumer market available on planet`
               .split("\n")
               .map((line, i) => (
                 <span key={i+line}>{line}</span>
@@ -72,7 +72,7 @@ export default function Landing() {
           </span>
         </div>
       </div>
-      {/* <DownArrow title={"Welcome"} /> */}
+      <DownArrow title={"Welcome"} />
     </div>
   );
 }

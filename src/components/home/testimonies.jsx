@@ -43,7 +43,7 @@ const Title = () => {
           <Description text={"Its truly gratifying when our customers find our work valuable and purposeful."} />
         </div>
         <div className="lg:hidden flex flex-1 justify-center items-center">
-          <span className="text-center sm:text-[3vw]">
+          <span className="text-center sm:text-[3vw] tracking-wider">
             Its truly gratifying when our customers find our work valuable and
             purposeful.
           </span>
@@ -103,7 +103,7 @@ export default function Testimonies() {
     <>
       <div
         id="PageWrapTestomony"
-        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal]  h-[85vh]  bg-[#D9D9D926] bg-opacity-75"
+        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal] h-[90vh] sm:h-[85vh]  bg-[#D9D9D926] bg-opacity-75"
       >
         <div className="testomony-item relative flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-[3vw] lg:justify-around items-center font-[PPNeueMontreal] h-[80vh] ">
           <Title />
@@ -161,16 +161,15 @@ export default function Testimonies() {
               ))}
             </Swiper> */}
             <div className="flex w-full justify-center h-full items-center">
-              <div className="flex w-[90%] space-x-[2.5vw]">
+              <div className="flex lg:flex-row flex-col w-[90%] space-y-[4vw] lg:space-y-0 lg:space-x-[2.5vw]">
                 {slides.slice(1, 3).map((item) => (
                   <div
                     key={item.name}
                     className="flex flex-1 border border-black p-5 h-[40vh] rounded-2xl relative"
                   >
-                    <span className="absolute -top-[2vw]  right-[2.5vw]">
+                    <span className="absolute -top-[4vw] sm:-top-[3vw] lg:-top-[2vw]  right-[2.5vw]">
                       <svg
-                        width="104"
-                        height="82"
+                        className="w-[12vw] h-[12vw] sm:w-[8vw] sm:h-[8vw] lg:w-[5vw] lg:h-[5vw]"
                         viewBox="0 0 104 82"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -183,23 +182,23 @@ export default function Testimonies() {
                       </svg>
                     </span>
                     <div className="flex w-full p-5 flex-col">
-                      <div className="flex h-[24%]">
+                      <div className="flex lg:h-[24%]">
                         <div
                           style={{
                             backgroundImage: `url(${item.backgroundImage})`,
                           }}
-                          className="flex border items-center justify-center bg-cover bg-center h-[80%] w-[8%] rounded-full"
+                          className="flex border items-center justify-center bg-cover bg-center lg:h-[80%] w-[14%] sm:w-[8%] rounded-full"
                         ></div>
                         <p className="flex flex-col px-4">
-                          <span className="flex font-semibold font-[Arial] text-[1.2vw]">
+                          <span className="flex font-semibold font-[Arial] text-[3.8vw] sm:text-[2.5vw] lg:text-[1.2vw]">
                             {item.name}
                           </span>
-                          <span className="flex text-[.7vw] font-[PPNeueMontreal]">
+                          <span className="flex text-[2.5vw] sm:text-[1.5vw] lg:text-[.7vw] font-[PPNeueMontreal]">
                             {item.description}
                           </span>
                         </p>
                       </div>
-                      <p className="flex flex-1 p-2 text-[1.1vw] mt-[1.5vw] font-[PPNeueMontreal]">
+                      <p className="flex flex-1 p-2 text-[3.7vw] tracking-wider sm:text-[2.2vw] lg:text-[1.1vw] mt-[1.5vw] font-[PPNeueMontreal]">
                         {item.text}
                       </p>
                     </div>
