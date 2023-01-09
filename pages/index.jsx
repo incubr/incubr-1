@@ -4,14 +4,14 @@ import About from "@/src/components/home/about";
 import Landing from "@/src/components/home/landing";
 import Testimonies from "@/src/components/home/testimonies";
 import OurWork from "@/src/components/home/middle";
-import { Store } from "@/context";
+import {Store} from "@/context";
 import Lottie from "react-lottie";
 import Animated from "@/assets/lf20_fnddduvc.json";
 import LogoAnimated from "@/assets/animation_l5o8netn.json";
 
 export default function Home() {
-  const { seconds, canShow, height } = React.useContext(Store);
-  const defaultOptions = {
+  const {seconds, canShow, height}=React.useContext(Store);
+  const defaultOptions={
     loop: true,
     autoplay: true,
     animationData: Animated,
@@ -19,7 +19,7 @@ export default function Home() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const defaultOptionsLogo = {
+  const defaultOptionsLogo={
     loop: true,
     autoplay: true,
     animationData: LogoAnimated,
@@ -29,10 +29,10 @@ export default function Home() {
   };
   return (
     <div className="w-full scroll-smooth">
-      {!canShow && (
+      {!canShow&&(
         <div
           className="fixed  loading-animation top-0 left-0  w-full bg-[#1D1D1D] z-[100]"
-          style={{ height }}
+          style={{height}}
         >
           <div className="flex flex-1 justify-center h-[80%] sm:h-[90%] lg:h-full items-center">
             <div className=" mt-16 lg:mt-0 px-6 text-white sm:px-16 lg:px-0">
@@ -60,9 +60,9 @@ export default function Home() {
         </div>
       )}
       <Landing />
-      <About />
       <OurWork />
       <Testimonies />
+      <About />
       <Footer />
     </div>
   );

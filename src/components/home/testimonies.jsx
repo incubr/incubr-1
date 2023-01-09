@@ -1,49 +1,48 @@
 import React from "react";
 import Description from "../common/Description";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper";
-import { brands } from "../../../data/brands";
+import {Autoplay} from "swiper";
+import {brands} from "../../../data/brands";
 import Image from "next/image";
-import { slides } from "@/data/testimonials";
+import {slides} from "@/data/testimonials";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import {motion, useInView} from "framer-motion";
 
-const Pagination = ({ activeIndex }) => {
-  const swiper = useSwiper();
+const Pagination=({activeIndex}) => {
+  const swiper=useSwiper();
   return (
     <span className=" flex button text-[1.3vw] justify-center space-x-2 mt-[2vw]">
       {slides.map((e, index) => (
         <span
-          key={"sadashjgjhd" + e.id}
+          key={"sadashjgjhd"+e.id}
           // onClick={() => swiper.slideTo(index)}
-          className={`w-3 h-3 ${
-            activeIndex % slides.length === index
-              ? "bg-[#FFA400]"
-              : "bg-transparent"
-          } border border-[#FFA400] rounded-full cursor-pointer`}
+          className={`w-3 h-3 ${activeIndex%slides.length===index
+            ? "bg-[#FFA400]"
+            :"bg-transparent"
+            } border border-[#FFA400] rounded-full cursor-pointer`}
         />
       ))}
     </span>
   );
 };
 
-const Title = () => {
+const Title=() => {
   return (
     <div
       id="testimonies"
-      className="flex flex-col w-full px-6 mt-[1vw] text-white bg-[#1F1D1D]"
+      className="flex flex-col w-full px-6 mt-[1vw] text-black bg-white"
     >
       <div className="flex flex-1"></div>
       <div className="flex flex-1 justify-center items-center flex-col">
-        <div className="flex px-5 py-2 text-[11vw] sm:text-[9vw] lg:mt-0 lg:text-[4vw] text-center font-[PPNeueMontreal] rounded-full tracking-wider">
-          <h1 className="uppercase">testimonials</h1>
+        <div className="flex px-5 py-2 text-[11vw] font-semibold sm:text-[9vw] lg:mt-0 lg:text-[3vw] text-center rounded-full tracking-wider">
+          <h1 className="font-[Arial]">Testimonial</h1>
         </div>
-        <div className="hidden lg:flex flex-1 justify-center items-center">
+        <div className="hidden lg:flex font-[PPNeueMontreal] flex-1 justify-center items-center">
           <Description
             text={
-              "Its truly gratifying when our customers find our\n work valuable and purposeful."
+              "Lorem Ipsum is simply dummy text of."
             }
           />
         </div>
@@ -58,7 +57,7 @@ const Title = () => {
   );
 };
 
-const ProfilePic = ({ link }) => {
+const ProfilePic=({link}) => {
   return (
     <div className="flex w-[45vw] h-[45vw] sm:w-[25vw] sm:h-[25vw] z-20 lg:w-[12vw] lg:h-[12vw] lg:p-[1vw]">
       <div
@@ -66,7 +65,7 @@ const ProfilePic = ({ link }) => {
         className="w-full h-full bg-cover rounded-xl flex items-end justify-end "
       >
         <div className="flex bg-white w-[8vw] cursor-pointer h-[8vw] sm:w-[5vw] sm:h-[5vw] lg:w-[2.5vw] lg:h-[2.5vw] justify-center items-center rounded-full">
-          <Link href={link || ""}>
+          <Link href={link||""}>
             <svg
               viewBox="0 0 32 30"
               fill="none"
@@ -88,9 +87,9 @@ const ProfilePic = ({ link }) => {
 };
 
 export default function Testimonies() {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [autoplay, setAutoplay] = React.useState(false);
-  const [link, setLink] = React.useState("");
+  const [activeIndex, setActiveIndex]=React.useState(0);
+  const [autoplay, setAutoplay]=React.useState(false);
+  const [link, setLink]=React.useState("");
   // const ref = React.useRef(null);
   // const isInView = useInView(ref);
 
@@ -108,7 +107,7 @@ export default function Testimonies() {
     <>
       <div
         id="PageWrapTestomony"
-        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal]  h-[100vh]  bg-[#1F1D1D]"
+        className=" flex dark__section flex-nowrap flex-col font-[PPNeueMontreal]  h-[100vh]  bg-white"
       >
         <div className="testomony-item relative flex dark__section flex-nowrap flex-col justify-around sm:justify-center space-y-0 sm:space-y-[10vw] lg:space-y-[3vw] lg:justify-around items-center font-[PPNeueMontreal] h-[100vh] bg-[#1F1D1D]">
           <Title />
@@ -131,15 +130,14 @@ export default function Testimonies() {
                 setActiveIndex(e.activeIndex);
                 document.getElementById(
                   "test_profile_pic"
-                ).style.backgroundImage = `url(${
-                  slides[e.activeIndex % slides.length].backgroundImage
+                ).style.backgroundImage=`url(${slides[e.activeIndex%slides.length].backgroundImage
                 })`;
-                setLink(slides[e.activeIndex % slides.length].link);
+                setLink(slides[e.activeIndex%slides.length].link);
               }}
             >
               {slides.map((_, index) => (
                 <SwiperSlide
-                  key={"sadasd" + index}
+                  key={"sadasd"+index}
                   style={{
                     height: "55vh",
                   }}
@@ -147,13 +145,13 @@ export default function Testimonies() {
                 >
                   <div className=" text-white tracking-widest flex flex-col mt-5 items-center">
                     <h1 className=" font-bold text-[7vw] sm:text-[5vw] lg:leading-[2vw] lg:text-[1.7vw]">
-                      {slides[activeIndex % slides.length].name}
+                      {slides[activeIndex%slides.length].name}
                     </h1>
                     <span className="lg:leading-[2vw] text-[#FFA400] font-semibold text-center text-[4vw] sm:text-[2.8vw] lg:text-[1.3vw]">
-                      {slides[activeIndex % slides.length].description}
+                      {slides[activeIndex%slides.length].description}
                     </span>
                     <span className="mt-4 hidden lg:flex flex-col w-[70%] text-center lg:text-[1.3vw] items-center">
-                      {slides[activeIndex % slides.length].text
+                      {slides[activeIndex%slides.length].text
                         .split("\n")
                         .map((text) => (
                           <span key={text} className="text-white">
@@ -162,10 +160,10 @@ export default function Testimonies() {
                         ))}
                     </span>
                     <span className="mt-4 flex lg:hidden w-[90%] flex-col text-center text-[3.5vw] sm:text-[2vw] items-center">
-                      {slides[activeIndex % slides.length].text
+                      {slides[activeIndex%slides.length].text
                         .split("\n")
                         .map((text, index) => (
-                          <span key={text + index} className="text-white">
+                          <span key={text+index} className="text-white">
                             {text}
                           </span>
                         ))}
@@ -177,16 +175,6 @@ export default function Testimonies() {
 
             <Pagination activeIndex={activeIndex} />
           </motion.div>
-        </div>
-      </div>
-
-      <div className="w-full h-[30vh] sm:h-[22vh] lg:h-[22vw] flex items-center justify-center bg-[#1F1D1D]">
-        <div className="flex lg:w-[60%] items-center sm:justify-around flex-wrap px-2">
-          {brands.map((items) => (
-            <span key={items.src} className="flex mt-2 mx-auto lg:mx-0 lg:mt-0">
-              <Image key={items.src} src={items} />
-            </span>
-          ))}
         </div>
       </div>
     </>

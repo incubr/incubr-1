@@ -10,29 +10,38 @@ import WhatsAppLight from "@/assets/whatsapp.svg";
 import InstagramLight from "@/assets/instagram.svg";
 import LinkedInLight from "@/assets/linkedin.svg";
 import moment from "moment";
-import { navigation_link } from "@/data/link";
+import {navigation_link} from "@/data/link";
 
-export default function Footer({ isDark = false }) {
+export default function Footer({isDark=false}) {
   return (
     <div
-      className={`w-full ${
-        isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
-      } flex flex-col pt-[5vw] items-center`}
+      className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#FDFDFD]"
+        } flex flex-col pt-[5vw] items-center`}
     >
+      <div className="flex w-full mb-6 lg:-mt-12 h-[26vh] justify-center">
+        <div className="flex w-[95%] sm:flex-row flex-col border-b-2 justify-around">
+          <div className="flex flex-col justify-center px-16 w-full">
+            <span className="flex font-medium text-[4.2vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] my-5 sm:my-0">Our Newsletter</span>
+            <span className="flex">Lorem Ipsum is simply dummy text of.</span>
+          </div>
+          <div className="flex w-full justify-center items-center">
+            <input type="email" placeholder="Your email" className="flex shadow-sm px-3 h-12  sm:w-[60%] w-[48%]" />
+            <span className="bg-black text-white h-12 items-center flex w-[20%] sm:w-[25%] justify-center text-[4vw] sm:text-[1.7vw] font-[PPNeueMontreal] font-normal">Subscribe</span>
+          </div>
+        </div>
+      </div>
       <div
-        className={`w-full ${
-          isDark ? "bg-[#1F1D1D]" : "bg-[#FDFDFD]"
-        } flex justify-center `}
+        className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#FDFDFD]"
+          } flex justify-center `}
       >
         <footer
-          className={` px-[6vw] py-[5vw] ${
-            isDark ? "border-white" : "border-black"
-          } border space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
+          className={` px-[6vw] py-[5vw] ${isDark? "border-white":"border-black"
+            } border space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[5vw] lg:space-y-0">
             <div className="flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
 
-              {isDark ? (
+              {isDark? (
                 <svg
                   width="200"
                   height="40"
@@ -45,7 +54,7 @@ export default function Footer({ isDark = false }) {
                     fill="white"
                   />
                 </svg>
-              ) : (
+              ):(
                 <svg
                   width="200"
                   height="40"
@@ -60,9 +69,8 @@ export default function Footer({ isDark = false }) {
                 </svg>
               )}
               <div
-                className={`w-full text-sm ${
-                  isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                } tracking-wider text-[4.5vw] sm:text-[2.5vw] sm:leading-[3.5vw] leading-[6vw] lg:text-[1.1vw] lg:leading-[1.8vw]  `}
+                className={`w-full text-sm ${isDark? "text-[#FDFDFD]":"text-[#1F1D1D]"
+                  } tracking-wider text-[4.5vw] sm:text-[2.5vw] sm:leading-[3.5vw] leading-[6vw] lg:text-[1.1vw] lg:leading-[1.8vw]  `}
               >
                 We are a new-age brand incubator that specializes in integrated
                 digital solutions- website, app, marketing, UX/UI, and
@@ -74,19 +82,18 @@ export default function Footer({ isDark = false }) {
               </div>
             </div>
             <div
-              className={`hidden lg:flex ${
-                isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-              }  lg:flex-1 flex-col  lg:space-y-[3vw]`}
+              className={`hidden lg:flex ${isDark? "text-[#FDFDFD]":"text-[#1F1D1D]"
+                }  lg:flex-1 flex-col  lg:space-y-[3vw]`}
             >
               <Image
-                src={isDark ? DarkLogo : Logo}
+                src={isDark? DarkLogo:Logo}
                 className="hidden lg:flex opacity-0"
               />
               <div className="flex ">
                 <div className="flex flex-[3] items-center flex-col">
                   <div className="button flex space-y-2 font-[600] lg:space-y-[1.5vw] flex-col text-xl cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw]">
                     {navigation_link.map((item, index) => (
-                      <Link key={"naviga" + index} href={item.link}>
+                      <Link key={"naviga"+index} href={item.link}>
                         <span className="px-[1.8vw] sm:px-0">{item.name}</span>
                       </Link>
                     ))}
@@ -99,19 +106,17 @@ export default function Footer({ isDark = false }) {
               <div className="">
                 <Link href={"/start-a-project"}>
                   <button
-                    className={`button transition-colors w-auto lg:w-[22vw] duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.2vw] px-8 ${
-                      isDark
-                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                        : "text-[#FDFDFD] bg-[#1F1D1D]"
-                    }`}
+                    className={`button transition-colors w-auto lg:w-[22vw] duration-200 ease-in-out hover:shadow-md hover:bg-[#F0C808] hover:text-black font-[PPNeueMontreal] p-3 sm:p-5 rounded-full  text-2xl lg:text-[2.2vw] px-8 ${isDark
+                      ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                      :"text-[#FDFDFD] bg-[#1F1D1D]"
+                      }`}
                   >
                     START A PROJECT
                   </button>
                 </Link>
                 <div
-                  className={`${
-                    isDark ? "text-[#FDFDFD]" : "text-[#1F1D1D]"
-                  } mt-5 lg:mt-[2vw] lg:ml-[0.5vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
+                  className={`${isDark? "text-[#FDFDFD]":"text-[#1F1D1D]"
+                    } mt-5 lg:mt-[2vw] lg:ml-[0.5vw] font-[PPNeueMontreal] text-center lg:text-start tracking-widest text-md lg:text-[1.2vw] font-[400]`}
                 >
                   We would love to help you.
                 </div>
@@ -120,24 +125,22 @@ export default function Footer({ isDark = false }) {
                 <div className="button flex space-x-3 justify-start">
                   <Link href={"https://www.linkedin.com/company/incubr/about/"}>
                     <button
-                      className={`w-14 ${
-                        isDark
-                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                          : "text-[#FDFDFD] bg-[#1F1D1D]"
-                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                      className={`w-14 ${isDark
+                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                        :"text-[#FDFDFD] bg-[#1F1D1D]"
+                        } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
                     >
-                      <Image src={isDark ? LinkedInLight : LinkedIn} />
+                      <Image src={isDark? LinkedInLight:LinkedIn} />
                     </button>
                   </Link>
                   <Link href={"https://www.instagram.com/incubr.tech/"}>
                     <button
-                      className={`w-14 ${
-                        isDark
-                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                          : "text-[#FDFDFD] bg-[#1F1D1D]"
-                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                      className={`w-14 ${isDark
+                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                        :"text-[#FDFDFD] bg-[#1F1D1D]"
+                        } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
                     >
-                      <Image src={isDark ? InstagramLight : Instagram} />
+                      <Image src={isDark? InstagramLight:Instagram} />
                     </button>
                   </Link>
                   <Link
@@ -146,13 +149,12 @@ export default function Footer({ isDark = false }) {
                     }
                   >
                     <button
-                      className={`w-14 ${
-                        isDark
-                          ? "text-[#1F1D1D] bg-[#FDFDFD]"
-                          : "text-[#FDFDFD] bg-[#1F1D1D]"
-                      } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
+                      className={`w-14 ${isDark
+                        ? "text-[#1F1D1D] bg-[#FDFDFD]"
+                        :"text-[#FDFDFD] bg-[#1F1D1D]"
+                        } h-14 flex justify-center items-center hover:shadow-md hover:bg-[#F0C808] hover:text-black  rounded-full`}
                     >
-                      <Image src={isDark ? WhatsAppLight : WhatsApp} />
+                      <Image src={isDark? WhatsAppLight:WhatsApp} />
                     </button>
                   </Link>
                 </div>
@@ -171,12 +173,11 @@ export default function Footer({ isDark = false }) {
             <div className="flex lg:hidden ">
               <div className="flex flex-[3] items-center">
                 <div
-                  className={`${
-                    isDark ? "text-white" : "text-black"
-                  } button flex  font-[600] text-md cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50`}
+                  className={`${isDark? "text-white":"text-black"
+                    } button flex  font-[600] text-md cursor-pointer font-[PPNeueMontreal] tracking-wider lg:text-[1.5vw] opacity-50`}
                 >
                   {navigation_link.slice(0, 4).map((item, index) => (
-                    <Link key={"naviga" + index} href={item.link}>
+                    <Link key={"naviga"+index} href={item.link}>
                       <span className="px-[1.8vw]">{item.name}</span>
                     </Link>
                   ))}
@@ -188,11 +189,10 @@ export default function Footer({ isDark = false }) {
       </div>
 
       <div
-        className={`${
-          isDark
+        className={`${isDark
           ? "text-[#e9e9e9] bg-[#1F1D1D]"
-            : "text-[#444444] bg-[#fff] "
-        } tracking-wider py-4 font-[PPNeueMontreal] w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
+          :"text-[#444444] bg-[#fff] "
+          } tracking-wider py-4 font-[PPNeueMontreal] w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
       >
         <span>&copy;INCUBR {moment().year()}</span>
       </div>
