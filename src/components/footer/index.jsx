@@ -20,13 +20,13 @@ export default function Footer({isDark=false}) {
     >
       <div className="flex w-full h-[26vh] justify-center bg-[#D9D9D926] bg-opacity-75">
         <div className="flex w-[95%] sm:flex-row flex-col border-b-2 justify-around">
-          <div className="flex flex-col font-[Arial] justify-center px-16 w-full">
-            <span className="flex font-bold text-[4.2vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] my-5 sm:my-0">Our Newsletter</span>
+          <div className="flex flex-col font-[Arial] items-start sm:justify-center px-10 w-full">
+            <span className="flex font-bold text-[4.9vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] my-5 sm:my-0px-10">Our Newsletter</span>
             <span className="flex lg:text-[1.5vw]">Lorem Ipsum is simply dummy text of.</span>
           </div>
-          <div className="flex w-full justify-center items-center">
-            <input type="email" placeholder="Your email" className="border border-white outline-none flex p-[1.2vw] sm:w-[60%] w-[48%] lg:text-[1.2vw]" />
-            <span className="bg-black text-white p-[1vw] items-center flex w-[20%] sm:w-[25%] justify-center text-[4vw] sm:text-[2vw] lg:text-[1.7vw] font-[PPNeueMontreal] font-normal">Subscribe</span>
+          <div className="flex w-full justify-start mx-10 sm:mx-0 sm:justify-center sm:items-center">
+            <input type="email" placeholder="Your email" className="border border-white outline-none flex p-[1.2vw] sm:w-[60%] w-[60%] h-[5vh] sm:h-[4vh] lg:text-[1.2vw]" />
+            <span className="bg-black text-white p-[1vw] items-center flex w-[20%] sm:w-[25%] justify-center text-[4vw] sm:text-[2vw] lg:text-[1.7vw] h-[5vh] sm:h-[4vh] font-[PPNeueMontreal] font-normal">Subscribe</span>
           </div>
         </div>
       </div>

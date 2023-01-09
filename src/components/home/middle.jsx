@@ -8,7 +8,7 @@ export default function MiddleSection() {
 
   return (
     <div className="flex h-screen w-full bg-[#ffffff] justify-center items-center ">
-      <div className="flex w-full py-[3vw] text-white bg-black lg:py-[13vh] flex-col lg:flex-row lg:items-start h-full">
+      <div className="flex w-full py-[3vw] text-white bg-black lg:py-[13vh] flex-col lg:flex-row lg:items-start h-[90%] sm:h-full">
         <div className="flex px-[6vw] lg:px-0 flex-col w-full lg:w-[38%] items-end">
           <div className="flex flex-col w-[97%] lg:w-[82%] ">
             <h1
@@ -20,15 +20,15 @@ export default function MiddleSection() {
             </h1>
             <div className="flex flex-col ">
               <span className=" opacity-80 font-[Arial]  mt-[2vw] sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
-                Lorem ipsim is simply dummy text of the printing and typesetting industry.
+                Together with our incredible team, we offer services that are efficient and will help your business grow.
               </span>
             </div>
           </div>
         </div>
 
         <div className="flex w-full justify-center items-center lg:w-[60%] h-full">
-          <div className="flex text-[5vw] sm:text-[5vw] md:text-[3vw] lg:[2vw] xl:text-[2vw] justify-between sm:w-[90%] font-[500] h-full px-24 flex-col">
-            <div className="flex sm:h-[23%] my-2 sm:my-0 h-[20%] border-b-2 items-center justify-between">
+          <div className="flex text-[5vw] sm:text-[5vw] md:text-[3vw] lg:[2vw] xl:text-[2vw] justify-between w-full sm:w-[90%] font-[500] h-[90%] md:h-full px-24 flex-col">
+            <div className="flex sm:h-[23%] my-2 sm:my-0 h-[20%] sm:w-auto border-b-2 items-center w-full justify-between">
               <span>Go to Market Planning</span>
               <svg
                 onClick={() => {

@@ -1,14 +1,14 @@
 import React from "react";
 import Description from "../common/Description";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper";
+import {Autoplay} from "swiper";
 // import {brands} from "../../../data/brands";
 // import Image from "next/image";
-import { slides } from "@/data/testimonials";
+import {slides} from "@/data/testimonials";
 // import Link from "next/link";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 // const Pagination=({activeIndex}) => {
 //   const swiper=useSwiper();
@@ -28,14 +28,14 @@ import { motion } from "framer-motion";
 //   );
 // };
 
-const Title = () => {
+const Title=() => {
   return (
     <div
       id="testimonies"
-      className="flex flex-col w-full px-6 mt-[1vw] text-black "
+      className="flex flex-col w-full px-6 sm:mt-[1vh] mt-[7vh] text-black mb-9"
     >
       <div className="flex flex-1"></div>
-      <div className="flex flex-1 justify-center items-center flex-col">
+      <div className="flex mt-24 sm:mt-0 justify-center items-center flex-col">
         <div className="flex px-5 py-2 text-[11vw] font-semibold sm:text-[9vw] lg:mt-0 lg:text-[3vw] text-center rounded-full tracking-wider">
           <h1 className="font-[Arial]">Testimonial</h1>
         </div>
@@ -83,9 +83,9 @@ const Title = () => {
 // };
 
 export default function Testimonies() {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [autoplay, setAutoplay] = React.useState(false);
-  const [link, setLink] = React.useState("");
+  const [activeIndex, setActiveIndex]=React.useState(0);
+  const [autoplay, setAutoplay]=React.useState(false);
+  const [link, setLink]=React.useState("");
   // const ref = React.useRef(null);
   // const isInView = useInView(ref);
 
@@ -160,17 +160,18 @@ export default function Testimonies() {
                 </SwiperSlide>
               ))}
             </Swiper> */}
-            <div className="flex w-full justify-center h-full items-center">
-              <div className="flex w-[90%] space-x-[2.5vw]">
+            <div className="flex w-full justify-center h-full items-center ">
+              <div className="flex flex-col sm:flex-row w-[90%] space-x-0
+              space-y-10 sm:space-y-0 sm:space-x-[2.5vw]">
                 {slides.slice(1, 3).map((item) => (
                   <div
                     key={item.name}
-                    className="flex flex-1 border border-black p-5 h-[40vh] rounded-2xl relative"
+                    className="flex flex-1 border border-black p-5 h-[40vh] rounded-2xl relative sm:mt-0"
                   >
-                    <span className="absolute -top-[2vw]  right-[2.5vw]">
+                    <span className="absolute -top-[5vh] sm:-top-[6vw] md:-top-[4.8vh] right-[2.5vw]">
                       <svg
-                        width="104"
-                        height="82"
+                        width="80%"
+                        height="80"
                         viewBox="0 0 104 82"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -188,18 +189,18 @@ export default function Testimonies() {
                           style={{
                             backgroundImage: `url(${item.backgroundImage})`,
                           }}
-                          className="flex border items-center justify-center bg-cover bg-center h-[80%] w-[8%] rounded-full"
+                          className="flex border items-center justify-center bg-cover bg-center sm:h-[100%] h-[140%] w-[15%] sm:w-[18%] md:h-[120%] md:w-[20%] rounded-full lg:h-[140%] lg:w-[15%]"
                         ></div>
                         <p className="flex flex-col px-4">
-                          <span className="flex font-semibold font-[Arial] text-[1.2vw]">
+                          <span className="flex font-semibold font-[Arial] sm:text-[2vw] md:text-[2.3vw] text-[5vw]">
                             {item.name}
                           </span>
-                          <span className="flex text-[.7vw] font-[PPNeueMontreal]">
+                          <span className="flex sm:text-[1vw] text-[3vw] font-[PPNeueMontreal]">
                             {item.description}
                           </span>
                         </p>
                       </div>
-                      <p className="flex flex-1 p-2 text-[1.1vw] mt-[1.5vw] font-[PPNeueMontreal]">
+                      <p className="flex flex-1 p-2 sm:text-[1.5vw] mt-[4vh] text-[2vw] sm:mt-[1.5vw] font-[PPNeueMontreal]">
                         {item.text}
                       </p>
                     </div>
