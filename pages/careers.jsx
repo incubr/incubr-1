@@ -1,23 +1,23 @@
 import Headers from "@/src/components/headers";
-import { onMouseEnterOnTitle } from "@/src/components/home/landing";
+import {onMouseEnterOnTitle} from "@/src/components/home/landing";
 import Navigation from "@/src/components/navigation";
-import { onmouseleave } from "@/src/custom-cursor";
+import {onmouseleave} from "@/src/custom-cursor";
 import React from "react";
-import { Store } from "@/context";
+import {Store} from "@/context";
 import Footer from "@/src/components/footer";
-import { jobs } from "@/data/jobs";
+import {jobs} from "@/data/jobs";
 import Link from "next/link";
 import MobileNavigation from "@/src/components/mobileNavigation";
 import DownArrow from "@/src/components/common/DownArrow";
 
 export default function Careers() {
-  const { height, width } = React.useContext(Store);
+  const {height, width}=React.useContext(Store);
 
   return (
     <div className="w-full scroll-smooth">
       <div
         className="w-full relative bg-[#fff] flex flex-col"
-        style={{ height: width > 1024 ? height - height * 0.05 : "95vh" }}
+        style={{height: width>1024? height-height*0.05:"95vh"}}
       >
         <Navigation />
         <MobileNavigation />
@@ -44,7 +44,7 @@ export default function Careers() {
                   jobs and apply today. `
                 .split("\n")
                 .map((line, i) => (
-                  <span key={i + line}>{line}</span>
+                  <span key={i+line}>{line}</span>
                 ))}
             </span>
             <span className="flex font-[PPNeueMontreal] w-full text-start leading-[1.5] flex-col lg:hidden mt-[4vw] text-[4vw] sm:text-[2.4vw] lg:text-[1.5vw] tracking-wide font-[350]">
@@ -56,7 +56,7 @@ export default function Careers() {
                  today. `
                 .split("\n")
                 .map((line, i) => (
-                  <span key={i + line}>{line}</span>
+                  <span key={i+line}>{line}</span>
                 ))}
             </span>
           </div>
@@ -84,7 +84,7 @@ export default function Careers() {
                   <tr
                     onClick={() => {
                       document
-                        .getElementById("jd_" + i.id)
+                        .getElementById("jd_"+i.id)
                         .classList.toggle("hidden");
                     }}
                     className="bg-white cursor-pointer"
@@ -109,8 +109,8 @@ export default function Careers() {
                           Job Responsibilities:
                         </span>
                         {i.responsibilities.map((j, index) => (
-                          <span key={index + j} className="mt-1">
-                            {index + 1}. {j}
+                          <span key={index+j} className="mt-1">
+                            {index+1}. {j}
                           </span>
                         ))}
 
@@ -119,7 +119,7 @@ export default function Careers() {
                         </span>
                         {i.skills.map((j, index) => (
                           <span
-                            key={index + j}
+                            key={index+j}
                             className="mt-1 flex items-center"
                           >
                             * {j}
@@ -137,7 +137,7 @@ export default function Careers() {
                         <button
                           onClick={() => {
                             document
-                              .getElementById("jd_" + i.id)
+                              .getElementById("jd_"+i.id)
                               .classList.toggle("hidden");
                           }}
                           className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-black border border-black hover:border-[#F0C808] hover:bg-[#F0C808] transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
@@ -162,13 +162,13 @@ export default function Careers() {
           <div className="sm:hidden flex flex-col w-full font-[PPNeueMontreal] sm:w-[60%] border-t border-black">
             {jobs.map((i) => (
               <div
-                key={"fgfrt" + i.id}
+                key={"fgfrt"+i.id}
                 className="flex flex-col w-full relative p-5 border-b border-black"
               >
                 <h1
                   onClick={() => {
                     document
-                      .getElementById("mjd_" + i.id)
+                      .getElementById("mjd_"+i.id)
                       .classList.toggle("hidden");
                   }}
                   className="text-4xl pb-3"
@@ -204,8 +204,8 @@ export default function Careers() {
                         Job Responsibilities:
                       </span>
                       {i.responsibilities.map((j, index) => (
-                        <span key={index + j} className="mt-1">
-                          {index + 1}. {j}
+                        <span key={index+j} className="mt-1">
+                          {index+1}. {j}
                         </span>
                       ))}
 
@@ -214,7 +214,7 @@ export default function Careers() {
                       </span>
                       {i.skills.map((j, index) => (
                         <span
-                          key={index + j}
+                          key={index+j}
                           className="mt-1 flex items-center"
                         >
                           * {j}
@@ -232,7 +232,7 @@ export default function Careers() {
                       <button
                         onClick={() => {
                           document
-                            .getElementById("mjd_" + i.id)
+                            .getElementById("mjd_"+i.id)
                             .classList.toggle("hidden");
                         }}
                         className={` button ml-3 mt-4 rounded-full tracking-wider hover:shadow-md text-black border border-black hover:bg-[#F0C808] hover:text-black transition-colors ease-in-out duration-200 py-2 px-4 sm:flex items-center justify-center text-xl`}
