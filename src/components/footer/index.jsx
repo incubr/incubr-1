@@ -15,28 +15,28 @@ import {navigation_link} from "@/data/link";
 export default function Footer({isDark=false}) {
   return (
     <div
-      className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#FDFDFD]"
-        } flex flex-col pt-[5vw] items-center`}
+      className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#D9D9D926] bg-opacity-75"
+        } flex flex-col items-center`}
     >
-      <div className="flex w-full mb-6 lg:-mt-12 h-[26vh] justify-center">
+      <div className="flex w-full h-[26vh] justify-center bg-[#D9D9D926] bg-opacity-75">
         <div className="flex w-[95%] sm:flex-row flex-col border-b-2 justify-around">
-          <div className="flex flex-col justify-center px-16 w-full">
-            <span className="flex font-medium text-[4.2vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] my-5 sm:my-0">Our Newsletter</span>
-            <span className="flex">Lorem Ipsum is simply dummy text of.</span>
+          <div className="flex flex-col font-[Arial] justify-center px-16 w-full">
+            <span className="flex font-bold text-[4.2vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] my-5 sm:my-0">Our Newsletter</span>
+            <span className="flex lg:text-[1.5vw]">Lorem Ipsum is simply dummy text of.</span>
           </div>
           <div className="flex w-full justify-center items-center">
-            <input type="email" placeholder="Your email" className="flex shadow-sm px-3 h-12  sm:w-[60%] w-[48%]" />
-            <span className="bg-black text-white h-12 items-center flex w-[20%] sm:w-[25%] justify-center text-[4vw] sm:text-[1.7vw] font-[PPNeueMontreal] font-normal">Subscribe</span>
+            <input type="email" placeholder="Your email" className="border border-white outline-none flex p-[1.2vw] sm:w-[60%] w-[48%] lg:text-[1.2vw]" />
+            <span className="bg-black text-white p-[1vw] items-center flex w-[20%] sm:w-[25%] justify-center text-[4vw] sm:text-[2vw] lg:text-[1.7vw] font-[PPNeueMontreal] font-normal">Subscribe</span>
           </div>
         </div>
       </div>
       <div
-        className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#FDFDFD]"
-          } flex justify-center `}
+        className={`w-full ${isDark? "bg-[#1F1D1D]":"bg-[#D9D9D926] bg-opacity-75"
+          } flex justify-center pb-[2vw] `}
       >
         <footer
           className={` px-[6vw] py-[5vw] ${isDark? "border-white":"border-black"
-            } border space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
+            } space-y-6 sm:space-y-[10vw] rounded-2xl lg:space-y-[2vw] w-[90%] lg:w-[95%] flex flex-col lg:flex-row items-center justify-center`}
         >
           <div className="flex flex-col lg:flex-row space-y-[5vw] lg:space-y-0">
             <div className="flex flex-col space-y-6 flex-1  sm:space-y-[10vw] lg:space-y-[3vw] justify-start items-start">
@@ -188,14 +188,14 @@ export default function Footer({isDark=false}) {
         </footer>
       </div>
 
-      <div
+      {/* <div
         className={`${isDark
           ? "text-[#e9e9e9] bg-[#1F1D1D]"
           :"text-[#444444] bg-[#fff] "
           } tracking-wider py-4 font-[PPNeueMontreal] w-full flex justify-center text-xl mt-[2vw] lg:text-[1.5vw]`}
       >
         <span>&copy;INCUBR {moment().year()}</span>
-      </div>
+      </div> */}
     </div>
   );
 }
