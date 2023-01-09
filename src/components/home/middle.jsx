@@ -20,7 +20,8 @@ export default function MiddleSection() {
             </h1>
             <div className="flex flex-col ">
               <span className=" opacity-80 font-[Arial]  mt-[2vw] sm:text-left leading-[6vw] text-[5vw] sm:text-[4vw] sm:leading-[5vw] lg:leading-[2vw] lg:text-[1.5vw] justify-center flex flex-col">
-              If you don’t do business with India, you’d miss the massive growth opportunity in the next decade.
+                If you don’t do business with India, you’d miss the massive
+                growth opportunity in the next decade.
               </span>
             </div>
           </div>
@@ -30,6 +31,7 @@ export default function MiddleSection() {
           <div className="w-[80%] lg:w-full h-[90%] lg:h-full flex flex-col">
             {howWeDo.map((item, index) => (
               <div
+                key={item.title}
                 style={{
                   transition: "all 0.5s ease-in-out",
                 }}
@@ -45,11 +47,8 @@ export default function MiddleSection() {
                     element.classList.add("hidden");
                   });
                 }}
-                
               >
-                <div 
-                  className="flex flex-1 cursor-pointer  items-center justify-between"
-                >
+                <div className="flex flex-1 cursor-pointer  items-center justify-between">
                   <span className="text-[7vw] sm:text-[5vw] sm:leading-[5.8vw] lg:text-[3.2vw] w- sm:w-[80%] lg:leading-[4vw] font-semibold tracking-wide">
                     {item.title}
                   </span>
@@ -67,7 +66,10 @@ export default function MiddleSection() {
                     </svg>
                   </span>
                 </div>
-                <span className="py-5 hidden text-xs sm:text-base" id={item.title}>
+                <span
+                  className="py-5 hidden text-xs sm:text-base"
+                  id={item.title}
+                >
                   {item.description}
                 </span>
               </div>
